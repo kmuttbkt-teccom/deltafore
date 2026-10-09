@@ -1,0 +1,19 @@
+{
+  "name": "deltafore",
+  "version": "1.0.0",
+  "description": "Garena Delta Force: redeem codes found on pages worldwide, queued and tracked (redeemed by hand), and a guide to playing at a competitive level",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "web": "node web/server.js",
+    "demo": "node web/server.js --port 4311 --demo",
+    "scan": "node redeem scan",
+    "next": "node redeem next",
+    "list": "node redeem list",
+    "watch": "node redeem watch",
+    "test": "node test/run.js && node test/helper-e2e.js",
+    "web:lan": "node web/server.js --lan"
+  }
+}

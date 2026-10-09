@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Delta Force Invitational 2026",
+    "start": "2026-11-27",
+    "end": "2026-11-29",
+    "where": "DreamHack Stockholm · สวีเดน",
+    "region": "โลก",
+    "mode": "Operations",
+    "platform": "",
+    "teams": "12 ทีม",
+    "prize": "",
+    "note": "รายการใหญ่ถัดไปของโหมด Operations — ยังไม่มีตารางแมตช์และเงินรางวัลประกาศ",
+    "watch": [
+      {
+        "label": "YouTube @DeltaForceGame",
+        "url": "https://www.youtube.com/@DeltaForceGame/live"
+      },
+      {
+        "label": "Twitch",
+        "url": "https://www.twitch.tv/deltaforcegameofficial"
+      }
+    ]
+  },
+  {
+    "name": "RISE Series ซีซัน 2",
+    "start": "2026-09-19",
+    "end": "2026-10-18",
+    "where": "ออนไลน์",
+    "region": "EMEA / Americas",
+    "mode": "Operations",
+    "platform": "",
+    "teams": "",
+    "prize": "",
+    "note": "รอบคัดสู่ Delta Force Invitational",
+    "watch": [
+      {
+        "label": "YouTube @DeltaForceGame",
+        "url": "https://www.youtube.com/@DeltaForceGame/live"
+      },
+      {
+        "label": "Twitch",
+        "url": "https://www.twitch.tv/deltaforcegameofficial"
+      }
+    ]
+  },
+  {
+    "name": "DFPO",
+    "start": "2026-09-19",
+    "end": "2026-10-11",
+    "where": "ไทย",
+    "region": "ไทย",
+    "mode": "",
+    "platform": "PC",
+    "teams": "",
+    "prize": "",
+    "unsure": true,
+    "note": "ชื่อเต็มและช่องถ่ายทอดยังหาไม่พบ — ดูที่เพจ Garena Delta Force TH",
+    "watch": [
+      {
+        "label": "Facebook Garena Delta Force TH",
+        "url": "https://www.facebook.com/GarenaDeltaForceTH/"
+      },
+      {
+        "label": "YouTube TH",
+        "url": "https://www.youtube.com/@GarenaDeltaForceTH"
+      }
+    ]
+  },
+  {
+    "name": "Delta Force Pro League — Summer",
+    "start": "2026-08-06",
+    "end": "2026-09-25",
+    "where": "จีน · ออฟไลน์",
+    "region": "จีน",
+    "mode": "",
+    "platform": "",
+    "teams": "24 ทีม",
+    "prize": "¥5,000,000",
+    "note": "ลีกระดับสูงสุดของเกม — ดูเพื่อเรียนเมต้า",
+    "watch": [
+      {
+        "label": "Liquipedia",
+        "url": "https://liquipedia.net/deltaforce/Delta_Force_Pro_League/2026/Summer"
+      }
+    ]
+  },
+  {
+    "name": "Operations Star League (DFSL)",
+    "start": "2026-07-25",
+    "end": "2026-09-06",
+    "where": "ไทย · ออนไลน์",
+    "region": "ไทย",
+    "mode": "Operations",
+    "platform": "มือถือ",
+    "teams": "12 ทีม",
+    "prize": "฿100,000",
+    "result": "แชมป์ Full House · รอง Royal Straight Flush",
+    "note": "ลีกมือถือของไทย — คลิปย้อนหลังรอบเพลย์ออฟคือบทเรียนที่ตรงที่สุด",
+    "watch": [
+      {
+        "label": "YouTube TH (ย้อนหลัง)",
+        "url": "https://www.youtube.com/@GarenaDeltaForceTH"
+      },
+      {
+        "label": "Liquipedia",
+        "url": "https://liquipedia.net/deltaforce/Delta_Force_Operations_Star_League/2026"
+      }
+    ]
+  },
+  {
+    "name": "Delta Force Invitational: Warfare (DFIW)",
+    "start": "2026-06-17",
+    "end": "2026-06-21",
+    "where": "อู่ฮั่น · จีน",
+    "region": "โลก",
+    "mode": "Warfare",
+    "platform": "",
+    "teams": "8 ทีม",
+    "prize": "มากกว่า $400,000",
+    "result": "แชมป์ Long Teng · Toxido Esports เป็นตัวแทนไทย",
+    "watch": [
+      {
+        "label": "รอบชิง (YouTube)",
+        "url": "https://www.youtube.com/watch?v=fLrY4E9K5gQ"
+      }
+    ]
+  },
+  {
+    "name": "Operations Showdown",
+    "start": "2026-05-08",
+    "end": "2026-05-17",
+    "where": "ไทย · ออนไลน์",
+    "region": "ไทย",
+    "mode": "Operations",
+    "platform": "",
+    "teams": "24 ทีม",
+    "prize": "฿150,000",
+    "watch": [
+      {
+        "label": "Liquipedia",
+        "url": "https://liquipedia.net/deltaforce/Delta_Force_Operations_Showdown/2026"
+      }
+    ]
+  },
+  {
+    "name": "Pan-Pacific Warfare Cup",
+    "start": "2026-04-18",
+    "end": "2026-04-19",
+    "where": "ออนไลน์",
+    "region": "SEA / แปซิฟิก",
+    "mode": "Warfare",
+    "platform": "PC",
+    "teams": "",
+    "prize": "",
+    "result": "RRQ (อินโดนีเซีย) ชนะ Toxido (ไทย) 2–1"
+  },
+  {
+    "game": "rov",
+    "name": "RoV Pro League 2026 Winter",
+    "start": "2026-08-22",
+    "end": "2026-10-25",
+    "where": "ไทย",
+    "region": "ไทย",
+    "mode": "5v5",
+    "platform": "มือถือ",
+    "teams": "Bacon Time · Buriram United · FULL SENSE · eArena · KOG · Hydra · Tenacity · SOLYX · Godji Check",
+    "prize": "",
+    "unsure": true,
+    "note": "รอบเก็บคะแนนถึง 11 ต.ค. — แหล่งข้อมูลให้วันจบลีกไม่ตรงกัน (11 หรือ 25 ต.ค.) ดูตารางจริงที่ช่อง Garena RoV Thailand",
+    "watch": [
+      {
+        "label": "YouTube Garena RoV Thailand",
+        "url": "https://www.youtube.com/results?search_query=Garena+RoV+Thailand+RoV+Pro+League+live"
+      },
+      {
+        "label": "ตาราง/ผลสด",
+        "url": "https://watchout.gg/competition/rov-pro-league-winter-2026"
+      },
+      {
+        "label": "Liquipedia",
+        "url": "https://liquipedia.net/honorofkings/RoV_Pro_League"
+      }
+    ]
+  },
+  {
+    "game": "rov",
+    "name": "Arena of Valor Premier League (APL) 2026",
+    "start": "2026-06-18",
+    "end": "2026-07-19",
+    "where": "เวียดนาม · Garena Esports Studio",
+    "region": "นานาชาติ",
+    "mode": "5v5",
+    "platform": "มือถือ",
+    "teams": "16 ทีม",
+    "prize": "$494,000",
+    "note": "รายการกลางปีของ Arena of Valor — ผลแชมป์ยังหาไม่พบในแหล่งที่ค้น",
+    "watch": [
+      {
+        "label": "Liquipedia",
+        "url": "https://liquipedia.net/honorofkings/Arena_of_Valor_Premier_League/2026"
+      }
+    ]
+  },
+  {
+    "game": "rov",
+    "name": "RoV Pro League 2026 Summer",
+    "start": "2026-01-31",
+    "end": "2026-04-05",
+    "where": "ไทย",
+    "region": "ไทย",
+    "mode": "5v5",
+    "platform": "มือถือ",
+    "teams": "",
+    "prize": "",
+    "watch": [
+      {
+        "label": "Liquipedia",
+        "url": "https://liquipedia.net/honorofkings/RoV_Pro_League/2026/Summer"
+      }
+    ]
+  }
+]

@@ -1,0 +1,679 @@
+{
+  "codes": {
+    "DELTAFORCEDOUBLEBEATS": {
+      "code": "DELTAFORCEDOUBLEBEATS",
+      "status": "invalid",
+      "source": "Garena SEA · joytify",
+      "addedAt": "2026-10-09T13:41:27.209Z",
+      "tries": 1,
+      "seen": [
+        "Garena SEA · joytify",
+        "Garena TW · ldshop",
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T14:32:27.507Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DELTAFORCEXALANWALKER": {
+      "code": "DELTAFORCEXALANWALKER",
+      "status": "invalid",
+      "source": "Garena SEA · joytify",
+      "addedAt": "2026-10-09T13:41:27.210Z",
+      "tries": 1,
+      "seen": [
+        "Garena SEA · joytify",
+        "Garena TW · ldshop",
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T14:32:45.387Z",
+      "note": "บันทึกผลเอง"
+    },
+    "AW88PTRP7D": {
+      "code": "AW88PTRP7D",
+      "status": "expired",
+      "source": "Garena SEA · joytify",
+      "addedAt": "2026-10-09T13:41:27.210Z",
+      "tries": 1,
+      "seen": [
+        "Garena SEA · joytify",
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T14:33:24.567Z",
+      "note": "บันทึกผลเอง"
+    },
+    "AW88PTR3W9": {
+      "code": "AW88PTR3W9",
+      "status": "expired",
+      "source": "Garena SEA · joytify",
+      "addedAt": "2026-10-09T13:41:27.210Z",
+      "tries": 1,
+      "seen": [
+        "Garena SEA · joytify",
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:33:33.832Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFRainbow356": {
+      "code": "DFRainbow356",
+      "status": "ok",
+      "source": "Garena SEA · joytify",
+      "addedAt": "2026-10-09T13:47:30.463Z",
+      "tries": 1,
+      "seen": [
+        "Garena SEA · joytify"
+      ],
+      "triedAt": "2026-10-09T16:55:10.791Z",
+      "note": "บันทึกผลเอง"
+    },
+    "yU9KMzxYyVP": {
+      "code": "yU9KMzxYyVP",
+      "status": "invalid",
+      "source": "Garena SEA · joytify",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena SEA · joytify",
+        "Global · pockettactics",
+        "Global · mobilematters"
+      ],
+      "triedAt": "2026-10-09T14:32:51.618Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFIPPQIASP": {
+      "code": "DFIPPQIASP",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:34:22.570Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFIPPQARVO": {
+      "code": "DFIPPQARVO",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:34:29.999Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFIPPQOCSP": {
+      "code": "DFIPPQOCSP",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:34:48.137Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFIPPQWLSP": {
+      "code": "DFIPPQWLSP",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:35:05.778Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFIPPQTBAF": {
+      "code": "DFIPPQTBAF",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:35:17.974Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFIPPQECMO": {
+      "code": "DFIPPQECMO",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:35:24.944Z",
+      "note": "บันทึกผลเอง"
+    },
+    "A5Z1NDW8K3PJLU": {
+      "code": "A5Z1NDW8K3PJLU",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn",
+        "Garena VN · dienthoaivui",
+        "Garena VN · hoanghamobile"
+      ],
+      "triedAt": "2026-10-09T16:54:27.261Z",
+      "note": "บันทึกผลเอง"
+    },
+    "Top1BXHVN": {
+      "code": "Top1BXHVN",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn",
+        "Garena VN · hoanghamobile"
+      ],
+      "triedAt": "2026-10-09T16:54:59.244Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFUTSUPPYPACK": {
+      "code": "DFUTSUPPYPACK",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:35:38.743Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFUTINTERMEDIATE": {
+      "code": "DFUTINTERMEDIATE",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:35:47.902Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFUTGEARTICKET": {
+      "code": "DFUTGEARTICKET",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:35:54.358Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFUTWEAPON": {
+      "code": "DFUTWEAPON",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:38:12.155Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFUTSCARH": {
+      "code": "DFUTSCARH",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:38:18.747Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFUTARMAMENT": {
+      "code": "DFUTARMAMENT",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:38:25.926Z",
+      "note": "บันทึกผลเอง"
+    },
+    "ReturningWarrior1": {
+      "code": "ReturningWarrior1",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn",
+        "Garena VN · dienthoaivui",
+        "Garena VN · hoanghamobile",
+        "Garena VN · bluestacks"
+      ],
+      "triedAt": "2026-10-09T16:53:52.408Z",
+      "note": "บันทึกผลเอง"
+    },
+    "ReturningWarrior2": {
+      "code": "ReturningWarrior2",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn",
+        "Garena VN · dienthoaivui",
+        "Garena VN · hoanghamobile",
+        "Garena VN · bluestacks"
+      ],
+      "triedAt": "2026-10-09T16:54:03.880Z",
+      "note": "บันทึกผลเอง"
+    },
+    "ReturningWarrior3": {
+      "code": "ReturningWarrior3",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn",
+        "Garena VN · dienthoaivui",
+        "Garena VN · hoanghamobile",
+        "Garena VN · bluestacks"
+      ],
+      "triedAt": "2026-10-09T16:54:15.333Z",
+      "note": "บันทึกผลเอง"
+    },
+    "N4SQWgxYcHw7gUci3bJy": {
+      "code": "N4SQWgxYcHw7gUci3bJy",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T16:55:22.272Z",
+      "note": "บันทึกผลเอง"
+    },
+    "aCuQjtxY7vXGjxCTBnQU": {
+      "code": "aCuQjtxY7vXGjxCTBnQU",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T16:55:33.675Z",
+      "note": "บันทึกผลเอง"
+    },
+    "CmtMZaxYuX8m8wZUDqFM": {
+      "code": "CmtMZaxYuX8m8wZUDqFM",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T16:55:45.073Z",
+      "note": "บันทึกผลเอง"
+    },
+    "fvzeLrxYajwVviFSTSZ": {
+      "code": "fvzeLrxYajwVviFSTSZ",
+      "status": "ok",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn",
+        "Garena VN · dienthoaivui",
+        "Garena VN · hoanghamobile"
+      ],
+      "triedAt": "2026-10-09T16:54:35.837Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFID2501V621": {
+      "code": "GARENADFID2501V621",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:39:05.520Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFID2501L983": {
+      "code": "GARENADFID2501L983",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:39:12.210Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFID2501R572": {
+      "code": "GARENADFID2501R572",
+      "status": "gone",
+      "source": "Garena VN · gearvn",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · gearvn"
+      ],
+      "triedAt": "2026-10-09T14:39:26.075Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFNY2501E034": {
+      "code": "GARENADFNY2501E034",
+      "status": "gone",
+      "source": "Garena VN · dienthoaivui",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · dienthoaivui"
+      ],
+      "triedAt": "2026-10-09T14:41:32.754Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFNY2501H258": {
+      "code": "GARENADFNY2501H258",
+      "status": "gone",
+      "source": "Garena VN · dienthoaivui",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · dienthoaivui"
+      ],
+      "triedAt": "2026-10-09T14:41:39.631Z",
+      "note": "บันทึกผลเอง"
+    },
+    "C7S2X9J5D4B1V3Q": {
+      "code": "C7S2X9J5D4B1V3Q",
+      "status": "gone",
+      "source": "Garena VN · dienthoaivui",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · dienthoaivui"
+      ],
+      "triedAt": "2026-10-09T14:41:51.863Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFCBT2503Z6T9": {
+      "code": "GARENADFCBT2503Z6T9",
+      "status": "gone",
+      "source": "Garena VN · dienthoaivui",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · dienthoaivui",
+        "Garena VN · bluestacks"
+      ],
+      "triedAt": "2026-10-09T14:33:54.887Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFCBT2503X9D1": {
+      "code": "GARENADFCBT2503X9D1",
+      "status": "gone",
+      "source": "Garena VN · dienthoaivui",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · dienthoaivui",
+        "Garena VN · bluestacks"
+      ],
+      "triedAt": "2026-10-09T14:34:02.079Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFCBT2503C3F4": {
+      "code": "GARENADFCBT2503C3F4",
+      "status": "gone",
+      "source": "Garena VN · dienthoaivui",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · dienthoaivui",
+        "Garena VN · bluestacks"
+      ],
+      "triedAt": "2026-10-09T14:34:08.907Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFclover812": {
+      "code": "DFclover812",
+      "status": "ok",
+      "source": "Garena VN · hoanghamobile",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · hoanghamobile"
+      ],
+      "triedAt": "2026-10-09T16:55:56.530Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFEnergy428": {
+      "code": "DFEnergy428",
+      "status": "ok",
+      "source": "Garena VN · hoanghamobile",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · hoanghamobile",
+        "Global · timesaver.gg",
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T16:54:47.519Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFMagic057": {
+      "code": "DFMagic057",
+      "status": "ok",
+      "source": "Garena VN · hoanghamobile",
+      "addedAt": "2026-10-09T13:47:30.464Z",
+      "tries": 1,
+      "seen": [
+        "Garena VN · hoanghamobile"
+      ],
+      "triedAt": "2026-10-09T16:56:07.974Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFARMX46": {
+      "code": "DFARMX46",
+      "status": "ok",
+      "source": "Garena TW · ldshop",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Garena TW · ldshop"
+      ],
+      "triedAt": "2026-10-09T16:56:19.412Z",
+      "note": "บันทึกผลเอง"
+    },
+    "PTR-32": {
+      "code": "PTR-32",
+      "status": "invalid",
+      "source": "Global · timesaver.gg",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · timesaver.gg",
+        "Global · pockettactics",
+        "Global · lootbar"
+      ],
+      "triedAt": "2026-10-09T14:42:39.227Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DELTAFORCE2026": {
+      "code": "DELTAFORCE2026",
+      "status": "invalid",
+      "source": "Global · timesaver.gg",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · timesaver.gg",
+        "Global · pockettactics",
+        "Global · lootbar"
+      ],
+      "triedAt": "2026-10-09T14:42:46.099Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFHAWK": {
+      "code": "DFHAWK",
+      "status": "invalid",
+      "source": "Global · timesaver.gg",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · timesaver.gg",
+        "Global · pockettactics",
+        "Global · lootbar"
+      ],
+      "triedAt": "2026-10-09T14:42:53.041Z",
+      "note": "บันทึกผลเอง"
+    },
+    "GARENADFNY2501C158": {
+      "code": "GARENADFNY2501C158",
+      "status": "gone",
+      "source": "Global · timesaver.gg",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · timesaver.gg",
+        "Global · pockettactics",
+        "Global · mobilematters"
+      ],
+      "triedAt": "2026-10-09T14:43:04.921Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFWizard309": {
+      "code": "DFWizard309",
+      "status": "ok",
+      "source": "Global · timesaver.gg",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · timesaver.gg",
+        "Global · pockettactics",
+        "Global · lootbar"
+      ],
+      "triedAt": "2026-10-09T16:56:30.857Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFRocket825": {
+      "code": "DFRocket825",
+      "status": "ok",
+      "source": "Global · timesaver.gg",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · timesaver.gg",
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T16:56:42.289Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFHeroic668": {
+      "code": "DFHeroic668",
+      "status": "ok",
+      "source": "Global · pockettactics",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T16:56:54.963Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFFantasy742": {
+      "code": "DFFantasy742",
+      "status": "ok",
+      "source": "Global · pockettactics",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T16:57:08.064Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFFlash260": {
+      "code": "DFFlash260",
+      "status": "ok",
+      "source": "Global · pockettactics",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T16:57:20.979Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DF0922": {
+      "code": "DF0922",
+      "status": "invalid",
+      "source": "Global · pockettactics",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · pockettactics",
+        "Global · mobilematters"
+      ],
+      "triedAt": "2026-10-09T14:43:29.554Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DELTAFORCEFOCUSBF": {
+      "code": "DELTAFORCEFOCUSBF",
+      "status": "invalid",
+      "source": "Global · pockettactics",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · pockettactics"
+      ],
+      "triedAt": "2026-10-09T16:57:33.863Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFHERO": {
+      "code": "DFHERO",
+      "status": "invalid",
+      "source": "Global · lootbar",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · lootbar"
+      ],
+      "triedAt": "2026-10-09T16:57:46.866Z",
+      "note": "บันทึกผลเอง"
+    },
+    "DFROASTSMITHXMAS": {
+      "code": "DFROASTSMITHXMAS",
+      "status": "invalid",
+      "source": "Global · mobilematters",
+      "addedAt": "2026-10-09T13:47:30.465Z",
+      "tries": 1,
+      "seen": [
+        "Global · mobilematters"
+      ],
+      "triedAt": "2026-10-09T16:57:59.864Z",
+      "note": "บันทึกผลเอง"
+    }
+  }
+}

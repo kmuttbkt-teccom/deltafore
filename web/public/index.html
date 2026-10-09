@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DELTAFORE — ศูนย์บัญชาการ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scan"></div>
+
+<header class="top">
+  <div class="brand">
+    <svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="32" cy="32" r="17" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 4"/>
+      <path d="M32 1v14M32 49v14M1 32h14M49 32h14" stroke="currentColor" stroke-width="2.4"/>
+      <path d="M32 21l3.2 7.2 7.8.7-5.9 5.2 1.8 7.7L32 37.7 25.1 41.8l1.8-7.7-5.9-5.2 7.8-.7z" fill="currentColor"/>
+    </svg>
+    <div>
+      <h1><span>DELTA</span>FORE</h1>
+      <p id="sub">ศูนย์บัญชาการ · Garena Delta Force</p>
+    </div>
+  </div>
+  <div class="games" id="games"></div>
+  <div class="chips" id="chips"></div>
+</header>
+
+<div id="demo-bar" class="demo-bar" hidden>โหมดสาธิต — ใช้หน้าแลกโค้ดจำลองและรายการตัวอย่าง ไม่มีอะไรถูกส่งไปที่ Garena</div>
+
+<nav class="tabs" role="tablist">
+  <button class="tab on" data-tab="codes" role="tab"><i>01</i>แลกโค้ด</button>
+  <button class="tab" data-tab="events" role="tab"><i>02</i>งานแข่ง &amp; ถ่ายทอดสด</button>
+  <button class="tab" data-tab="guide" role="tab"><i>03</i>คู่มือสายแข่ง</button>
+</nav>
+
+<main>
+  <!-- 01 ─ codes -->
+  <section class="page on" id="page-codes">
+    <div class="panel manual" data-mode="manual">
+      <h2><b>แลกเอง — ทีละโค้ด</b><span id="mq-count"></span></h2>
+      <div class="helper" id="helper" data-redeem="web">
+        <div class="hp-head">
+          <b>ตัวช่วยกรอกอัตโนมัติ</b><span class="badge s-skip" id="hp-state">ยังไม่เริ่ม</span>
+          <div class="hp-opts">
+            <label class="hp-auto-opt">
+              <input type="checkbox" id="hp-auto" checked> <b>กดยืนยันอัตโนมัติ (ไม่ต้องกดเอง)</b>
+            </label>
+            <label>เว้นจังหวะระหว่างโค้ด
+              <select id="hp-delay"><option value="5">5 วินาที</option><option value="10" selected>10 วินาที</option><option value="20">20 วินาที</option><option value="30">30 วินาที</option><option value="60">1 นาที</option></select>
+            </label>
+          </div>
+        </div>
+        <ol class="steps" id="hp-steps">
+          <li data-step="1"><i>1</i><div><b>ติดตั้งบุ๊กมาร์ก "DF ช่วยกรอก"</b> <span class="once">ครั้งเดียวต่อเครื่อง</span>
+            <span><u>คอมพิวเตอร์:</u> ลากปุ่มนี้ไปวางบนแถบบุ๊กมาร์ก <a class="bm" id="hp-bm" href="#" draggable="true">DF ช่วยกรอก</a> (ไม่เห็นแถบ กด Ctrl+Shift+B)</span>
+            <span><u>มือถือ / ไอแพด / แท็บเล็ต:</u> <button class="btn mini" id="hp-copybm">คัดลอกโค้ดบุ๊กมาร์ก</button> แล้วทำตาม "วิธีติดตั้งบนมือถือ" ด้านล่าง</span></div></li>
+          <li data-step="2"><i>2</i><div><b>เปิดหน้าแลกโค้ดจากปุ่มนี้</b> <button class="btn gold mini" id="hp-open">เปิดหน้าแลกโค้ด ↗</button><span id="hp-s2">คิวทั้งหมดถูกส่งไปกับหน้านั้น · ยังไม่ได้เข้าสู่ระบบ Garena ก็เข้าด้วยตัวคุณเองในหน้านั้น</span></div></li>
+          <li data-step="3"><i>3</i><div><b>ในหน้าแลกโค้ด กดบุ๊กมาร์ก "DF ช่วยกรอก"</b><span id="hp-s3">แถบสีทองขึ้นบนหน้าแลกโค้ด = ตัวช่วยทำงานแล้ว</span></div></li>
+          <li data-step="4"><i>4</i><div><b>ระบบใส่โค้ดให้ → กดยืนยันอัตโนมัติ → อ่านผล จดให้ พัก แล้วใส่โค้ดถัดไป</b><span id="hp-live">ระบบทำงานวนจนหมดคิว ทุกขั้นตอนอัตโนมัติโดยไม่ต้องกดเอง</span></div></li>
+        </ol>
+        <details class="mobile-how">
+          <summary>ใช้บนมือถือ / ไอแพด / แท็บเล็ต</summary>
+          <p id="lan-box" class="lan"></p>
+          <textarea id="hp-bmtext" class="bmtext" readonly hidden rows="3" aria-label="โค้ดบุ๊กมาร์ก — แตะค้าง เลือกทั้งหมด แล้วคัดลอก"></textarea>
+          <p><b>iPhone / iPad (Safari)</b> — ① กดแชร์ → "เพิ่มบุ๊กมาร์ก" (หน้าไหนก็ได้) ตั้งชื่อ <code>DF ช่วยกรอก</code> ② เปิดรายการบุ๊กมาร์ก → "แก้ไข" → แตะบุ๊กมาร์กนั้น → ลบที่อยู่เดิม วางโค้ดที่คัดลอก → เสร็จ ③ ในหน้าแลกโค้ด เปิดรายการบุ๊กมาร์กแล้วแตะ "DF ช่วยกรอก" · บนไอแพดเปิด "แสดงแถบรายการโปรด" แล้วแตะจากแถบได้เลย</p>
+          <p><b>Android (Chrome)</b> — ① กด ⋮ → ☆ (บุ๊กมาร์กหน้าไหนก็ได้) → "แก้ไข": ชื่อ <code>dfhelp</code> · URL ลบของเดิมแล้ววางโค้ดที่คัดลอก ② ในหน้าแลกโค้ด แตะแถบที่อยู่ พิมพ์ <code>dfhelp</code> แล้ว <u>แตะรายการบุ๊กมาร์กที่ขึ้นมา</u> (อย่ากด Enter)</p>
+          <p>บนมือถือทุกอย่างจบในแท็บเดียว: ตัวช่วยถือคิวไว้เอง · เสร็จแล้วกด <b>"กลับศูนย์โค้ด"</b> บนแถบสีทอง ผลทั้งหมดจะถูกส่งกลับมาจดที่นี่</p>
+        </details>
+      </div>
+      <div id="mq-empty" class="empty" hidden>ไม่มีโค้ดในคิว — กด "อนุมัติ" ที่โค้ดในรายการด้านล่าง หรือวางโค้ดใหม่</div>
+      <div id="mq" hidden>
+        <div class="mq-top">
+          <div class="mq-code" id="mq-code"></div>
+          <div class="row wrap">
+            <button class="btn gold" id="mq-copy">คัดลอกโค้ด</button>
+            <a class="btn" id="mq-open" target="_blank" rel="noopener" data-redeem="web">เปิดหน้าแลกโค้ด ↗</a>
+          </div>
+        </div>
+        <p class="mq-meta" id="mq-meta"></p>
+        <p class="mq-ingame" id="mq-ingame" data-redeem="ingame"></p>
+        <p class="mq-how">ปุ่มด้านล่างนี้ <b>แค่จดผล ไม่ได้ส่งโค้ด</b> — ใช้เมื่อคุณวางโค้ดในหน้าแลกของ Garena เองแล้ว (ตัวช่วยกรอกจดผลให้เองอยู่แล้ว) · จดผิดกด "เข้าคิวใหม่" ที่แถวนั้นในรายการ</p>
+        <div class="results">
+          <button class="res r-ok" data-res="ok"><b>สำเร็จ</b><span>รับสำเร็จ! กรุณาตรวจสอบกล่องจดหมายในเกม</span></button>
+          <button class="res r-used" data-res="used"><b>เคยแลกแล้ว</b><span>ผู้ใช้นี้แลก CDKey แล้ว / ใช้สิทธิ์ครบแล้ว</span></button>
+          <button class="res r-exp" data-res="expired"><b>หมดอายุ</b><span>หมดเวลาแลก CDKey แล้ว</span></button>
+          <button class="res r-bad" data-res="invalid"><b>โค้ดไม่ถูกต้อง</b><span>CD Key ไม่ถูกต้อง กรุณากรอกใหม่</span></button>
+          <button class="res r-exp" data-res="gone"><b>ถูกแลกครบแล้ว</b><span>CDKey ถูกแลกครบแล้ว</span></button>
+          <button class="res r-skip" data-res="skip"><b>ข้าม</b><span>ยังไม่แลกโค้ดนี้</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h2><b>เพิ่มโค้ด</b><span>วางได้หลายโค้ด คั่นด้วยเว้นวรรคหรือขึ้นบรรทัดใหม่</span></h2>
+        <textarea id="code-input" rows="3" spellcheck="false" autocomplete="off" placeholder="GARENAXXXX"></textarea>
+        <div class="row">
+          <button class="btn gold" id="btn-add-run" data-mode="auto">เพิ่มแล้วแลกเลย</button>
+          <button class="btn" id="btn-add">เพิ่มเข้าคิว</button>
+          <span class="hint" id="add-msg"></span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2><b>สั่งการ</b><span id="login-line">ยังไม่ได้เช็กการเข้าสู่ระบบ</span></h2>
+        <div class="row wrap">
+          <button class="btn gold" data-job="run" data-mode="auto">แลกโค้ดที่รอ</button>
+          <button class="btn" data-job="scan">ตรวจหน้าเว็บรวมโค้ดทั่วโลก</button>
+          <button class="btn" data-job="login" data-mode="auto">เข้าสู่ระบบ Garena</button>
+          <button class="btn ghost" data-job="status" data-mode="auto">เช็กสถานะ</button>
+        </div>
+        <p class="mode-note" data-mode="manual">หน้าเข้าสู่ระบบของ Garena ปฏิเสธเบราว์เซอร์ที่เครื่องมือควบคุม ("Access is temporarily restricted") — เครื่องมือนี้จึงไม่เปิดหน้า Garena เอง: มันหาโค้ด จัดคิว และจำผล ส่วนการแลกคุณทำในเบราว์เซอร์ปกติ</p>
+        <label class="switch">
+          <input type="checkbox" id="auto-on">
+          <span class="knob"></span>
+          <span><span data-mode="auto">เฝ้าและแลกอัตโนมัติ</span><span data-mode="manual">ตรวจหาโค้ดใหม่อัตโนมัติ</span> ทุก
+            <select id="auto-every"><option value="30">30 นาที</option><option value="60">1 ชม.</option><option value="120" selected>2 ชม.</option><option value="360">6 ชม.</option><option value="720">12 ชม.</option></select>
+            <em id="auto-next"></em>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="panel console-panel">
+      <h2><b>บันทึกการทำงาน</b><span id="job-title">ยังไม่ได้สั่งงาน</span></h2>
+      <pre class="console" id="console">พร้อมรับคำสั่ง</pre>
+    </div>
+
+    <div class="panel">
+      <h2><b>รายการโค้ด</b><span id="count-line"></span></h2>
+      <div class="filters" id="filters"></div>
+      <div class="table-wrap"><table class="codes"><thead><tr><th>โค้ด</th><th>สถานะ</th><th>ผล / หมายเหตุ</th><th>เวลา</th><th>ที่มา</th><th></th></tr></thead><tbody id="code-rows"></tbody></table></div>
+      <p class="empty" id="code-empty" hidden>ยังไม่มีโค้ดในรายการ — วางโค้ดในช่องด้านบน</p>
+    </div>
+
+    <div class="panel slim">
+      <h2><b>การตั้งค่าที่ใช้อยู่</b><span>แก้ได้ในไฟล์ config.json</span></h2>
+      <div class="kv" id="cfg"></div>
+    </div>
+  </section>
+
+  <!-- 02 ─ events -->
+  <section class="page" id="page-events">
+    <div class="panel">
+      <h2><b>ช่องถ่ายทอดสดและข่าว</b><span>ทางการ</span></h2>
+      <div class="channels" data-only="rov">
+        <a class="ch" href="https://www.facebook.com/ROVTH" target="_blank" rel="noopener"><b>Facebook</b><span>Garena RoV Thailand · ประกาศ โค้ดแจก กิจกรรม</span></a>
+        <a class="ch" href="https://www.youtube.com/results?search_query=Garena+RoV+Thailand+RoV+Pro+League+live" target="_blank" rel="noopener"><b>YouTube</b><span>Garena RoV Thailand · ไลฟ์ RoV Pro League + ย้อนหลัง</span></a>
+        <a class="ch" href="https://watchout.gg/competition/rov-pro-league-winter-2026" target="_blank" rel="noopener"><b>ตารางแข่ง RPL</b><span>watchout.gg · ตาราง ผลสด ตารางคะแนน</span></a>
+        <a class="ch" href="https://liquipedia.net/honorofkings/RoV_Pro_League" target="_blank" rel="noopener"><b>Liquipedia</b><span>RoV Pro League · สายแข่ง รายชื่อทีม</span></a>
+        <a class="ch" href="https://liquipedia.net/honorofkings/Arena_of_Valor" target="_blank" rel="noopener"><b>Liquipedia AoV</b><span>APL · AIC · ลีกเวียดนาม/ไต้หวัน</span></a>
+        <a class="ch" href="https://escharts.com/matches?game=aov" target="_blank" rel="noopener"><b>Esports Charts</b><span>แมตช์ Arena of Valor ทั้งหมด</span></a>
+      </div>
+      <div class="channels" data-only="deltaforce">
+        <a class="ch" href="https://www.facebook.com/GarenaDeltaForceTH/" target="_blank" rel="noopener"><b>Facebook</b><span>Garena Delta Force TH · ประกาศ โค้ดแจก ไลฟ์แข่ง</span></a>
+        <a class="ch" href="https://www.youtube.com/@GarenaDeltaForceTH" target="_blank" rel="noopener"><b>YouTube</b><span>@GarenaDeltaForceTH · ไลฟ์ + คลิปย้อนหลัง</span></a>
+        <a class="ch" href="https://www.tiktok.com/@garenadeltaforceth" target="_blank" rel="noopener"><b>TikTok</b><span>@garenadeltaforceth · ไลฟ์ ไฮไลต์</span></a>
+        <a class="ch" href="https://discord.com/invite/SA9R5N9Q4c" target="_blank" rel="noopener"><b>Discord</b><span>หาทีม · ประกาศรับสมัครแข่ง</span></a>
+        <a class="ch" href="https://www.youtube.com/@DeltaForceGame/live" target="_blank" rel="noopener"><b>YouTube โลก</b><span>@DeltaForceGame · RISE Series, Invitational</span></a>
+        <a class="ch" href="https://www.twitch.tv/deltaforcegameofficial" target="_blank" rel="noopener"><b>Twitch</b><span>deltaforcegameofficial</span></a>
+        <a class="ch" href="https://liquipedia.net/deltaforce/Main_Page" target="_blank" rel="noopener"><b>Liquipedia</b><span>สายแข่ง ผล รายชื่อทีม ทุกรายการ</span></a>
+        <a class="ch" href="https://deltaforce.garena.com/th/" target="_blank" rel="noopener"><b>เว็บไซต์เกม</b><span>โน้ตแพตช์ ข่าวอีสปอร์ต</span></a>
+      </div>
+    </div>
+    <div class="panel">
+      <h2><b>กำลังแข่ง และที่กำลังจะมา</b><span id="ev-asof"></span></h2>
+      <div class="events" id="ev-live"></div>
+    </div>
+    <div class="panel">
+      <h2><b>จบแล้ว ปี 2026</b><span>ดูย้อนหลังเพื่อเรียนเมต้า</span></h2>
+      <div class="events past" id="ev-past"></div>
+    </div>
+    <p class="foot-note">แก้/เพิ่มรายการได้ในไฟล์ events.json · รายการที่มี ⚠ คือข้อมูลที่ยังยืนยันไม่ครบ</p>
+  </section>
+
+  <!-- 03 ─ guide -->
+  <section class="page" id="page-guide">
+    <div class="guide-wrap">
+      <aside class="toc" id="toc"></aside>
+      <article class="panel guide" id="guide">กำลังโหลดคู่มือ…</article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">เครื่องมือส่วนตัว ทำงานในเครื่องนี้เท่านั้น · ไม่ใช่เว็บไซต์ทางการของ Garena หรือ Delta Force</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

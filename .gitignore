@@ -1,0 +1,8 @@
+# Local browser profile, temporary session logs and keys stay on this machine
+data/browser-profile/
+data/redeem.log
+data/web-key
+.claude/
+node_modules/
+.DS_Store
+Thumbs.db

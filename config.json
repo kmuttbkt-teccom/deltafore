@@ -1,0 +1,99 @@
+{
+  "mode": "manual",
+  "portal": "https://redeem.df.garena.sg/th/cdkgarena.html",
+  "browser": "auto",
+  "headless": false,
+  "delayBetweenCodesSec": [
+    8,
+    15
+  ],
+  "maxCodesPerRun": 10,
+  "maxInvalidPerDay": 5,
+  "maxTriesPerCode": 3,
+  "loginWaitMin": 10,
+  "keepLoginDays": 30,
+  "rejectOptionalCookies": true,
+  "watchEveryMin": 120,
+  "sources": [
+    {
+      "name": "Garena SEA · joytify",
+      "url": "https://www.joytify.com/blog/en-my/fps-delta-force-garena-redeem-codes/",
+      "auto": false
+    },
+    {
+      "name": "Garena VN · gearvn",
+      "url": "https://gearvn.com/blogs/game-hay/tong-hop-code-game-delta-force",
+      "auto": false
+    },
+    {
+      "name": "Garena VN · dienthoaivui",
+      "url": "https://dienthoaivui.com.vn/tin-tuc/code-delta-force",
+      "auto": false
+    },
+    {
+      "name": "Garena VN · hoanghamobile",
+      "url": "https://hoanghamobile.com/tin-tuc/code-delta-force/",
+      "auto": false
+    },
+    {
+      "name": "Garena VN · bluestacks",
+      "url": "https://www.bluestacks.com/vi/blog/redeem-codes/delta-force-redeem-codes-vi.html",
+      "auto": false
+    },
+    {
+      "name": "Garena TW · ldshop",
+      "url": "https://www.ldshop.gg/tw/blog/delta-force/delta-force-redeem-code-zh.html",
+      "auto": false
+    },
+    {
+      "name": "Global · timesaver.gg",
+      "url": "https://timesaver.gg/blog/delta-force-codes",
+      "auto": false
+    },
+    {
+      "name": "Global · pockettactics",
+      "url": "https://www.pockettactics.com/delta-force-codes",
+      "auto": false
+    },
+    {
+      "name": "Global · lootbar",
+      "url": "https://www.lootbar.com/blog/en/delta-force-redeem-codes.html",
+      "auto": false
+    },
+    {
+      "name": "Global · mobilematters",
+      "url": "https://mobilematters.gg/guides/gaming/delta-force-redeem-codes",
+      "auto": false
+    }
+  ],
+  "games": {
+    "rov": {
+      "name": "RoV",
+      "redeem": "ingame",
+      "words": true,
+      "how": "เปิดเกม RoV → หน้ากิจกรรม/ประกาศ → ช่อง \"กรอกโค้ด\" (CDKey) → วางโค้ด → ยืนยัน · ของเข้ากล่องจดหมายในเกม",
+      "sources": [
+        {
+          "name": "RoV TH · sanook (ล่าสุด)",
+          "url": "https://www.sanook.com/game/1186610/",
+          "auto": false
+        },
+        {
+          "name": "RoV TH · sanook",
+          "url": "https://www.sanook.com/game/1186434/",
+          "auto": false
+        },
+        {
+          "name": "RoV TH · memuplay",
+          "url": "https://www.memuplay.com/blog/th/rov-codes.html",
+          "auto": false
+        },
+        {
+          "name": "RoV TH · bluestacks",
+          "url": "https://www.bluestacks.com/th/blog/redeem-codes/arena-of-valor-redeem-codes-th.html",
+          "auto": false
+        }
+      ]
+    }
+  }
+}
