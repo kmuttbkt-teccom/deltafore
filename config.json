@@ -95,5 +95,32 @@
         }
       ]
     }
-  }
+  },
+  "buildSources": [
+    {
+      "name": "codmunity",
+      "url": "https://codmunity.gg/delta-force"
+    },
+    {
+      "name": "deltaforcetools",
+      "url": "https://deltaforcetools.gg/weapon-builds"
+    },
+    {
+      "name": "deltaforcedb",
+      "url": "https://deltaforcedb.com/"
+    },
+    {
+      "name": "skycoach",
+      "url": "https://skycoach.gg/blog/delta-force-hawk-ops/articles/df-best-loadouts"
+    },
+    {
+      "name": "buffbuff",
+      "url": "https://buffbuff.com/blog/delta-force-gun-code"
+    },
+    {
+      "name": "steam (ธ.ค. 2024)",
+      "url": "https://steamcommunity.com/app/2507950/discussions/0/604141990686365729",
+      "enabled": false
+    }
+  ]
 }

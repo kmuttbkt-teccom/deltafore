@@ -585,8 +585,15 @@ document.addEventListener('click', async ev => {
   if (t.id === 'hp-open') return openPortal();
   if (t.id === 'hp-copybm') {
     const ok = bookmark && await copyText(bookmark);
-    t.textContent = ok ? 'คัดลอกแล้ว ✓ — วางในช่อง URL ของบุ๊กมาร์ก' : 'คัดลอกไม่ได้ — ลองอีกครั้ง';
+    t.textContent = ok ? 'คัดลอกแล้ว ✓' : 'คัดลอกเองจากช่องด้านล่าง ↓';
     setTimeout(() => { t.textContent = 'คัดลอกโค้ดบุ๊กมาร์ก'; }, 3500);
+    if (!ok && bookmark) {                         // the browser would not copy for us: the code itself, to copy by hand
+      const box = $('#hp-bmtext');
+      $('.mobile-how').open = true;
+      box.hidden = false; box.value = bookmark;
+      box.focus(); box.select(); box.setSelectionRange(0, bookmark.length);
+      box.scrollIntoView({ block: 'center' });
+    }
     return;
   }
   if (t.dataset.copy) { const ok = await copyText(t.dataset.copy); t.textContent = ok ? 'คัดลอกแล้ว ✓' : 'คัดลอกไม่ได้'; setTimeout(() => { t.textContent = 'คัดลอก'; }, 2000); return; }

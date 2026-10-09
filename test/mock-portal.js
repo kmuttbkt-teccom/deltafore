@@ -71,6 +71,13 @@ const CODES = `<!doctype html><meta charset="utf-8"><h1>Delta Force Codes OCTOBE
 <p>Use code: HAWKOPS77 before 2026-10-31. โค้ด DELTA4EVER ใช้ได้ถึงสิ้นเดือน. Updated 20261009 for ANDROID14.</p>
 <table><tr><td>XMAS2025GIFT</td><td>expired</td></tr></table>`;
 
+// A page of weapon builds: one in the text, one in a table, one only in the page's data.
+const BUILDS = `<!doctype html><meta charset="utf-8"><h1>Best loadouts</h1>
+<p>Meta Build Assault CI-19 Assault Rifle-Warfare-6HLOANO09MFFCME3G7LT2 (copy it)</p>
+<table><tr><td>SR-3M Compact Assault Rifle-Warfare-6HLOBK009MFFCME3G7LT2</td></tr></table>
+<script>window.__DATA = {"builds":[{"share":"AS Val Assault Rifle-Operations-6K5TDKO073PJM0S450OEV"},{"share":"CI-19 Assault Rifle-Warfare-6HLOANO09MFFCME3G7LT2"}]};</script>
+<p>K416 Assault Rifle-Warfare-TOOSHORT and Warfare-6HLOANO09MFFCME3G7LT2 alone are not builds.</p>`;
+
 function start(port) {
   const hits = [];
   const server = http.createServer((req, res) => {
@@ -79,6 +86,7 @@ function start(port) {
     if (url.pathname.endsWith('/cdkgarena.html')) return send(200, 'text/html', PAGE);
     if (url.pathname === '/sso') return send(200, 'text/html', SSO);
     if (url.pathname === '/codes.html') return send(200, 'text/html', CODES);
+    if (url.pathname === '/builds.html') return send(200, 'text/html', BUILDS);
     if (url.pathname === '/blocked.html') return send(403, 'text/plain', 'no');
     if (url.pathname.endsWith('/CdkV2/RedeemCDKey') && req.method === 'POST') {
       const cdkey = url.searchParams.get('cdkey');

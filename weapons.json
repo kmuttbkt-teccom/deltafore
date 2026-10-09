@@ -1,0 +1,204 @@
+{
+  "_": "Game weapon (the name before its class) → the real firearm it is modelled on. 'wiki' is a Wikipedia article (its free-licensed lead image is shown); 'file' names a file of Wikimedia Commons instead, for articles without one. So the picture is the REAL gun, not the in-game model. 'real' is the note under it. A weapon without an entry gets a silhouette of its class. Edit freely; then: node redeem builds images",
+  ".357": {
+    "wiki": "Colt Python",
+    "real": "รีวอลเวอร์ .357 (ภาพตัวอย่าง: Colt Python)"
+  },
+  "AK-12": {
+    "wiki": "AK-12",
+    "real": "AK-12",
+    "file": "AK-12.png"
+  },
+  "AKM": {
+    "wiki": "AKM",
+    "real": "AKM"
+  },
+  "AKS-74": {
+    "wiki": "AK-74",
+    "real": "AKS-74 (ตระกูล AK-74)"
+  },
+  "AS Val": {
+    "wiki": "AS Val",
+    "real": "AS Val"
+  },
+  "ASh-12": {
+    "wiki": "ASh-12.7",
+    "real": "ASh-12.7"
+  },
+  "AUG": {
+    "wiki": "Steyr AUG",
+    "real": "Steyr AUG"
+  },
+  "AWM": {
+    "wiki": "Accuracy International AWM",
+    "real": "Accuracy International AWM"
+  },
+  "Bizon": {
+    "wiki": "PP-19 Bizon",
+    "real": "PP-19 Bizon"
+  },
+  "CAR-15": {
+    "wiki": "CAR-15",
+    "real": "CAR-15"
+  },
+  "Double-Barrel": {
+    "wiki": "Double-barreled shotgun",
+    "real": "ลูกซองแฝด"
+  },
+  "G3": {
+    "wiki": "Heckler & Koch G3",
+    "real": "H&K G3"
+  },
+  "K416": {
+    "wiki": "Heckler & Koch HK416",
+    "real": "H&K HK416"
+  },
+  "K437": {
+    "wiki": "Heckler & Koch HK437",
+    "real": "H&K HK437"
+  },
+  "M1014": {
+    "wiki": "Benelli M4",
+    "real": "Benelli M4 (M1014)",
+    "file": "Benelli m4 2.jpg"
+  },
+  "M14": {
+    "wiki": "M14 rifle",
+    "real": "M14"
+  },
+  "M16A4": {
+    "wiki": "M16 rifle",
+    "real": "M16A4 (ตระกูล M16)"
+  },
+  "M249": {
+    "wiki": "M249 Squad Automatic Weapon",
+    "real": "M249"
+  },
+  "M250": {
+    "wiki": "M250 light machine gun",
+    "real": "SIG M250 (XM250)"
+  },
+  "M4A1": {
+    "wiki": "M4 carbine",
+    "real": "M4A1"
+  },
+  "M7": {
+    "wiki": "M7 rifle",
+    "real": "SIG M7 (XM7)"
+  },
+  "M700": {
+    "wiki": "Remington Model 700",
+    "real": "Remington 700"
+  },
+  "M870": {
+    "wiki": "Remington Model 870",
+    "real": "Remington 870",
+    "file": "Remington 870 Police (55284788188).jpg"
+  },
+  "MK47": {
+    "wiki": "CMMG Mk47 Mutant",
+    "real": "CMMG Mk47 Mutant",
+    "file": "CMMG Mk47 Mutant.jpg"
+  },
+  "MP5": {
+    "wiki": "Heckler & Koch MP5",
+    "real": "H&K MP5"
+  },
+  "MP7": {
+    "wiki": "Heckler & Koch MP7",
+    "real": "H&K MP7"
+  },
+  "Mini-14": {
+    "wiki": "Ruger Mini-14",
+    "real": "Ruger Mini-14"
+  },
+  "P90": {
+    "wiki": "FN P90",
+    "real": "FN P90"
+  },
+  "PKM": {
+    "wiki": "PK machine gun",
+    "real": "PKM"
+  },
+  "PSG-1": {
+    "wiki": "Heckler & Koch PSG1",
+    "real": "H&K PSG1",
+    "file": "H&K PSG-1 Sniper Rifle.jpg"
+  },
+  "PTR-32": {
+    "wiki": "PTR 91",
+    "real": "PTR-32 (ภาพ: PTR 91 รุ่นพี่น้อง)"
+  },
+  "QBZ95-1": {
+    "wiki": "QBZ-95",
+    "real": "QBZ-95-1"
+  },
+  "QCQ171": {
+    "wiki": "QCQ-171",
+    "real": "QCQ-171"
+  },
+  "QJB201": {
+    "wiki": "QJB-201",
+    "real": "QJB-201"
+  },
+  "R93": {
+    "wiki": "Blaser R93 Tactical",
+    "real": "Blaser R93 Tactical"
+  },
+  "S12K": {
+    "wiki": "Saiga-12",
+    "real": "Saiga-12K"
+  },
+  "SCAR-H": {
+    "wiki": "FN SCAR",
+    "real": "FN SCAR-H"
+  },
+  "SG552": {
+    "wiki": "SIG SG 550",
+    "real": "SIG SG 552 (ตระกูล SG 550)"
+  },
+  "SKS": {
+    "wiki": "SKS",
+    "real": "SKS"
+  },
+  "SMG-45": {
+    "wiki": "Heckler & Koch UMP",
+    "real": "H&K UMP45"
+  },
+  "SR-25": {
+    "wiki": "SR-25",
+    "real": "SR-25"
+  },
+  "SR-3M": {
+    "wiki": "SR-3 Vikhr",
+    "real": "SR-3M Vikhr"
+  },
+  "SR9": {
+    "wiki": "Heckler & Koch SR9",
+    "real": "H&K SR9"
+  },
+  "SV-98": {
+    "wiki": "SV-98",
+    "real": "SV-98"
+  },
+  "SVD": {
+    "wiki": "SVD (rifle)",
+    "real": "SVD Dragunov"
+  },
+  "UZI": {
+    "wiki": "Uzi",
+    "real": "Uzi"
+  },
+  "VSS": {
+    "wiki": "VSS Vintorez",
+    "real": "VSS Vintorez"
+  },
+  "Vector": {
+    "wiki": "KRISS Vector",
+    "real": "KRISS Vector"
+  },
+  "Vityaz": {
+    "wiki": "PP-19-01 Vityaz",
+    "real": "PP-19-01 Vityaz"
+  }
+}

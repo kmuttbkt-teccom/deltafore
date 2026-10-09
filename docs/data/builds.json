@@ -1,0 +1,1095 @@
+{
+  "builds": {
+    "6HLOANO09MFFCME3G7LT2": {
+      "code": "6HLOANO09MFFCME3G7LT2",
+      "name": "CI-19 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "CI-19 Assault Rifle-Warfare-6HLOANO09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.293Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBES09MFFCME3G7LT2": {
+      "code": "6HLOBES09MFFCME3G7LT2",
+      "name": "M4A1 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "M4A1 Assault Rifle-Warfare-6HLOBES09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBLC09MFFCME3G7LT2": {
+      "code": "6HLOBLC09MFFCME3G7LT2",
+      "name": "SMG-45 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "SMG-45 Submachine Gun-Warfare-6HLOBLC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "deltaforcedb",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBK009MFFCME3G7LT2": {
+      "code": "6HLOBK009MFFCME3G7LT2",
+      "name": "SR-3M Compact Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "SR-3M Compact Assault Rifle-Warfare-6HLOBK009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "deltaforcedb",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCUK09MFFCME3G7LT2": {
+      "code": "6HLOCUK09MFFCME3G7LT2",
+      "name": "AWM Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "AWM Sniper Rifle-Warfare-6HLOCUK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCT009MFFCME3G7LT2": {
+      "code": "6HLOCT009MFFCME3G7LT2",
+      "name": "AWM Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "AWM Sniper Rifle-Warfare-6HLOCT009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOD7809MFFCME3G7LT2": {
+      "code": "6HLOD7809MFFCME3G7LT2",
+      "name": "R93 Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "R93 Sniper Rifle-Warfare-6HLOD7809MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6ID37M409MFFCME3G7LT2": {
+      "code": "6ID37M409MFFCME3G7LT2",
+      "name": "MK4 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "MK4 Submachine Gun-Warfare-6ID37M409MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB3G09MFFCME3G7LT2": {
+      "code": "6HLOB3G09MFFCME3G7LT2",
+      "name": "SG552 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "SG552 Assault Rifle-Warfare-6HLOB3G09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBDK09MFFCME3G7LT2": {
+      "code": "6HLOBDK09MFFCME3G7LT2",
+      "name": "AKM Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AKM Assault Rifle-Warfare-6HLOBDK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HKHRB409MFFCME3G7LT2": {
+      "code": "6HKHRB409MFFCME3G7LT2",
+      "name": "Bizon Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "Bizon Submachine Gun-Warfare-6HKHRB409MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOD8G09MFFCME3G7LT2": {
+      "code": "6HLOD8G09MFFCME3G7LT2",
+      "name": "SV-98 Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "SV-98 Sniper Rifle-Warfare-6HLOD8G09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6J0LKQC09MFFCME3G7LT2": {
+      "code": "6J0LKQC09MFFCME3G7LT2",
+      "name": "LT Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "LT Assault Rifle-Warfare-6J0LKQC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOAM809MFFCME3G7LT2": {
+      "code": "6HLOAM809MFFCME3G7LT2",
+      "name": "K437 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "K437 Assault Rifle-Warfare-6HLOAM809MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBGC09MFFCME3G7LT2": {
+      "code": "6HLOBGC09MFFCME3G7LT2",
+      "name": "QCQ171 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "QCQ171 Submachine Gun-Warfare-6HLOBGC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOC9809MFFCME3G7LT2": {
+      "code": "6HLOC9809MFFCME3G7LT2",
+      "name": "M250 General Machine Gun",
+      "mode": "Warfare",
+      "cls": "LMG",
+      "full": "M250 General Machine Gun-Warfare-6HLOC9809MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBCG09MFFCME3G7LT2": {
+      "code": "6HLOBCG09MFFCME3G7LT2",
+      "name": "QBZ95-1 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "QBZ95-1 Assault Rifle-Warfare-6HLOBCG09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBB409MFFCME3G7LT2": {
+      "code": "6HLOBB409MFFCME3G7LT2",
+      "name": "AKS-74 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AKS-74 Assault Rifle-Warfare-6HLOBB409MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "deltaforcedb"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBQC09MFFCME3G7LT2": {
+      "code": "6HLOBQC09MFFCME3G7LT2",
+      "name": "Vector Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "Vector Submachine Gun-Warfare-6HLOBQC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBOS09MFFCME3G7LT2": {
+      "code": "6HLOBOS09MFFCME3G7LT2",
+      "name": "Vector Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "Vector Submachine Gun-Warfare-6HLOBOS09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB4K09MFFCME3G7LT2": {
+      "code": "6HLOB4K09MFFCME3G7LT2",
+      "name": "M7 Battle Rifle",
+      "mode": "Warfare",
+      "cls": "BR",
+      "full": "M7 Battle Rifle-Warfare-6HLOB4K09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBSS09MFFCME3G7LT2": {
+      "code": "6HLOBSS09MFFCME3G7LT2",
+      "name": "P90 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "P90 Submachine Gun-Warfare-6HLOBSS09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB6009MFFCME3G7LT2": {
+      "code": "6HLOB6009MFFCME3G7LT2",
+      "name": "AUG Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AUG Assault Rifle-Warfare-6HLOB6009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOC2G09MFFCME3G7LT2": {
+      "code": "6HLOC2G09MFFCME3G7LT2",
+      "name": "S12K Shotgun",
+      "mode": "Warfare",
+      "cls": "SG",
+      "full": "S12K Shotgun-Warfare-6HLOC2G09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOAJG09MFFCME3G7LT2": {
+      "code": "6HLOAJG09MFFCME3G7LT2",
+      "name": "KC17 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "KC17 Assault Rifle-Warfare-6HLOAJG09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBU009MFFCME3G7LT2": {
+      "code": "6HLOBU009MFFCME3G7LT2",
+      "name": "MP5 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "MP5 Submachine Gun-Warfare-6HLOBU009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCBS09MFFCME3G7LT2": {
+      "code": "6HLOCBS09MFFCME3G7LT2",
+      "name": "PKM General Machine Gun",
+      "mode": "Warfare",
+      "cls": "LMG",
+      "full": "PKM General Machine Gun-Warfare-6HLOCBS09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCD009MFFCME3G7LT2": {
+      "code": "6HLOCD009MFFCME3G7LT2",
+      "name": "PKM General Machine Gun",
+      "mode": "Warfare",
+      "cls": "LMG",
+      "full": "PKM General Machine Gun-Warfare-6HLOCD009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOC5C09MFFCME3G7LT2": {
+      "code": "6HLOC5C09MFFCME3G7LT2",
+      "name": "QJB201 Light Machine Gun",
+      "mode": "Warfare",
+      "cls": "LMG",
+      "full": "QJB201 Light Machine Gun-Warfare-6HLOC5C09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCFK09MFFCME3G7LT2": {
+      "code": "6HLOCFK09MFFCME3G7LT2",
+      "name": "PSG-1 Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "PSG-1 Marksman Rifle-Warfare-6HLOCFK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOC1409MFFCME3G7LT2": {
+      "code": "6HLOC1409MFFCME3G7LT2",
+      "name": "M870 Shotgun",
+      "mode": "Warfare",
+      "cls": "SG",
+      "full": "M870 Shotgun-Warfare-6HLOC1409MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCR009MFFCME3G7LT2": {
+      "code": "6HLOCR009MFFCME3G7LT2",
+      "name": "Mini-14 Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "Mini-14 Marksman Rifle-Warfare-6HLOCR009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HKHR6C09MFFCME3G7LT2": {
+      "code": "6HKHR6C09MFFCME3G7LT2",
+      "name": "CAR-15 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "CAR-15 Assault Rifle-Warfare-6HKHR6C09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBVK09MFFCME3G7LT2": {
+      "code": "6HLOBVK09MFFCME3G7LT2",
+      "name": "Double-Barrel Shotgun",
+      "mode": "Warfare",
+      "cls": "SG",
+      "full": "Double-Barrel Shotgun-Warfare-6HLOBVK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCKC09MFFCME3G7LT2": {
+      "code": "6HLOCKC09MFFCME3G7LT2",
+      "name": "SR-25 Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "SR-25 Marksman Rifle-Warfare-6HLOCKC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "deltaforcedb"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOAVC09MFFCME3G7LT2": {
+      "code": "6HLOAVC09MFFCME3G7LT2",
+      "name": "G3 Battle Rifle",
+      "mode": "Warfare",
+      "cls": "BR",
+      "full": "G3 Battle Rifle-Warfare-6HLOAVC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOD6009MFFCME3G7LT2": {
+      "code": "6HLOD6009MFFCME3G7LT2",
+      "name": "M700 Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "M700 Sniper Rifle-Warfare-6HLOD6009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCAK09MFFCME3G7LT2": {
+      "code": "6HLOCAK09MFFCME3G7LT2",
+      "name": "M249 Light Machine Gun",
+      "mode": "Warfare",
+      "cls": "LMG",
+      "full": "M249 Light Machine Gun-Warfare-6HLOCAK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCPC09MFFCME3G7LT2": {
+      "code": "6HLOCPC09MFFCME3G7LT2",
+      "name": "VSS Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "VSS Marksman Rifle-Warfare-6HLOCPC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB0K09MFFCME3G7LT2": {
+      "code": "6HLOB0K09MFFCME3G7LT2",
+      "name": "SCAR-H Battle Rifle",
+      "mode": "Warfare",
+      "cls": "BR",
+      "full": "SCAR-H Battle Rifle-Warfare-6HLOB0K09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBIO09MFFCME3G7LT2": {
+      "code": "6HLOBIO09MFFCME3G7LT2",
+      "name": "Vityaz Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "Vityaz Submachine Gun-Warfare-6HLOBIO09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "deltaforcedb"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCN009MFFCME3G7LT2": {
+      "code": "6HLOCN009MFFCME3G7LT2",
+      "name": "M14 Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "M14 Marksman Rifle-Warfare-6HLOCN009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCOC09MFFCME3G7LT2": {
+      "code": "6HLOCOC09MFFCME3G7LT2",
+      "name": "SVD Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "SVD Sniper Rifle-Warfare-6HLOCOC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB9O09MFFCME3G7LT2": {
+      "code": "6HLOB9O09MFFCME3G7LT2",
+      "name": "ASh-12 Battle Rifle",
+      "mode": "Warfare",
+      "cls": "BR",
+      "full": "ASh-12 Battle Rifle-Warfare-6HLOB9O09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOC3O09MFFCME3G7LT2": {
+      "code": "6HLOC3O09MFFCME3G7LT2",
+      "name": "M1014 Shotgun",
+      "mode": "Warfare",
+      "cls": "SG",
+      "full": "M1014 Shotgun-Warfare-6HLOC3O09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HKHVKC09MFFCME3G7LT2": {
+      "code": "6HKHVKC09MFFCME3G7LT2",
+      "name": "MK47 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "MK47 Assault Rifle-Warfare-6HKHVKC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCLG09MFFCME3G7LT2": {
+      "code": "6HLOCLG09MFFCME3G7LT2",
+      "name": "SKS Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "SKS Marksman Rifle-Warfare-6HLOCLG09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity",
+        "deltaforcedb"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB8G09MFFCME3G7LT2": {
+      "code": "6HLOB8G09MFFCME3G7LT2",
+      "name": "K416 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "K416 Assault Rifle-Warfare-6HLOB8G09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBHK09MFFCME3G7LT2": {
+      "code": "6HLOBHK09MFFCME3G7LT2",
+      "name": "MP7 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "MP7 Submachine Gun-Warfare-6HLOBHK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOCH009MFFCME3G7LT2": {
+      "code": "6HLOCH009MFFCME3G7LT2",
+      "name": "SR9 Marksman Rifle",
+      "mode": "Warfare",
+      "cls": "DMR",
+      "full": "SR9 Marksman Rifle-Warfare-6HLOCH009MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB1O09MFFCME3G7LT2": {
+      "code": "6HLOB1O09MFFCME3G7LT2",
+      "name": "AK-12 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AK-12 Assault Rifle-Warfare-6HLOB1O09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOAQC09MFFCME3G7LT2": {
+      "code": "6HLOAQC09MFFCME3G7LT2",
+      "name": "AS Val Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AS Val Assault Rifle-Warfare-6HLOAQC09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOBNK09MFFCME3G7LT2": {
+      "code": "6HLOBNK09MFFCME3G7LT2",
+      "name": "UZI Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "UZI Submachine Gun-Warfare-6HLOBNK09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLODI809MFFCME3G7LT2": {
+      "code": "6HLODI809MFFCME3G7LT2",
+      "name": ".357 Revolver",
+      "mode": "Warfare",
+      "cls": "HG",
+      "full": ".357 Revolver-Warfare-6HLODI809MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOATS09MFFCME3G7LT2": {
+      "code": "6HLOATS09MFFCME3G7LT2",
+      "name": "PTR-32 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "PTR-32 Assault Rifle-Warfare-6HLOATS09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLOB7C09MFFCME3G7LT2": {
+      "code": "6HLOB7C09MFFCME3G7LT2",
+      "name": "M16A4 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "M16A4 Assault Rifle-Warfare-6HLOB7C09MFFCME3G7LT2",
+      "source": "codmunity",
+      "seen": [
+        "codmunity"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HNEL2G0EIPHRNLI0J8JI": {
+      "code": "6HNEL2G0EIPHRNLI0J8JI",
+      "name": "CI-19 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "CI-19 Assault Rifle-Warfare-6HNEL2G0EIPHRNLI0J8JI",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6I04C2G0FSH6GRF76DG60": {
+      "code": "6I04C2G0FSH6GRF76DG60",
+      "name": "AUG Assault Rifle",
+      "mode": "Operations",
+      "cls": "AR",
+      "full": "AUG Assault Rifle-Operations-6I04C2G0FSH6GRF76DG60",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HE0B9808M3TET99CEP38": {
+      "code": "6HE0B9808M3TET99CEP38",
+      "name": "AKM Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AKM Assault Rifle-Warfare-6HE0B9808M3TET99CEP38",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HS36340FSH6GRF76DG60": {
+      "code": "6HS36340FSH6GRF76DG60",
+      "name": "K416 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "K416 Assault Rifle-Warfare-6HS36340FSH6GRF76DG60",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HLPMQ80EIPHRNLI0J8JI": {
+      "code": "6HLPMQ80EIPHRNLI0J8JI",
+      "name": "AS Val Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AS Val Assault Rifle-Warfare-6HLPMQ80EIPHRNLI0J8JI",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HSGLAG0FSH6GRF76DG60": {
+      "code": "6HSGLAG0FSH6GRF76DG60",
+      "name": "AK-12 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AK-12 Assault Rifle-Warfare-6HSGLAG0FSH6GRF76DG60",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6EO15NC057RAU0E7AE9HI": {
+      "code": "6EO15NC057RAU0E7AE9HI",
+      "name": "SMG-45 Submachine Gun",
+      "mode": "Warfare",
+      "cls": "SMG",
+      "full": "SMG-45 Submachine Gun-Warfare-6EO15NC057RAU0E7AE9HI",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6I6KK3S00RR8JACO27GDL": {
+      "code": "6I6KK3S00RR8JACO27GDL",
+      "name": "AKS-74 Assault Rifle",
+      "mode": "Warfare",
+      "cls": "AR",
+      "full": "AKS-74 Assault Rifle-Warfare-6I6KK3S00RR8JACO27GDL",
+      "source": "deltaforcetools",
+      "seen": [
+        "deltaforcetools"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6KJTP280554DKS2KS8AAN": {
+      "code": "6KJTP280554DKS2KS8AAN",
+      "name": "AWM Sniper Rifle",
+      "mode": "Warfare",
+      "cls": "SR",
+      "full": "AWM Sniper Rifle-Warfare-6KJTP280554DKS2KS8AAN",
+      "source": "skycoach",
+      "seen": [
+        "skycoach"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6K5T3F0073PJM0S450OEV": {
+      "code": "6K5T3F0073PJM0S450OEV",
+      "name": "M7 Battle Rifle",
+      "mode": "Operations",
+      "cls": "BR",
+      "full": "M7 Battle Rifle-Operations-6K5T3F0073PJM0S450OEV",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6K5TDKO073PJM0S450OEV": {
+      "code": "6K5TDKO073PJM0S450OEV",
+      "name": "AS Val Assault Rifle",
+      "mode": "Operations",
+      "cls": "AR",
+      "full": "AS Val Assault Rifle-Operations-6K5TDKO073PJM0S450OEV",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6K5VHK8073PJM0S450OEV": {
+      "code": "6K5VHK8073PJM0S450OEV",
+      "name": "AWM Sniper Rifle",
+      "mode": "Operations",
+      "cls": "SR",
+      "full": "AWM Sniper Rifle-Operations-6K5VHK8073PJM0S450OEV",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6K5TIM0073PJM0S450OEV": {
+      "code": "6K5TIM0073PJM0S450OEV",
+      "name": "PKM General Machine Gun",
+      "mode": "Operations",
+      "cls": "LMG",
+      "full": "PKM General Machine Gun-Operations-6K5TIM0073PJM0S450OEV",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6K5TJV4073PJM0S450OEV": {
+      "code": "6K5TJV4073PJM0S450OEV",
+      "name": "SR-25 Marksman Rifle",
+      "mode": "Operations",
+      "cls": "DMR",
+      "full": "SR-25 Marksman Rifle-Operations-6K5TJV4073PJM0S450OEV",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6I01TBC0FSH6GRF76DG60": {
+      "code": "6I01TBC0FSH6GRF76DG60",
+      "name": "AWM Sniper Rifle",
+      "mode": "Operations",
+      "cls": "SR",
+      "full": "AWM Sniper Rifle-Operations-6I01TBC0FSH6GRF76DG60",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HSGI580FSH6GRF76DG60": {
+      "code": "6HSGI580FSH6GRF76DG60",
+      "name": "M14 Marksman Rifle",
+      "mode": "Operations",
+      "cls": "DMR",
+      "full": "M14 Marksman Rifle-Operations-6HSGI580FSH6GRF76DG60",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6I0476C0FSH6GRF76DG60": {
+      "code": "6I0476C0FSH6GRF76DG60",
+      "name": "MK47 Assault Rifle",
+      "mode": "Operations",
+      "cls": "AR",
+      "full": "MK47 Assault Rifle-Operations-6I0476C0FSH6GRF76DG60",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6HSGGQG0FSH6GRF76DG60": {
+      "code": "6HSGGQG0FSH6GRF76DG60",
+      "name": "MP7 Submachine Gun",
+      "mode": "Operations",
+      "cls": "SMG",
+      "full": "MP7 Submachine Gun-Operations-6HSGGQG0FSH6GRF76DG60",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6JGIO4C073PLKDGT2OU3K": {
+      "code": "6JGIO4C073PLKDGT2OU3K",
+      "name": "KC-17 Assault Rifle",
+      "mode": "Operations",
+      "cls": "AR",
+      "full": "KC-17 Assault Rifle-Operations-6JGIO4C073PLKDGT2OU3K",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6I5KMSC00RR8JACO27GDL": {
+      "code": "6I5KMSC00RR8JACO27GDL",
+      "name": "SR-3M Compact Assault Rifle",
+      "mode": "Operations",
+      "cls": "AR",
+      "full": "SR-3M Compact Assault Rifle-Operations-6I5KMSC00RR8JACO27GDL",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.294Z",
+      "fav": false,
+      "hidden": false
+    },
+    "6K5TROO073PJM0S450OEV": {
+      "code": "6K5TROO073PJM0S450OEV",
+      "name": "ASh-12 Battle Rifle",
+      "mode": "Operations",
+      "cls": "BR",
+      "full": "ASh-12 Battle Rifle-Operations-6K5TROO073PJM0S450OEV",
+      "source": "buffbuff",
+      "seen": [
+        "buffbuff"
+      ],
+      "addedAt": "2026-10-09T17:53:44.295Z",
+      "fav": false,
+      "hidden": false
+    }
+  }
+}

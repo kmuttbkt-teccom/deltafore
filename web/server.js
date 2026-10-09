@@ -49,11 +49,12 @@ function main() {
   // codes, the player redeems in their own browser and reports what the page answered.
   // Every request names its game (?game=…); Delta Force when it names none.
   const manual = g => store.config(g).mode !== 'auto';
-  const allowed = (cmd, g) => cmd === 'scan' || !manual(g);
+  const allowed = (cmd, g) => cmd === 'scan' || cmd === 'builds' || !manual(g);      // the two that only read public pages
+  const builds = require('../redeem/builds');
   const gameOf = url => { const g = url.searchParams.get('game') || store.FIRST; store.config(g); return g; };   // throws on a game that is not in config.json
 
   // ---- one command at a time -------------------------------------------------------
-  const JOBS = { run: 'แลกโค้ดที่รอ', scan: 'ตรวจหน้าเว็บรวมโค้ด', login: 'เข้าสู่ระบบ Garena', status: 'เช็กการเข้าสู่ระบบ', logout: 'ออกจากระบบ' };
+  const JOBS = { builds: 'ตรวจหน้าเว็บโค้ดแต่งปืน', run: 'แลกโค้ดที่รอ', scan: 'ตรวจหน้าเว็บรวมโค้ด', login: 'เข้าสู่ระบบ Garena', status: 'เช็กการเข้าสู่ระบบ', logout: 'ออกจากระบบ' };
   let job = { id: 0, cmd: '', label: '', running: false, lines: [], code: null };
   const login = { state: 'unknown', user: '', at: null };
 
@@ -73,7 +74,7 @@ function main() {
     if (job.running || !JOBS[cmd] || !allowed(cmd, g)) return null;
     const mine = job = { id: job.id + 1, cmd, game: g, label: JOBS[cmd] + ' · ' + store.config(g).name, running: true, lines: [], code: null, startedAt: Date.now() };
     return new Promise(resolve => {
-      const child = spawn(process.execPath, [path.join(ROOT, 'redeem'), cmd], { cwd: ROOT, env: Object.assign({}, process.env, { DF_GAME: g }), windowsHide: true });
+      const child = spawn(process.execPath, [path.join(ROOT, 'redeem')].concat(cmd === 'builds' ? ['builds', 'scan'] : [cmd]), { cwd: ROOT, env: Object.assign({}, process.env, { DF_GAME: g }), windowsHide: true });
       let buf = '';
       const take = d => {
         buf += d.toString('utf8');
@@ -218,6 +219,10 @@ function main() {
       const g = url.pathname.startsWith('/api/') ? gameOf(url) : store.FIRST;
       if (req.method === 'GET') {
         if (url.pathname === '/api/state') return json(200, state(g));
+        if (url.pathname === '/api/builds') {
+          const db = builds.load();
+          return json(200, { builds: builds.list(db), pictures: builds.pictures(db), pages: (store.config().buildSources || []).filter(s => s.enabled !== false).length });
+        }
         if (url.pathname === '/api/guide') {                // PRO-GUIDE.md for the first game, <ID>-GUIDE.md for the others
           const f = path.join(ROOT, g === store.FIRST ? 'PRO-GUIDE.md' : g.toUpperCase() + '-GUIDE.md');
           return send(200, 'text/plain', fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '# ' + store.config(g).name + '\n\nยังไม่มีคู่มือของเกมนี้');
@@ -235,6 +240,20 @@ function main() {
           return json(200, { out, started });
         }
         if (url.pathname === '/api/mark') return json(200, { n: mark(String(b.code || ''), b.to, g) });
+        if (url.pathname === '/api/builds/add') {             // share lines pasted by the player
+          const { items, bad } = builds.parse(b.text);
+          const db = builds.load();
+          const fresh = builds.merge(db, items, 'manual');
+          builds.save(db);
+          return json(200, { added: fresh.length, known: items.length - fresh.length, bad });
+        }
+        if (url.pathname === '/api/builds/mark') {            // a star, or out of sight
+          const db = builds.load(), it = db.builds[String(b.code || '')];
+          const SET = { fav: ['fav', true], unfav: ['fav', false], hide: ['hidden', true], show: ['hidden', false] }[b.to];
+          if (!it || !SET) return json(200, { n: 0 });
+          it[SET[0]] = SET[1]; builds.save(db);
+          return json(200, { n: 1 });
+        }
         if (url.pathname === '/api/job') {
           if (!JOBS[b.cmd]) return json(400, { error: 'unknown command' });
           if (!allowed(b.cmd, g)) return json(400, { error: 'โหมดแลกเอง: คำสั่งนี้ปิดไว้ (Garena ปฏิเสธเบราว์เซอร์ที่เครื่องมือควบคุม)' });

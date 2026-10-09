@@ -105,6 +105,23 @@ const get = (url, headers) => new Promise(resolve => {
 
     await room.eval(`[...document.querySelectorAll('[data-job]')].filter(b => b.getClientRects().length).map(b => b.dataset.job).join()`).then(v => check('no button here drives a browser', v === 'scan', v));
 
+    // ── tab 04: weapon builds ──
+    const post = (p, b) => fetch(BASE + p, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(b) }).then(r => r.json());
+    const added = await post('/api/builds/add', { text: 'CI-19 Assault Rifle-Warfare-6HLOANO09MFFCME3G7LT2\nAS Val Assault Rifle-Operations-6K5TDKO073PJM0S450OEV\nnonsense line' });
+    check('builds: two lines taken, the third named as not a build', added.added === 2 && added.bad.length === 1, added);
+    await room.eval(`location.hash = 'builds'; 1`);
+    const cards = await room.until(`document.querySelectorAll('#bd-list .bd').length === 2 && [...document.querySelectorAll('#bd-list .bd h3')].map(h => h.textContent).join('|')`, 6000);
+    check('the tab lists them', !!cards && /CI-19 Assault Rifle/.test(cards) && /AS Val Assault Rifle/.test(cards), cards);
+    await room.eval(`document.querySelector('[data-bm="Operations"]').click(); 1`);
+    check('the mode filter narrows the list', await room.eval(`document.querySelectorAll('#bd-list .bd').length`) === 1);
+    await room.eval(`document.querySelector('[data-bstar]').click(); 1`);
+    await sleep(500);
+    const afterStar = (await (await fetch(BASE + '/api/builds')).json()).builds;
+    check('a star is kept by the server and comes first', afterStar[0].fav === true && afterStar[0].name === 'AS Val Assault Rifle', afterStar.map(x => [x.name, x.fav]));
+    await room.eval(`document.querySelector('[data-bm="all"]').click(); document.querySelector('#bd-q').value = 'ci-19'; document.querySelector('#bd-q').dispatchEvent(new Event('input')); 1`);
+    check('the search finds a weapon by name', await room.eval(`[...document.querySelectorAll('#bd-list .bd h3')].map(h => h.textContent).join()`) === 'CI-19 Assault Rifle');
+    await room.eval(`location.hash = 'codes'; 1`);
+
     // ── the door for phones and tablets ──
     const ip = Object.values(os.networkInterfaces()).flat().filter(i => i && i.family === 'IPv4' && !i.internal).map(i => i.address)[0];
     if (!ip) console.log('  (this machine has no network address: the --lan checks are skipped)');

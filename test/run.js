@@ -64,6 +64,30 @@ const check = (name, ok, extra) => { ok ? pass++ : fail++; console.log((ok ? '  
   check('the list of games names both', store.config().games.map(x => x.id + ':' + x.redeem).join() === 'deltaforce:web,rov:ingame');
   check('codes that are plain capital words: read for a game marked "words" only', sources.extract('<li>SEAMONSTER</li><li>FACEBOOK</li><li>short</li>', null, true).join() === 'SEAMONSTER' && sources.extract('<li>SEAMONSTER</li>').length === 0);
 
+  console.log('weapon builds');
+  const builds = require('../redeem/builds');
+  const onPage = builds.extract('<p>Meta Build Assault CI-19 Assault Rifle-Warfare-6HLOANO09MFFCME3G7LT2</p><script>{"a":"AS Val Assault Rifle-Operations-6K5TDKO073PJM0S450OEV","b":"SR-3M Compact Assault Rifle-Warfare-6HLOBK009MFFCME3G7LT2"}</script><td>.357 Revolver-Warfare-6HLOXXX09MFFCME3G7LT2</td><p>K416 Assault Rifle-Warfare-SHORT, Warfare-6HLOANO09MFFCME3G7LT2</p>');
+  check('builds on a page: name, mode and code — also from the page\'s data, without the words before the name',
+    onPage.map(x => x.full).join('|') === 'CI-19 Assault Rifle-Warfare-6HLOANO09MFFCME3G7LT2|AS Val Assault Rifle-Operations-6K5TDKO073PJM0S450OEV|SR-3M Compact Assault Rifle-Warfare-6HLOBK009MFFCME3G7LT2|.357 Revolver-Warfare-6HLOXXX09MFFCME3G7LT2', onPage.map(x => x.full));
+  check('class and mode are read from the line', onPage[0].cls === 'AR' && onPage[1].mode === 'Operations' && onPage[3].cls === 'HG');
+  const pasted = builds.parse('M4A1 ปืนไรเฟิลจู่โจม-สงคราม-6HLOBES09MFFCME3G7LT2\nnot a build\nSCAR-H Battle Rifle-Operations-6K5T3F0073PJM0S450OEV');
+  check('pasted lines: any language, hyphens in the name; a line that is not a build is named', pasted.items.length === 2 && pasted.items[0].mode === 'Warfare' && pasted.items[1].name === 'SCAR-H Battle Rifle' && pasted.bad.join() === 'not a build', pasted);
+  writeCfg({ buildSources: [{ name: 'mockbuilds', url: base + '/builds.html' }, { name: 'refused', url: base + '/blocked.html' }, { name: 'off', url: base + '/builds.html', enabled: false }] });
+  await quiet(() => cli.main(['builds', 'scan']));
+  let bdb = builds.load();
+  check('a scan keeps them in data/builds.json; a refused page does not stop it', Object.keys(bdb.builds).length === 3 && bdb.builds['6K5TDKO073PJM0S450OEV'].seen.join() === 'mockbuilds' && fs.existsSync(path.join(tmp, 'builds.json')), Object.keys(bdb.builds));
+  await quiet(() => cli.main(['builds', 'scan']));
+  await quiet(() => cli.main(['builds', 'add', 'M4A1 Assault Rifle-Warfare-6HLOBES09MFFCME3G7LT2']));
+  bdb = builds.load();
+  check('a second scan adds nothing; a line added by hand is kept as the player\'s own', Object.keys(bdb.builds).length === 4 && bdb.builds['6HLOBES09MFFCME3G7LT2'].source === 'manual' && bdb.builds['6HLOANO09MFFCME3G7LT2'].seen.length === 1);
+  check('the code list of the game is untouched by all this', Object.keys(store.load().codes).length === 7);
+  fs.writeFileSync(path.join(tmp, 'weapon-images.json'), JSON.stringify({ 'M4 carbine': { src: 'https://upload.example/m4.png', w: 480, h: 200, page: 'https://en.wikipedia.org/wiki/File:M4.png' }, 'AS Val': {}, 'File:Remington 870 Police (55284788188).jpg': { src: 'https://upload.example/870.jpg', w: 480, h: 240, page: 'https://commons.wikimedia.org/wiki/File:x' } }));
+  const pics = builds.pictures({ builds: { a: { name: 'M4A1 Assault Rifle' }, b: { name: 'AS Val Assault Rifle' }, c: { name: 'M870 Shotgun' }, d: { name: 'CI-19 Assault Rifle' }, e: { name: 'SR-3M Compact Assault Rifle' } } });
+  check('a picture for a weapon: by its article, or by a named file; none where the encyclopedia had none or the weapon is not mapped',
+    Object.keys(pics).sort().join() === 'M4A1,M870' && pics.M4A1.real === 'M4A1' && pics.M870.src.endsWith('870.jpg') && pics.M4A1.page.startsWith('https://en.wikipedia.org/wiki/File:'), pics);
+  check('the model is the name without its class', builds.modelOf('SR-3M Compact Assault Rifle') === 'SR-3M' && builds.modelOf('M250 General Machine Gun') === 'M250' && builds.modelOf('.357 Revolver') === '.357');
+  writeCfg();
+
   console.log('not signed in');
   check('status says so', await quiet(() => cli.cmdStatus(store.config())) === 2);
   let r = await quiet(() => cli.cmdRun(store.config(), { unattended: true }));

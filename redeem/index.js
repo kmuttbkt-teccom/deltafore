@@ -269,13 +269,46 @@ async function main(argv) {
       say('  ' + ICON[e.status] + ' ' + e.code + ' : ' + LABEL[e.status]);
       return 0;
     }
+    case 'builds': {                                        // weapon build share codes (redeem/builds.js)
+      const builds = require('./builds');
+      if (args[0] === 'scan') {
+        const pages = (cfg.buildSources || []).filter(s => s.enabled !== false);
+        if (!pages.length) { say('ไม่มีหน้าเว็บโค้ดแต่งปืนใน config.json ("buildSources")'); return 0; }
+        say('🔫 ตรวจหน้าเว็บโค้ดแต่งปืน ' + pages.length + ' แห่ง');
+        const fresh = await builds.scan(pages, say);
+        try { await builds.fetchPictures(say); } catch (e) { say('  ✗ รูปปืน: ' + e.message + ' (ข้ามไป)'); }
+        say(fresh ? 'ชุดแต่งใหม่ ' + fresh + ' รายการ' : 'ไม่มีชุดแต่งใหม่');
+        return 0;
+      }
+      if (args[0] === 'images') {                           // the pictures alone (after editing weapons.json)
+        await builds.fetchPictures(say);
+        return 0;
+      }
+      if (args[0] === 'add') {
+        const { items, bad } = builds.parse(args.slice(1).join(' '));
+        const db = builds.load();
+        const fresh = builds.merge(db, items, 'manual');
+        builds.save(db);
+        for (const b of fresh) say('  + ' + b.full);
+        for (const l of bad) say('  ✗ ไม่ใช่โค้ดแต่งปืน: ' + l);
+        if (!fresh.length && !bad.length) say('มีอยู่แล้ว');
+        return bad.length && !items.length ? 1 : 0;
+      }
+      const all = builds.list(builds.load()).filter(b => !b.hidden);
+      if (!all.length) { say('ยังไม่มีโค้ดแต่งปืน — `node redeem builds scan`'); return 0; }
+      for (const b of all) say((b.fav ? '⭐ ' : '   ') + b.full + '   ← ' + ((b.seen || []).join(', ') || 'เพิ่มเอง'));
+      return 0;
+    }
     case 'watch': return cmdWatch(cfg, args[0]);
     default: say(HELP); return cmd && cmd !== 'help' ? 1 : 0;
   }
 }
 
 if (require.main === module) {
-  main(process.argv.slice(2)).then(code => process.exit(code || 0), e => { console.error('✗ ' + e.message); process.exit(1); });
+  // The exit code is set and the process left to end by itself: process.exit() right after a
+  // network request trips an assertion inside Node on Windows. The timer is for a handle that lingers.
+  const end = code => { process.exitCode = code; setTimeout(() => process.exit(code), 4000).unref(); };
+  main(process.argv.slice(2)).then(code => end(code || 0), e => { console.error('✗ ' + e.message); end(1); });
 }
 
 module.exports = { main, cmdRun, cmdScan, cmdAdd, cmdMark, cmdStatus, withPortal, ensureLogin };
