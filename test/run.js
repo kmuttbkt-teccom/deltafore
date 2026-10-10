@@ -86,6 +86,21 @@ const check = (name, ok, extra) => { ok ? pass++ : fail++; console.log((ok ? '  
   check('a picture for a weapon: by its article, or by a named file; none where the encyclopedia had none or the weapon is not mapped',
     Object.keys(pics).sort().join() === 'M4A1,M870' && pics.M4A1.real === 'M4A1' && pics.M870.src.endsWith('870.jpg') && pics.M4A1.page.startsWith('https://en.wikipedia.org/wiki/File:'), pics);
   check('the model is the name without its class', builds.modelOf('SR-3M Compact Assault Rifle') === 'SR-3M' && builds.modelOf('M250 General Machine Gun') === 'M250' && builds.modelOf('.357 Revolver') === '.357');
+  const shots = builds.gameShots('<a href="/weapons/as-val"><img src="/assets/images/weapons/as-val.webp" alt="AS VAL" loading="lazy"></a><img alt="M4A1" class="w" src="https://cdn.example/img/weapons/m4a1.png"><img src="/assets/images/brand/logo.webp" alt="Logo"><img src="/assets/images/weapons/x.webp">', 'https://db.example/weapons/');
+  check('the weapons as they look in the game: the address of each picture on a weapon list, by the name beside it', JSON.stringify(shots) === '{"ASVAL":"https://db.example/assets/images/weapons/as-val.webp","M4A1":"https://cdn.example/img/weapons/m4a1.png"}', shots);
+  fs.writeFileSync(path.join(tmp, 'weapon-images.json'), JSON.stringify({ 'M4 carbine': { src: 'https://upload.example/m4.png', w: 480, h: 200, page: 'https://en.wikipedia.org/wiki/File:M4.png' }, '@game': { from: 'db.example', page: 'https://db.example/weapons/', items: shots } }));
+  const mixedPics = builds.pictures({ builds: { a: { name: 'AS Val Assault Rifle' }, b: { name: 'M4A1 Assault Rifle' }, c: { name: 'CI-19 Assault Rifle' } } });
+  check('a card takes the picture from the game where there is one — its address and its site, nothing copied', mixedPics['AS Val'].game === true && mixedPics['AS Val'].src === shots.ASVAL && mixedPics['AS Val'].by === 'db.example' && mixedPics.M4A1.game === true && !mixedPics['CI-19'], mixedPics);
+  const dataPage = '<script>[{_id:"a1",WeaponName:"M4A1",Playstyle:"Long Range",Muzzle:"Sandstorm Vertical Compensator",Barrel:"Guerrilla 406mm Barrel","Rear Grip":"AR Heavy Tower Grip",title:"junk",countAttachments:9,popularity:12.34,updated:1757000000000,LoadoutCode:"M4A1 Assault Rifle-Warfare-6HLOBES09MFFCME3G7LT2"},' +
+    '{_id:"b2",WeaponName:"AKM",Playstyle:"Close Range",countAttachments:7,LoadoutCode:"AKM Assault Rifle-Warfare-6HLOAKM09MFFCME3G7LT2"}]</script>';
+  const made = builds.extract(dataPage);
+  check('what a build is made of is read from the page\'s data: slots, style, share of players, date',
+    Object.keys(made[0].att).join() === 'Muzzle,Barrel,Rear Grip' && made[0].att['Rear Grip'] === 'AR Heavy Tower Grip' && made[0].style === 'Long Range' && made[0].count === 9 && made[0].pick === 12.3 && made[0].updated === '2025-09-04', made[0]);
+  check('a build with no list on the page gets none — not its neighbour\'s', made[1].name === 'AKM Assault Rifle' && !made[1].att && made[1].count === 7 && made[1].style === 'Close Range', made[1]);
+  const ownPage = builds.pagesOf('<a href="/build/m4a1-long-range-6hlobes09mffcme3g7lt2">x</a><a href="/weapon/m4a1">y</a>', 'https://example.org/delta-force/');
+  check('a build\'s own page is found by the code in its address', ownPage.size === 1 && ownPage.get('6HLOBES09MFFCME3G7LT2') === 'https://example.org/build/m4a1-long-range-6hlobes09mffcme3g7lt2', [...ownPage]);
+  const listed = builds.listOnPage('<div><span class="k">Muzzle</span><p class="v">Sandstorm Vertical Compensator</p></div><div><span>Views</span><p>12,345 views</p></div><div><span> Rear Grip </span> <p>AR Heavy Tower Grip &amp; Wrap</p></div>');
+  check('and the list on it is read slot by slot, other pairs left out', JSON.stringify(listed) === '{"Muzzle":"Sandstorm Vertical Compensator","Rear Grip":"AR Heavy Tower Grip & Wrap"}', listed);
   writeCfg();
 
   console.log('not signed in');

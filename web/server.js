@@ -227,6 +227,10 @@ function main() {
           const f = path.join(ROOT, g === store.FIRST ? 'PRO-GUIDE.md' : g.toUpperCase() + '-GUIDE.md');
           return send(200, 'text/plain', fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '# ' + store.config(g).name + '\n\nยังไม่มีคู่มือของเกมนี้');
         }
+        if (/^\/(?:DF-[A-Z]+\.md|(?:maps|checklist|fish)\.json)$/.test(url.pathname)) {      // what tabs 05–07 read (DF-EVENTS.md, DF-MAPS.md, DF-TIPS.md, maps.json, checklist.json, fish.json), kept at the root
+          const f = path.join(ROOT, url.pathname.slice(1));
+          return fs.existsSync(f) ? send(200, 'text/plain', fs.readFileSync(f, 'utf8')) : send(404, 'text/plain', 'not found');
+        }
         const file = path.join(PUBLIC, url.pathname === '/' ? 'index.html' : path.normalize(url.pathname).replace(/^([\\/])+/, ''));
         if (!file.startsWith(PUBLIC) || !fs.existsSync(file) || !fs.statSync(file).isFile()) return send(404, 'text/plain', 'not found');
         return send(200, TYPES[path.extname(file)] || 'application/octet-stream', fs.readFileSync(file));

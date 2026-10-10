@@ -3,6 +3,8 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: "17 */6 * * *"      # every six hours: look for new codes and fill the site again
   workflow_dispatch:
 
 permissions:
@@ -23,6 +25,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The site's lists are filled again here, in the runner only. Nothing is committed: the
+      # repository keeps exactly what was pushed from the computer (its results, its stars), and a
+      # page that refuses the runner — or the whole step failing — still leaves the pushed lists to go up.
+      - name: Look for new codes
+        continue-on-error: true
+        run: |
+          node redeem scan
+          node redeem --game rov scan
+      - name: Fill docs/
+        run: node scripts/build-docs.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

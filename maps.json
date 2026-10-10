@@ -1,0 +1,91 @@
+{
+  "_": "Tab 05 (แผนที่ & จุดของ). The interactive map of each map is not copied here: `embeds` are pages of other sites, shown inside the tab as they are, named and linked. The numbers are how many markers of each kind those maps had on the day in `asOf` (community data, not the game's own) — edit by hand when a season changes a map. `doc` is the heading of this map's notes in DF-MAPS.md.",
+  "asOf": "2026-10-10",
+  "source": { "name": "deltaforcetools.gg", "url": "https://deltaforcetools.gg/map" },
+  "doorCodes": {
+    "name": "deltaforcetools.gg",
+    "url": "https://deltaforcetools.gg/blog/delta-force-door-codes-guide",
+    "note": "⚠️ ยังไม่ได้ตรวจว่ารหัสในหน้านั้นถูก: เว็บบอกว่าอัปเดตทุกวันหลังรีเซ็ต แต่ไม่บอกว่าใช้กับเซิร์ฟ Garena ได้ไหม ไม่อ้างแหล่งทางการ และเป็นเว็บที่โปรโมตบริการเติมเกม — ใช้ลองดูเท่านั้น"
+  },
+  "maps": [
+    {
+      "id": "zero-dam", "name": "Zero Dam", "icon": "🏞️", "doc": "Zero Dam",
+      "th": "แผนที่เริ่มต้น ขนาดกลาง แบ่งด้วยเนินและแม่น้ำ — ที่ฝึกวงจร เก็บของ → ออก",
+      "levels": "Easy · Normal", "floors": "-1F ถึง 2F",
+      "embeds": [
+        { "name": "deltaforcetools.gg", "url": "https://deltaforcetools.gg/map/zero-dam" },
+        { "name": "deltaforcedb.com", "url": "https://deltaforcedb.com/maps/zerodam/#deltaForceMap", "note": "316 หมุด · มีบอสและประตูคีย์การ์ดแยกชั้นข้อมูล" }
+      ],
+      "zones": ["Administrative Area", "Major Substation", "Cement Plant", "Visitor Center", "Barracks"],
+      "keycards": ["Cement Plant Dormitory", "Cement Plant Office", "Barracks Storage Room", "West Wing Control Room", "West Wing Monitoring Room", "West Wing Infirmary", "East Wing Managers Office", "Central VIP Room", "Substation Dormitory", "Substation Tech Room", "Equipment Collection Room", "Ticket Office", "???#D1-3", "???#D2-3", "???#D3-3"],
+      "crates": ["#D1", "#D7", "#D8"],
+      "spawns": 14,
+      "exits": { "Exfil": 2, "Conditional Exfil": 3, "Random Exfil": 2, "Paid Exfil": 1, "Trigger": 2 },
+      "loot": { "Safe": 11, "Small Safe": 4, "Server": 3, "Computer": 3, "Protocol Crate": 8, "Large Weapon Crate": 7, "Weapon Crate": 4, "Premium Storage Box": 2, "Premium Suitcase": 3, "Briefcase": 4, "Hidden Stash": 9, "Flight Case": 6, "Bird Nest": 20, "Ammo Crate": 10, "Computer Case": 9, "Field Supply Box": 11, "Military Med Kit": 7, "Pile Of Medical Supplies": 6, "Tool Cabinet": 13, "Travel Bag": 19, "Storage Box": 20, "Courier Carton": 6, "Drawer": 5, "Piece Of Clothing": 12, "Garbage Bin": 4, "Cement Truck": 6, "Combination Lock": 3 },
+      "red": { "999.9 Gold Bar": 6, "Electronic items": 10, "Energy Item": 6, "Executive Office Keycard": 6, "Furniture Items": 5, "Heart of Africa": 3, "Intelligence File": 9, "Luxury Mechanical Watch": 4, "Medical Props": 1, "Military artillery shell": 6, "Olivia Champagne": 3, "Tool materials": 6 },
+      "also": "deltaforcedb.com นับได้ต่างกัน: ตู้เซฟ 15 · ประตูคีย์การ์ด 12 · บอส 6 · กล่องลับ 6 — สองเว็บเก็บข้อมูลกันเอง ตัวเลขจึงไม่ตรงกัน"
+    },
+    {
+      "id": "layali-grove", "name": "Layali Grove", "icon": "🌴", "doc": "Layali Grove",
+      "th": "แผนที่ของซีซันนี้ (2.0) — โรงแรม สถานีรถไฟ หมู่บ้าน ห้องแล็บ · มีระบบตกปลาและรังนกของกิจกรรมครบรอบ",
+      "levels": "Easy · Normal", "floors": "-1F ถึง 3F",
+      "embeds": [{ "name": "deltaforcetools.gg", "url": "https://deltaforcetools.gg/map/layali-grove" }],
+      "zones": ["Sparkling Empress Hotel", "Transnova Station", "Aminya Village", "Storage Center", "Small Train Station", "Manor House", "Gharbi Building", "Substation", "Blue Wharf", "Cargo Havoc", "Checkpoint", "Desert Trails Farm", "Ghurab Desolation"],
+      "keycards": ["King's Suite", "Prince's Suite", "General's Room", "Diamonds Room", "Spades Room", "Radar Station Control Room", "Radar Station Data Center", "Radar Station Conference Room", "Radar Station UAV Platform", "Radar Station Side Entrance", "Lab Building Office", "Lab Building Archive Room", "Cargo Plane Conference Room", "Checkpoint Storeroom", "Farm Admin Room", "Town Diner", "Small Train Station Ticket Office", "???#L0-0", "???#L1-3", "???#L2-3", "???#L3-3"],
+      "crates": ["#L6"],
+      "spawns": 22,
+      "exits": { "Exfil": 4, "Random Exfil": 2, "Paid Exfil": 1 },
+      "loot": { "Safe": 3, "Small Safe": 6, "Server": 4, "Computer": 8, "Protocol Crate": 7, "Large Weapon Crate": 13, "Weapon Crate": 5, "Premium Storage Box": 1, "Premium Suitcase": 16, "Briefcase": 8, "Hidden Stash": 13, "Flight Case": 5, "Bird Nest": 41, "Ammo Crate": 14, "Computer Case": 6, "Field Supply Box": 11, "Military Med Kit": 11, "Pile Of Medical Supplies": 9, "Tool Cabinet": 8, "Travel Bag": 14, "Storage Box": 21, "Courier Carton": 28, "Drawer": 2, "Piece Of Clothing": 17, "Garbage Bin": 7, "Climbing Bag": 5, "Cement Truck": 5, "Combination Lock": 2 },
+      "red": { "Electronic items": 9, "Energy Item": 10, "Furniture Items": 7, "Intelligence File": 4, "Luxury Mechanical Watch": 7, "Medical Props": 5, "Military UAV": 5, "Olivia Champagne": 12, "Tool materials": 1 }
+    },
+    {
+      "id": "space-city", "name": "Space City", "icon": "🚀", "doc": "Space City",
+      "th": "พึ่งคีย์การ์ดมากที่สุด มุมยิงยาว โหดกับคนเดินที่โล่ง — แผนที่โต้ตอบมีเฉพาะระดับ Normal",
+      "levels": "Normal", "floors": "1F ถึง 3F",
+      "embeds": [{ "name": "deltaforcetools.gg", "url": "https://deltaforcetools.gg/map/space-city" }],
+      "zones": ["Black Chamber", "Test Range", "Buoyancy Lab", "Centrifuge Facility", "Central Command Building", "Central Bridge", "Eastern Suspension Bridge", "Western Gate", "Dormitory Building", "Employee Passage 1", "Employee Passage 2", "Horizontal Test Workshop", "Hoisting Room", "Assembly Room", "Printing Room"],
+      "keycards": ["CEO Office Reception Room", "Central Command Room 3F", "Test Range Core", "Test Range Data Center", "Test Range Glass Room", "Black Chamber Server Room", "Buoyancy Lab Infirmary", "Assembly Workshop 2F Lab", "Dormitory Back Room", "Western Gate", "Employee Passage 2", "Eastern Bridge Key"],
+      "crates": ["#S4"],
+      "spawns": 9,
+      "exits": { "Conditional Exfil": 3 },
+      "loot": { "Safe": 7, "Small Safe": 4, "Server": 5, "Computer": 3, "Protocol Crate": 4, "Large Weapon Crate": 13, "Weapon Crate": 4, "Premium Storage Box": 8, "Premium Suitcase": 2, "Briefcase": 5, "Hidden Stash": 4, "Flight Case": 6, "Bird Nest": 3, "Ammo Crate": 15, "Computer Case": 9, "Computer Bag": 2, "Field Supply Box": 2, "Military Med Kit": 7, "Pile Of Medical Supplies": 6, "Tool Cabinet": 5, "Travel Bag": 8, "Storage Box": 12, "Courier Carton": 14, "Drawer": 11, "Piece Of Clothing": 23, "Garbage Bin": 4, "Climbing Bag": 7, "Combination Lock": 1 },
+      "red": { "Rocket Fuel": 13, "SATCOM Antenna": 7, "Heart of Africa": 9, "Electronic items": 7, "Intelligence File": 7, "Medical Props": 4, "Furniture Items": 3, "Energy Item": 2, "Tool materials": 2, "Luxury Mechanical Watch": 1, "Olivia Champagne": 1 }
+    },
+    {
+      "id": "brakkesh", "name": "Brakkesh", "icon": "🏙️", "doc": "Brakkesh",
+      "th": "เมืองสองฝั่ง: ตึกสูงทางใต้ ย่านเมืองทางเหนือ · จุดเกิดอยู่ชิดกัน เจอคนเร็ว · ทางออกทุกจุดมีเงื่อนไข",
+      "levels": "Normal", "floors": "-1F ถึง 3F",
+      "embeds": [{ "name": "deltaforcetools.gg", "url": "https://deltaforcetools.gg/map/brakkesh" }],
+      "zones": ["New Tower Of Babel", "Royal Museum", "Blue River Hotel", "Brakkesh Grand Hammam", "Brakkesh Market", "Cherry Town", "Azure Town", "Ahsarah Camp", "Parking Lot", "Loading Area", "Helipad Area", "Water Storage Area"],
+      "keycards": ["Underground Vault Storage", "CEO Conference Room", "Biological Data Server Room", "New Tower Of Babel Power Access Card", "Relink Implant Surgery Room", "Museum Exhibition Suite", "Museum Abandoned Exhibition Hall", "Museum Surveillance Room", "Ocean Monitoring Hall", "Interrogation Room 1", "Old Bath VIP Room", "Old Bath Diner", "Hotel Dining Room", "Hotel Staff Break Room", "Medical Conference Room", "Outpatient Room", "West Town Residential Bedroom", "East Town Residential Bedroom"],
+      "crates": ["#B1", "#B6"],
+      "spawns": 15,
+      "exits": { "Conditional Exfil": 2 },
+      "loot": { "Safe": 12, "Small Safe": 9, "Server": 3, "Computer": 7, "Protocol Crate": 5, "Large Weapon Crate": 13, "Weapon Crate": 4, "Premium Storage Box": 11, "Premium Suitcase": 19, "Briefcase": 20, "Hidden Stash": 12, "Flight Case": 6, "Bird Nest": 8, "Ammo Crate": 15, "Computer Case": 9, "Computer Bag": 1, "Field Supply Box": 16, "Military Med Kit": 8, "Pile Of Medical Supplies": 8, "Tool Cabinet": 10, "Travel Bag": 37, "Storage Box": 29, "Courier Carton": 35, "Drawer": 14, "Piece Of Clothing": 18, "Garbage Bin": 4, "Climbing Bag": 13, "Combination Lock": 2 },
+      "red": { "Furniture Items": 21, "Heart of Africa": 10, "Energy Item": 6, "Olivia Champagne": 5, "Electronic items": 4, "999.9 Gold Bar": 3, "Intelligence File": 3, "Luxury Mechanical Watch": 2, "Tool materials": 1 }
+    },
+    {
+      "id": "tide-prison", "name": "Tide Prison", "icon": "🌊", "doc": "Tide Prison",
+      "th": "เรือนจำกลางทะเล มีโซนใต้น้ำและห้องคีย์การ์ดหลายระดับ · ⚠️ คู่มือผู้เล่นบอกว่าเกิดในห้องขังและต้องแก้ปริศนาออกมาก่อน",
+      "embeds": [],
+      "none": "ยังไม่พบแผนที่แบบโต้ตอบที่ลงหมุดของ Tide Prison ไว้ (deltaforcetools.gg ไม่มีแผนที่นี้ · deltaforcedb.com มีหน้าแต่ยังว่าง) — ดูจุดสำคัญจากบันทึกด้านล่าง",
+      "links": [
+        { "name": "timesaver.gg — คู่มือ Tide Prison", "url": "https://timesaver.gg/blog/delta-force-tide-prison-map-loot-extraction-guide" },
+        { "name": "deltaforcedb.com — หน้าของแผนที่ (ยังว่าง)", "url": "https://deltaforcedb.com/maps/tide-prison/" }
+      ]
+    },
+    {
+      "id": "az3", "name": "AZ3", "icon": "☢️", "doc": "AZ3",
+      "th": "โรงไฟฟ้านิวเคลียร์ มีรังสี ต้องคุมเวลาที่อยู่ในโซน · ของแดงเฉพาะแผนที่ 3 ชนิด · จุดรูดคีย์การ์ด 23 จุด",
+      "floors": "1F ถึง 3F",
+      "embeds": [{ "name": "deltaforcetools.gg", "url": "https://deltaforcetools.gg/map/az3" }],
+      "zones": ["Core Reactor", "Sarcophagus", "Turbine Room", "PWR (Pressurized Water Reactor)", "Spent Fuel Plant", "Post-Processing Plant", "Emergency Thermal Power Plant", "Stellarator Research Institute", "Old Academy", "Wastewater Disposal Area", "Seawater Treatment Area", "Seaside Office"],
+      "keycards": [],
+      "swipes": 23,
+      "spawns": 14,
+      "exits": { "Exfil": 4, "Conditional Exfil": 3, "Paid Exfil": 1 },
+      "loot": { "Safe": 6, "Small Safe": 4, "Server": 19, "Computer": 6, "Large Weapon Crate": 4, "Premium Storage Box": 11, "Premium Suitcase": 11, "Briefcase": 17, "Hidden Stash": 31, "Flight Case": 3, "Bird Nest": 18, "Ammo Crate": 19, "Computer Case": 31, "Computer Bag": 10, "Field Supply Box": 18, "Military Med Kit": 3, "Pile Of Medical Supplies": 14, "Travel Bag": 46, "Storage Box": 33, "Courier Carton": 76, "Drawer": 48, "Piece Of Clothing": 19, "Garbage Bin": 21, "Cement Truck": 8 },
+      "red": { "Enriched Uranium Sample": 16, "Isotope Identifier": 15, "Reactor Cooling Core": 14 }
+    }
+  ]
+}

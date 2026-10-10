@@ -96,6 +96,10 @@
       ]
     }
   },
+  "gamePictures": {
+    "url": "https://deltaforcedb.com/weapons/",
+    "enabled": true
+  },
   "buildSources": [
     {
       "name": "codmunity",

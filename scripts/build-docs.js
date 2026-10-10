@@ -22,7 +22,7 @@ const done = [];
 // the page itself
 for (const f of fs.readdirSync(path.join(ROOT, 'web/public'))) if (copy('web/public/' + f, f)) done.push(f);
 // what it reads instead of asking a server
-for (const f of ['events.json', 'PRO-GUIDE.md', 'ROV-GUIDE.md']) if (copy(f)) done.push(f);
+for (const f of ['events.json', 'PRO-GUIDE.md', 'ROV-GUIDE.md', 'DF-EVENTS.md', 'DF-MAPS.md', 'DF-TIPS.md', 'maps.json', 'checklist.json', 'fish.json']) if (copy(f)) done.push(f);
 for (const f of ['codes.json', 'codes-rov.json', 'builds.json']) {
   if (copy('data/' + f, 'data/' + f)) done.push('data/' + f);
   if (f !== 'builds.json') copy('data/' + f, f);            // the page also looks for the two lists beside itself

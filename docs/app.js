@@ -25,12 +25,30 @@ try { game = localStorage.getItem('df-game') || game; } catch (e) { /* no storag
 
 let isStaticMode = location.hostname.endsWith('github.io') || location.protocol === 'file:';
 
+// A device's own list against the newer list of the site (the site is filled again from time to
+// time): codes this device has never seen come in, and a result the site knows — the computer's —
+// takes the place of "still waiting" here. A result filed on this device stays as it is.
+const FINAL = ['ok', 'used', 'expired', 'invalid', 'gone'];
+function mergeSiteList(local, site) {
+  let n = 0;
+  local.codes = local.codes || {};
+  for (const k in (site && site.codes) || {}) {
+    const mine = local.codes[k], theirs = site.codes[k];
+    if (!mine) { local.codes[k] = theirs; n++; }
+    else if (!FINAL.includes(mine.status) && FINAL.includes(theirs.status)) { local.codes[k] = Object.assign({}, mine, theirs); n++; }
+  }
+  return n;
+}
+const siteListRead = {};                 // per game: the site's list was read once since this page opened
+
 async function getStaticDb(g) {
   const key = 'df_db_' + g;
+  let local = null;
   try {
     const raw = localStorage.getItem(key);
-    if (raw) return JSON.parse(raw);
+    if (raw) local = JSON.parse(raw);
   } catch (e) {}
+  if (local && siteListRead[g]) return local;
   const file = g === 'rov' ? 'data/codes-rov.json' : 'data/codes.json';
   let initial = { codes: {} };
   try {
@@ -43,6 +61,8 @@ async function getStaticDb(g) {
       if (res2.ok) initial = await res2.json();
     } catch (e2) {}
   }
+  siteListRead[g] = true;
+  if (local) { if (mergeSiteList(local, initial)) saveStaticDb(local, g); return local; }
   try { localStorage.setItem(key, JSON.stringify(initial)); } catch (e) {}
   return initial;
 }
@@ -487,6 +507,15 @@ function md(src) {
     const hd = /^(#{1,4})\s+(.*)$/.exec(l);
     if (hd) { const n = hd[1].length; out.push(`<h${n}${n === 2 ? ` id="g-${++h}"` : ''}>${inline(hd[2])}</h${n}>`); i++; continue; }
     if (/^>/.test(l)) { const buf = []; while (i < L.length && /^>/.test(L[i])) buf.push(L[i++].replace(/^>\s?/, '')); out.push('<blockquote><p>' + inline(buf.join(' ')) + '</p></blockquote>'); continue; }
+    // a picture on a line of its own: ![caption](https://…) — shown from where it is, never copied here.
+    // ![caption](https://… "9.8 MB") is a heavy one: a button, and the picture only when it is asked for.
+    const pic = /^!\[([^\]]*)\]\((https:\/\/[^)\s]+)(?:\s+"([^"]*)")?\)\s*$/.exec(l);
+    if (pic) {
+      out.push('<figure class="shot">' + (pic[3]
+        ? `<button class="btn shot-tap" data-shot="${esc(pic[2])}">🖼 แตะเพื่อดูภาพ <small>${esc(pic[3])}</small></button>`
+        : `<img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="${esc(pic[2])}" alt="">`) + `<figcaption>${esc(pic[1])}</figcaption></figure>`);
+      i++; continue;
+    }
     if (/^\|/.test(l) && /^\|?\s*:?-{2,}/.test(L[i + 1] || '')) {
       const head = cells(l); i += 2; const rows = [];
       while (i < L.length && /^\|/.test(L[i])) rows.push(cells(L[i++]));
@@ -507,7 +536,7 @@ function md(src) {
       continue;
     }
     const buf = [];
-    while (i < L.length && L[i].trim() && !/^(#{1,4}\s|>|\||```|---+\s*$|\s*([*-]|\d+\.)\s)/.test(L[i])) buf.push(L[i++]);
+    while (i < L.length && L[i].trim() && !/^(#{1,4}\s|>|\||```|---+\s*$|!\[[^\]]*\]\(https:|\s*([*-]|\d+\.)\s)/.test(L[i])) buf.push(L[i++]);
     out.push('<p>' + inline(buf.join(' ')) + '</p>');
   }
   return out.join('\n');
@@ -537,6 +566,8 @@ function show(tab) {
   if (!$('#page-' + tab)) tab = 'codes';
   $$('.tab').forEach(b => b.classList.toggle('on', b.dataset.tab === tab));
   $$('.page').forEach(p => p.classList.toggle('on', p.id === 'page-' + tab));
+  const strip = $('.tabs'), on = $('.tab.on');             // on a phone the row of tabs is wider than the screen
+  if (strip && on) strip.scrollLeft += on.getBoundingClientRect().left - strip.getBoundingClientRect().left - (strip.clientWidth - on.offsetWidth) / 2;
   if (tab === 'guide') loadGuide();
 }
 
@@ -580,6 +611,11 @@ document.addEventListener('click', async ev => {
   const t = ev.target.closest('button'); if (!t) return;
   if (t.dataset.tab) { location.hash = t.dataset.tab; return; }
   if (t.dataset.game) return switchGame(t.dataset.game);
+  if (t.dataset.shot) {                           // a heavy picture of a page, asked for
+    const img = document.createElement('img');
+    img.decoding = 'async'; img.referrerPolicy = 'no-referrer'; img.alt = ''; img.src = t.dataset.shot;
+    return t.replaceWith(img);
+  }
   if (t.dataset.f) { filter = t.dataset.f; drawCodes(); return; }
   if (t.id === 'mq-copy') return copyCode();
   if (t.id === 'hp-open') return openPortal();

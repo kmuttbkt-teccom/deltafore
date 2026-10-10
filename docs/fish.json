@@ -1,0 +1,44 @@
+{
+  "_": "Tab 07 (ของฉัน → สมุดตกปลา). The 27 species and the four tests, as players' guides give them (see DF-EVENTS.md §3 for the sources) — Team Jade has published no table of its own. `by`: float = คันทุ่น, lure = คันเหยื่อปลอม, both = ได้ทั้งสองแบบ. `need` of a gate are the names of the fish to hand in.",
+  "asOf": "2026-10-10",
+  "tiers": [
+    { "id": "common", "name": "ทั่วไป", "color": "#9aa0a6" },
+    { "id": "rare", "name": "หายาก", "color": "#4ea3e0" },
+    { "id": "prize", "name": "ของสะสม", "color": "#e9b949" }
+  ],
+  "fish": [
+    { "name": "Sharpbelly", "tier": "common", "by": "float" },
+    { "name": "Banded Barb", "tier": "common", "by": "float" },
+    { "name": "Bighead Carp", "tier": "common", "by": "float" },
+    { "name": "Black Carp", "tier": "common", "by": "lure" },
+    { "name": "Striped Bass", "tier": "common", "by": "lure" },
+    { "name": "Mullet", "tier": "common", "by": "lure" },
+    { "name": "Zander", "tier": "common", "by": "lure" },
+    { "name": "Tilapia", "tier": "common", "by": "both" },
+    { "name": "Redtail", "tier": "common", "by": "both" },
+    { "name": "Ruby Cichlid", "tier": "rare", "by": "float" },
+    { "name": "Longnose Elephantfish", "tier": "rare", "by": "float" },
+    { "name": "African Butterflyfish", "tier": "rare", "by": "float" },
+    { "name": "Topmouth Culter", "tier": "rare", "by": "lure" },
+    { "name": "Giraffe Catfish", "tier": "rare", "by": "lure" },
+    { "name": "Mirror Carp", "tier": "rare", "by": "lure" },
+    { "name": "Pike", "tier": "rare", "by": "lure" },
+    { "name": "North African Catfish", "tier": "rare", "by": "lure" },
+    { "name": "Radioactive Grouper", "tier": "rare", "by": "lure", "note": "⚠️ มีรายงานว่าไม่มีที่ Layali Grove — ต้องตกนอกชายฝั่งโรงไฟฟ้าของ AZ3" },
+    { "name": "Shortnose Bichir", "tier": "rare", "by": "both" },
+    { "name": "Saddled Bichir", "tier": "rare", "by": "both" },
+    { "name": "Sapphire Snakehead", "tier": "prize", "by": "float" },
+    { "name": "Platinum Silver Arowana", "tier": "prize", "by": "lure", "note": "⚠️ คู่มือหนึ่งระบุว่าอยู่ที่ Cavern ของ Layali Grove" },
+    { "name": "Giant Brown Trout", "tier": "prize", "by": "lure" },
+    { "name": "Baby Shark", "tier": "prize", "by": "lure" },
+    { "name": "Atlantic Salmon", "tier": "prize", "by": "lure" },
+    { "name": "Tigerfish", "tier": "prize", "by": "lure" },
+    { "name": "Bigeye Tarpon", "tier": "prize", "by": "lure" }
+  ],
+  "gates": [
+    { "level": 10, "need": [], "text": "ไม่ต้องส่งปลา — กลับไปคุยกับ Joe Reed", "unlock": "คัน Fiberglass Lure (เริ่มตกด้วยเหยื่อปลอมได้)" },
+    { "level": 20, "need": ["Mullet", "Zander"], "text": "Mullet หนักเกิน 1.5 กก. + Zander หนักเกิน 2.5 กก.", "unlock": "คัน Metal Lure" },
+    { "level": 30, "need": ["Topmouth Culter", "Shortnose Bichir", "Saddled Bichir"], "text": "Topmouth Culter + Bichir ⚠️ คู่มือไม่ระบุว่า Bichir ชนิดไหน", "unlock": "คัน High-Carbon Lure" },
+    { "level": 40, "need": ["North African Catfish", "Radioactive Grouper", "Baby Shark"], "text": "North African Catfish + Radioactive Grouper แล้วตามด้วยฉลามวัยอ่อน ⚠️", "unlock": "เลเวล 41–50" }
+  ]
+}

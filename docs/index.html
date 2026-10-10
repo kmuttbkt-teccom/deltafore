@@ -27,6 +27,7 @@
   </div>
   <div class="games" id="games"></div>
   <div class="chips" id="chips"></div>
+  <div class="chips mine" id="my-chips" data-only="deltaforce"></div>
 </header>
 
 <div id="demo-bar" class="demo-bar" hidden>โหมดสาธิต — ใช้หน้าแลกโค้ดจำลองและรายการตัวอย่าง ไม่มีอะไรถูกส่งไปที่ Garena</div>
@@ -36,6 +37,9 @@
   <button class="tab" data-tab="events" role="tab"><i>02</i>งานแข่ง &amp; ถ่ายทอดสด</button>
   <button class="tab" data-tab="guide" role="tab"><i>03</i>คู่มือสายแข่ง</button>
   <button class="tab" data-tab="builds" role="tab" data-only="deltaforce"><i>04</i>โค้ดแต่งปืน</button>
+  <button class="tab" data-tab="maps" role="tab" data-only="deltaforce"><i>05</i>แผนที่ &amp; จุดของ</button>
+  <button class="tab" data-tab="info" role="tab" data-only="deltaforce"><i>06</i>กิจกรรม &amp; ทริก</button>
+  <button class="tab" data-tab="my" role="tab" data-only="deltaforce"><i>07</i>ของฉัน</button>
 </nav>
 
 <main>
@@ -189,7 +193,7 @@
   <section class="page" id="page-builds">
     <div class="panel">
       <h2><b>โค้ดแต่งปืนที่มีคนแจก</b><span id="bd-count"></span></h2>
-      <p class="bd-how">กด <b>คัดลอก</b> แล้วไปที่เกม: หน้าแต่งปืน → ชุดแต่ง (Loadout) → <b>นำเข้า (Import)</b> → วางทั้งบรรทัด <u>รวมชื่อปืน</u> · โค้ดของโหมด Warfare กับ Operations ใช้ข้ามกันไม่ได้ · แพตช์ใหม่อาจทำให้โค้ดเก่าใช้ไม่ได้</p>
+      <p class="bd-how">กด <b>คัดลอก</b> แล้วไปที่เกม: หน้าแต่งปืน → ชุดแต่ง (Loadout) → <b>นำเข้า (Import)</b> → วางทั้งบรรทัด <u>รวมชื่อปืน</u> · โค้ดของโหมด Warfare กับ Operations ใช้ข้ามกันไม่ได้ · แพตช์ใหม่อาจทำให้โค้ดเก่าใช้ไม่ได้<br><b>สำคัญ:</b> Garena ระบุว่า "โค้ดของ Garena ใช้ได้เฉพาะเวอร์ชัน Garena" — โค้ดในหน้านี้มาจากเว็บของเซิร์ฟ Global จึง <u>อาจนำเข้าไม่ได้</u> ถ้านำเข้าไม่ได้ ให้เปิด "แต่งอะไรบ้าง" แล้วประกอบตามทีละชิ้น</p>
       <div class="row wrap">
         <button class="btn gold" id="bd-scan">ตรวจหาโค้ดแต่งปืนใหม่</button>
         <input id="bd-q" class="bd-q" type="search" placeholder="ค้นหาชื่อปืน เช่น M4A1" autocomplete="off" spellcheck="false">
@@ -205,11 +209,46 @@
       <div class="row"><button class="btn" id="bd-add">เพิ่ม</button><span class="hint" id="bd-addmsg"></span></div>
     </div>
   </section>
+
+  <!-- 05 ─ every Operations map and where its loot is (web/public/maps.js) -->
+  <section class="page" id="page-maps">
+    <div class="map-pick" id="map-pick"></div>
+    <div id="map-body"><p class="empty">กำลังโหลดแผนที่…</p></div>
+    <p class="foot-note">แผนที่ในกรอบเป็นหน้าของเว็บอื่นที่แสดงตรงจากเว็บนั้น ไม่ได้คัดลอกมาเก็บไว้ที่นี่ · ตัวเลขและบันทึกแก้ได้ในไฟล์ maps.json และ DF-MAPS.md · ⚠️ คือข้อมูลจากผู้เล่นที่ยังไม่ยืนยันจากทางการ</p>
+  </section>
+
+  <!-- 06 ─ what the game runs now and how to do it, what gives an edge (web/public/info.js) -->
+  <section class="page" id="page-info">
+    <div class="filters info-docs" id="info-docs">
+      <button class="fchip on" data-doc="events">กิจกรรมตอนนี้ &amp; ตกปลา</button>
+      <button class="fchip" data-doc="tips">ทริกได้เปรียบ</button>
+    </div>
+    <div class="guide-wrap">
+      <aside class="toc" id="info-toc"></aside>
+      <article class="panel guide" id="info-doc">กำลังโหลด…</article>
+    </div>
+    <p class="foot-note">แก้/เพิ่มได้ในไฟล์ DF-EVENTS.md · DF-TIPS.md · ภาพกิจกรรมแสดงตรงจากเว็บของ Garena (ไม่ได้คัดลอกมา) · ⚠️ คือข้อมูลจากผู้เล่นที่ยังไม่ยืนยันจากทางการ</p>
+  </section>
+
+  <!-- 07 ─ the player's own: checklist, fishing handbook, carrying it to another device (web/public/my.js) -->
+  <section class="page" id="page-my">
+    <div class="filters info-docs" id="my-tabs">
+      <button class="fchip on" data-my="check">✅ เช็กลิสต์</button>
+      <button class="fchip" data-my="fish">🎣 สมุดตกปลา</button>
+      <button class="fchip" data-my="move">📦 ย้ายข้อมูล</button>
+    </div>
+    <div id="my-body"><p class="empty">กำลังโหลด…</p></div>
+    <p class="foot-note">สิ่งที่ติ๊กในแท็บนี้ โน้ตแผนที่ และเครื่องหมาย "นำเข้าได้" ของโค้ดแต่งปืน เก็บในเบราว์เซอร์ของเครื่องนี้เท่านั้น — ล้างข้อมูลเบราว์เซอร์แล้วจะหาย · รายการแก้ได้ในไฟล์ checklist.json และ fish.json</p>
+  </section>
 </main>
 
 <footer class="foot">เครื่องมือส่วนตัว ทำงานในเครื่องนี้เท่านั้น · ไม่ใช่เว็บไซต์ทางการของ Garena หรือ Delta Force</footer>
 
 <script src="app.js"></script>
+<script src="mine.js"></script>
 <script src="builds.js"></script>
+<script src="maps.js"></script>
+<script src="info.js"></script>
+<script src="my.js"></script>
 </body>
 </html>

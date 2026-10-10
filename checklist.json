@@ -1,0 +1,31 @@
+{
+  "_": "Tab 07 (ของฉัน → เช็กลิสต์). daily/weekly come back unticked when their period turns; `once` is done one time before `until` (YYYY-MM-DD, the last day) and leaves the list after it. Keep the ids: the ticks are kept by id. The game's reset time is not known for sure — the player sets it on the page.",
+  "asOf": "2026-10-10",
+  "weeklyNote": "⚠️ ประกาศของ Garena ระบุรอบเสบียงและ Expert Choice ถึง 1 ต.ค. เท่านั้น — ดูหน้ากิจกรรมในเกมว่าสัปดาห์นี้มีรอบไหม",
+  "daily": [
+    { "id": "d-login", "text": "ล็อกอินรับของรายวัน" },
+    { "id": "d-missions", "text": "ทำภารกิจรายวัน — ได้ Delta Tickets จำกัดเวลา", "until": "2026-10-25" },
+    { "id": "d-ops", "text": "เล่น Operations อย่างน้อย 1 รอบ — สะสม Anniversary Token", "until": "2026-10-15" },
+    { "id": "d-mooncake", "text": "ล็อกอินสะสมขนมไหว้พระจันทร์", "until": "2026-10-15" }
+  ],
+  "weekly": [
+    { "id": "w-ops-supply", "text": "เสบียงรายสัปดาห์ Operations — ล็อกอิน + เข้าแมตช์ รับ Gear Ticket" },
+    { "id": "w-wf-supply", "text": "เสบียงรายสัปดาห์ Warfare — เล่นแมตช์ รับ Weapon EXP Card" },
+    { "id": "w-expert", "text": "Expert Choice — ทำภารกิจด้วยปืนที่กำหนดของสัปดาห์" },
+    { "id": "w-merit", "text": "Weekend Merit Boost — สามแมตช์แรงก์แรกของสุดสัปดาห์ (เมื่อมีรอบ)" },
+    { "id": "w-tickets", "text": "ใช้ Gear Ticket ที่ได้มาฝึกแผนที่" }
+  ],
+  "once": [
+    { "id": "o-token", "text": "แลก Anniversary Token ในร้านให้หมด", "until": "2026-10-15" },
+    { "id": "o-inside", "text": "Inside Haavk — ไขปริศนาฟอรัมแล้วไปหาร่องรอยใน Operations", "until": "2026-10-15" },
+    { "id": "o-on", "text": "On Haavk — โต้ตอบกับ NPC ตามภารกิจให้ครบ", "until": "2026-10-15" },
+    { "id": "o-nest", "text": "อีสเตอร์เอ้กรังนกที่ Layali Grove", "until": "2026-10-15" },
+    { "id": "o-harmonica", "text": "บรรเลงฮาร์โมนิกา — นำเสบียงออก + ภารกิจยุทธวิธี", "until": "2026-10-15" },
+    { "id": "o-teamup", "text": "Team Up — เล่นกับเพื่อนสะสมเวลา", "until": "2026-10-15" },
+    { "id": "o-daniel", "text": "Daniel Wu มาแล้ว! — สะสมเวลาเอาชีวิตรอด + Active Mission", "until": "2026-10-15" },
+    { "id": "o-warfare", "text": "โหมด Warfare ครบรอบ: Flagship Frenzy · Ultra Overload · Vehicle Challenge", "until": "2026-10-15" },
+    { "id": "o-tickets", "text": "ใช้ Delta Tickets จำกัดเวลาให้หมด + เลือก Bundle ให้ครบ 3 ครั้ง", "until": "2026-10-25" },
+    { "id": "o-eclosion", "text": "Eclosion — อ่านการ์ตูน Vlinder ครบ 4 บท รับชุดฟรี", "until": "2026-11-09" },
+    { "id": "o-pass", "text": "ซีซันพาส — เก็บรางวัลก่อนจบซีซัน", "until": "2026-11-09" }
+  ]
+}

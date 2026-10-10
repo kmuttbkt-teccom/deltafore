@@ -28,6 +28,46 @@ const classOf = name => { const c = CLASSES.find(x => name.endsWith(x[0])); retu
 const modeOf = m => /warfare|สงคราม|สมรภูมิ/i.test(m) ? 'Warfare' : /operation|ปฏิบัติการ/i.test(m) ? 'Operations' : m.trim();
 const make = (name, mode, code) => ({ code, name: name.trim(), mode: modeOf(mode), cls: classOf(name.trim()), full: name.trim() + '-' + mode.trim() + '-' + code });
 
+// Some pages carry each build as data too: its attachments by slot, a play style, how many
+// players pick it, when it was last changed. Read where it is there (the shape is the one of
+// codmunity's page data: { …, Barrel:"…", "Rear Grip":"…", LoadoutCode:"name-mode-code", … }).
+const NOT_A_SLOT = new Set(['_id', 'WeaponName', 'Playstyle', 'Playstyle2', 'Description', 'Game', 'Category', 'image', 'collec', 'appGame', 'meta', 'LoadoutCode', 'weaponSlug', 'weaponGame']);
+function details(html) {
+  const out = new Map(), src = String(html);
+  for (const m of src.matchAll(/LoadoutCode:"([^"]{8,90})"/g)) {
+    const code = (/-([A-Z0-9]{18,24})$/.exec(m[1]) || [])[1];
+    const start = src.lastIndexOf('{', m.index), end = src.indexOf('}', m.index);     // one build is one flat object
+    if (!code || out.has(code) || start < 0 || end < 0 || m.index - start > 4000) continue;
+    const obj = src.slice(start, end), att = {};
+    for (const p of obj.matchAll(/[{,](?:"([^"]{2,24})"|([A-Za-z_][A-Za-z0-9_]{1,23})):"([^"]{2,70})"/g)) {
+      const slot = p[1] || p[2];
+      if (!NOT_A_SLOT.has(slot) && /^[A-Z]/.test(slot)) att[slot] = p[3];            // slots are named with a capital
+    }
+    const num = k => { const x = new RegExp('[{,]' + k + ':(\\d+(?:\\.\\d+)?)').exec(obj); return x ? Number(x[1]) : null; };
+    const d = Object.keys(att).length ? { att } : {};              // the page gives the full list for its top builds only
+    const count = num('countAttachments'); if (count) d.count = count;
+    const style = /[{,]Playstyle:"([^"]{2,30})"/.exec(obj); if (style) d.style = style[1];
+    const pick = num('popularity'); if (pick !== null) d.pick = Math.round(pick * 10) / 10;
+    const at = num('updated'); if (at && at > 1e12) d.updated = new Date(at).toISOString().slice(0, 10);
+    if (Object.keys(d).length) out.set(code, d);
+  }
+  return out;
+}
+
+// Where a page links each build to a page of its own (/build/…-<code>), that page lists the
+// attachments as  <span>Slot</span> <p>Attachment</p>.
+const SLOT = /(Muzzle|Barrel|Optic|Scope|Stock|Mag|Grip|Rail|Patch|Handguard|Gas Block|Cheek|Heat Shield|Handle|Unique|Bipod|Laser|Bolt|Receiver|Mount)/;
+function pagesOf(html, base) {
+  const out = new Map();
+  for (const m of String(html).matchAll(/href="(\/build\/[a-z0-9-]+-([a-z0-9]{18,24}))"/g)) out.set(m[2].toUpperCase(), new URL(m[1], base).href);
+  return out;
+}
+function listOnPage(html) {
+  const att = {};
+  for (const m of String(html).matchAll(/<span[^>]*>\s*([A-Z][A-Za-z ]{2,22}?)\s*<\/span>\s*<p[^>]*>\s*([^<]{3,70}?)\s*<\/p>/g)) if (SLOT.test(m[1])) att[m[1]] = m[2].replace(/&amp;/g, '&');
+  return att;
+}
+
 // Every build on a page. The codes often sit in the page's data (inside scripts), not in its
 // visible text, so the whole source is read: tags become breaks, the usual escapes are undone.
 function extract(html) {
@@ -35,6 +75,8 @@ function extract(html) {
     .replace(/&amp;/g, '&').replace(/&#x27;|&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ');
   const out = new Map();
   for (const m of text.matchAll(ON_PAGE)) if (!out.has(m[3])) out.set(m[3], make(m[1], m[2], m[3]));
+  const more = details(html);
+  for (const b of out.values()) Object.assign(b, more.get(b.code));
   return [...out.values()];
 }
 
@@ -63,12 +105,20 @@ function save(db) {
 }
 
 // Puts builds in the list; one already known only gains the page it was seen on. Returns the new ones.
-function merge(db, items, source) {
+function merge(db, items, source, url) {
   const fresh = [];
   for (const it of items) {
     const known = db.builds[it.code];
-    if (known) { if (source !== 'manual' && !(known.seen || []).includes(source)) known.seen = (known.seen || []).concat(source); continue; }
-    db.builds[it.code] = Object.assign({}, it, { source, seen: source === 'manual' ? [] : [source], addedAt: new Date().toISOString(), fav: false, hidden: false });
+    if (known) {
+      if (source !== 'manual' && !(known.seen || []).includes(source)) known.seen = (known.seen || []).concat(source);
+      if (it.att || it.style || it.count) {                 // the page that says what it is made of is the one to link to
+        for (const k of ['style', 'pick', 'updated', 'count']) if (it[k] !== undefined && known[k] === undefined) known[k] = it[k];
+        if (it.att && !known.att) { known.att = it.att; known.link = it.page || url || known.link; }
+        else if (!known.link) known.link = it.page || url;
+      } else if (!known.link && (it.page || url)) known.link = it.page || url;
+      continue;
+    }
+    db.builds[it.code] = Object.assign({}, it, { source, link: it.page || url || '', seen: source === 'manual' ? [] : [source], addedAt: new Date().toISOString(), fav: false, hidden: false });
     fresh.push(db.builds[it.code]);
   }
   return fresh;
@@ -82,16 +132,29 @@ async function scan(sources, say) {
     try {
       const r = await fetch(src.url, { headers: { 'user-agent': UA, 'accept': 'text/html' }, signal: AbortSignal.timeout(25000), redirect: 'follow' });
       if (!r.ok) return { src, error: 'ตอบ ' + r.status + ' (ข้ามไป)' };
-      return { src, items: extract(await r.text()) };
+      const html = await r.text(), items = extract(html), own = pagesOf(html, src.url);
+      for (const it of items) if (own.has(it.code)) it.page = own.get(it.code);
+      return { src, items };
     } catch (e) {
       return { src, error: e.name === 'TimeoutError' ? 'ไม่ตอบใน 25 วินาที' : e.message };
     }
   }));
   const db = load();
+  // the attachment lists that stand on a build's own page: one request each, a dozen at most per scan
+  let asked = 0;
+  for (const r of results) for (const it of r.items || []) {
+    if (!it.page || it.att || (db.builds[it.code] && db.builds[it.code].att) || asked >= 12) continue;
+    asked++;
+    try {
+      const p = await fetch(it.page, { headers: { 'user-agent': UA, 'accept': 'text/html' }, signal: AbortSignal.timeout(20000) });
+      const att = p.ok ? listOnPage(await p.text()) : {};
+      if (Object.keys(att).length >= 2) it.att = att;
+    } catch (e) { /* the list stays unknown */ }
+  }
   let fresh = 0;
   for (const r of results) {
     if (r.error) { say('  ✗ ' + r.src.name + ' — ' + r.error); continue; }
-    const n = merge(db, r.items, r.src.name).length;
+    const n = merge(db, r.items, r.src.name, r.src.url).length;
     fresh += n;
     say('  ✓ ' + r.src.name + ' — พบ ' + r.items.length + ' ชุดแต่ง' + (n ? ' (ใหม่ ' + n + ')' : ''));
   }
@@ -104,17 +167,37 @@ async function scan(sources, say) {
 // Wikipedia article, asked for with "free licence only" and shown straight from Wikimedia with
 // a link to the file's page (its author and licence). weapons.json says which article; what
 // the encyclopedia answered is kept in data/weapon-images.json. Not the game's own art.
+//
+// The weapon as it looks in the game comes first where a weapon list names one (config.json →
+// gamePictures.url): the picture is not copied — its address on that site is kept, and the card
+// shows it from there with the site named and linked. Switch it off there and the cards go back
+// to the photographs.
 const ROOT = path.join(__dirname, '..');
 const IMAGES = () => path.join(store.DATA, 'weapon-images.json');
 const modelOf = name => name.replace(new RegExp(' (?:' + CLASS_RE + ')$'), '');
 const weaponMap = () => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'weapons.json'), 'utf8')); } catch (e) { return {}; } };
 const loadImages = () => { try { return JSON.parse(fs.readFileSync(IMAGES(), 'utf8')); } catch (e) { return {}; } };
 
-// model → { src, w, h, page, real } for every model of the list that has a picture
+const keyOf = name => String(name).toUpperCase().replace(/[^A-Z0-9]/g, '');      // "AS Val" and "AS VAL" are one weapon
+// every <img src=".../weapons/…" alt="NAME"> of a weapon list → { NAME: address of its picture }
+function gameShots(html, base) {
+  const items = {};
+  for (const tag of String(html).match(/<img\b[^>]*>/g) || []) {
+    const src = /\bsrc="([^"]+\/weapons\/[^"]+\.(?:webp|png|jpe?g))"/i.exec(tag), alt = /\balt="([^"]{2,40})"/.exec(tag);
+    if (!src || !alt || !keyOf(alt[1]) || items[keyOf(alt[1])]) continue;
+    try { const u = new URL(src[1], base); if (/^https?:$/.test(u.protocol)) items[keyOf(alt[1])] = u.href; } catch (e) { /* not an address */ }
+  }
+  return items;
+}
+
+// model → its picture, for every model of the list that has one: { src, page, by, game: true }
+// as it looks in the game, or { src, w, h, page, real } — the real firearm it is modelled on
 function pictures(db) {
-  const map = weaponMap(), got = loadImages(), out = {};
+  const map = weaponMap(), got = loadImages(), game = got['@game'] || {}, out = {};
   for (const b of Object.values(db.builds)) {
-    const m = modelOf(b.name), want = map[m], img = want && (want.file ? got['File:' + want.file] : got[want.wiki]);
+    const m = modelOf(b.name), shot = game.items && game.items[keyOf(m)];
+    if (shot) { out[m] = { src: shot, page: game.page, by: game.from, game: true }; continue; }
+    const want = map[m], img = want && (want.file ? got['File:' + want.file] : got[want.wiki]);
     if (img && img.src) out[m] = Object.assign({ real: want.real || want.wiki }, img);
   }
   return out;
@@ -154,11 +237,23 @@ async function fetchPictures(say) {
       got[t] = ii && ii.thumburl ? { src: ii.thumburl, w: ii.thumbwidth, h: ii.thumbheight, page: ii.descriptionurl } : {};
     }
   }
+  // the weapons as they look in the game: one page, read again every time (it changes with the game)
+  const gp = store.config().gamePictures;
+  if (gp && gp.url && gp.enabled !== false) {
+    try {
+      const r = await fetch(gp.url, { headers: { 'user-agent': UA, 'accept': 'text/html' }, signal: AbortSignal.timeout(25000), redirect: 'follow' });
+      if (!r.ok) throw new Error('หน้าเว็บตอบ ' + r.status);
+      const items = gameShots(await r.text(), gp.url);
+      if (!Object.keys(items).length) throw new Error('ไม่พบรูปในหน้านั้น');
+      got['@game'] = { from: new URL(gp.url).hostname.replace(/^www\./, ''), page: gp.url, at: new Date().toISOString().slice(0, 10), items };
+      if (say) say('  🎮 รูปปืนในเกม: ' + Object.keys(items).length + ' รุ่น (แสดงจาก ' + got['@game'].from + ')');
+    } catch (e) { if (say) say('  ✗ รูปปืนในเกม: ' + e.message + ' (ใช้ของเดิม)'); }
+  } else delete got['@game'];
   fs.mkdirSync(store.DATA, { recursive: true });
   fs.writeFileSync(IMAGES(), JSON.stringify(got, null, 2));
-  const have = Object.values(got).filter(x => x.src).length;
-  if (say) say('  🖼  รูปปืน: ' + have + ' จาก ' + Object.keys(got).length + ' บทความ' + (titles.length + files.length ? ' (ถามใหม่ ' + (titles.length + files.length) + ')' : ''));
+  const asked = Object.keys(got).filter(k => k !== '@game'), have = asked.filter(k => got[k].src).length;
+  if (say) say('  🖼  รูปปืนจริง: ' + have + ' จาก ' + asked.length + ' บทความ' + (titles.length + files.length ? ' (ถามใหม่ ' + (titles.length + files.length) + ')' : ''));
   return have;
 }
 
-module.exports = { extract, parse, load, save, merge, list, scan, classOf, modeOf, modelOf, pictures, fetchPictures, CLASSES };
+module.exports = { details, pagesOf, listOnPage, extract, parse, load, save, merge, list, scan, classOf, modeOf, modelOf, pictures, fetchPictures, gameShots, CLASSES };

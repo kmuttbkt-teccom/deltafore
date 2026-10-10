@@ -13,7 +13,24 @@
       ],
       "addedAt": "2026-10-09T17:53:44.293Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 20.2,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 10,
+      "att": {
+        "Foregrip": "Secret Order Bevel Foregrip",
+        "Barrel": "New Leviathan Tactical Long Barrel",
+        "Gas Block": "New Stabilizing Gas Block",
+        "Mag": "5.8 Newtype 60-Round Drum Mag",
+        "Muzzle": "Sandstorm Vertical Compensator",
+        "Optic": "Cobra Accuracy Sight",
+        "Rear Grip": "New Type Vanguard Light Grip",
+        "Right Rail": "DBAL-X2 Purple Laser-Light Combo",
+        "Stock": "416 Light Stock",
+        "Upper Patch": "Ranger Handguard"
+      }
     },
     "6HLOBES09MFFCME3G7LT2": {
       "code": "6HLOBES09MFFCME3G7LT2",
@@ -28,7 +45,25 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 23.2,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 11,
+      "att": {
+        "Foregrip": "Secret Order Bevel Foregrip",
+        "Barrel": "AR Gabriel Long Barrel Combo",
+        "Cheek Pad": "Universal Cheek Pad",
+        "Mag": "M4 45-Round Extended Mag",
+        "Mag Mount": "Badger Small Mag Assist (Black)",
+        "Muzzle": "Sandstorm Vertical Compensator",
+        "Optic": "Cobra Accuracy Sight",
+        "Rear Grip": "Phantom Rear Grip",
+        "Right Rail": "DBAL-X2 Purple Laser-Light Combo",
+        "Stock": "M16A4 Stable Stock",
+        "Upper Patch": "KC Hound Handguard"
+      }
     },
     "6HLOBLC09MFFCME3G7LT2": {
       "code": "6HLOBLC09MFFCME3G7LT2",
@@ -44,7 +79,25 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Close Range",
+      "pick": 12.5,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 11,
+      "att": {
+        "Foregrip": "Secret Order Bevel Foregrip",
+        "Barrel": "SMG-45 Fission Long Barrel",
+        "Grip Mount": "Balanced Grip Base",
+        "Mag": "SMG-45 40-Round Extended Mag",
+        "Mag Mount": "Hornet SMG Mag Assist (Black)",
+        "Muzzle": "SMG Echo Suppressor",
+        "Optic": "OSIGHT Red Dot",
+        "Rear Grip": "AR Heavy Tower Grip",
+        "Right Rail": "PEQ-2 Red Laser-Light Combo",
+        "Stock": "UR Spec Ops Tactical Stock",
+        "Upper Patch": "DD Python Handguard"
+      }
     },
     "6HLOBK009MFFCME3G7LT2": {
       "code": "6HLOBK009MFFCME3G7LT2",
@@ -60,7 +113,26 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Close Range",
+      "pick": 1.1,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 12,
+      "att": {
+        "Foregrip": "X25U Angled Combat Grip",
+        "Barrel": "SR-3M Cast Steel Tactical Barrel",
+        "Grip Mount": "Balanced Grip Base",
+        "Mag": "Vss 45-Round Mag",
+        "Mag Mount": "Coyote Medium P. Mag Assist (Black)",
+        "Muzzle": "Bastion Horizontal Compensator",
+        "Optic": "OSIGHT Red Dot",
+        "Rear Grip": "AK Heavy Tower Grip",
+        "Right Rail": "LA-3C Green Laser-Light Combo",
+        "Stock": "UR Spec Ops Tactical Stock",
+        "Upper Patch": "DD Python Handguard",
+        "Charging Handle": "ZenitCo Charging Handle Cap"
+      }
     },
     "6HLOCUK09MFFCME3G7LT2": {
       "code": "6HLOCUK09MFFCME3G7LT2",
@@ -74,7 +146,18 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Sniper",
+      "pick": 7.2,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 4,
+      "att": {
+        "Optic": "XCOG Assault 3.5x Scope",
+        "Right Rail": "PEQ-2 Red Laser-Light Combo",
+        "Upper Patch": "DD Python Handguard Panel",
+        "Unique": "AWM M-Lok Kit"
+      }
     },
     "6HLOCT009MFFCME3G7LT2": {
       "code": "6HLOCT009MFFCME3G7LT2",
@@ -89,7 +172,20 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Sniper",
+      "pick": 7.2,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 6,
+      "att": {
+        "Barrel": "AWM Skyline Long Barrel",
+        "Muzzle": "Resonant Sniper Rifle Suppressor",
+        "Optic": "ACOG Precision 6x Scope",
+        "Right Rail": "DBAL-X2 Purple Laser-Light Combo",
+        "Upper Patch": "DD Python Handguard",
+        "Unique": "AWM M-Lok Kit"
+      }
     },
     "6HLOD7809MFFCME3G7LT2": {
       "code": "6HLOD7809MFFCME3G7LT2",
@@ -104,7 +200,18 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Sniper",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 4,
+      "att": {
+        "Barrel": "R93 Lightweight Short Barrel",
+        "Heat Shield": "R93 Barrel Heat Shield",
+        "Muzzle": "Whisper Tactical Suppressor",
+        "Optic": "ACOG Precision 6x Scope"
+      }
     },
     "6ID37M409MFFCME3G7LT2": {
       "code": "6ID37M409MFFCME3G7LT2",
@@ -118,7 +225,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Close Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 11
     },
     "6HLOB3G09MFFCME3G7LT2": {
       "code": "6HLOB3G09MFFCME3G7LT2",
@@ -132,7 +244,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 11
     },
     "6HLOBDK09MFFCME3G7LT2": {
       "code": "6HLOBDK09MFFCME3G7LT2",
@@ -146,7 +263,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 11
     },
     "6HKHRB409MFFCME3G7LT2": {
       "code": "6HKHRB409MFFCME3G7LT2",
@@ -160,7 +282,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Close Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 10
     },
     "6HLOD8G09MFFCME3G7LT2": {
       "code": "6HLOD8G09MFFCME3G7LT2",
@@ -174,7 +301,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Sniper",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 5
     },
     "6J0LKQC09MFFCME3G7LT2": {
       "code": "6J0LKQC09MFFCME3G7LT2",
@@ -188,7 +320,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 11
     },
     "6HLOAM809MFFCME3G7LT2": {
       "code": "6HLOAM809MFFCME3G7LT2",
@@ -202,7 +339,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 10
     },
     "6HLOBGC09MFFCME3G7LT2": {
       "code": "6HLOBGC09MFFCME3G7LT2",
@@ -216,7 +358,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Close Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 10
     },
     "6HLOC9809MFFCME3G7LT2": {
       "code": "6HLOC9809MFFCME3G7LT2",
@@ -230,7 +377,12 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "style": "Long Range",
+      "pick": 1.9,
+      "updated": "2025-09-26",
+      "link": "https://codmunity.gg/delta-force",
+      "count": 9
     },
     "6HLOBCG09MFFCME3G7LT2": {
       "code": "6HLOBCG09MFFCME3G7LT2",
@@ -244,7 +396,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOBB409MFFCME3G7LT2": {
       "code": "6HLOBB409MFFCME3G7LT2",
@@ -259,7 +414,23 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcedb.com/build/aks-74-warfare-aks-74-assault-rifle-warfare-6hlobb409mffcme3g7lt2",
+      "style": "Long Range",
+      "count": 12,
+      "att": {
+        "Rear Grip": "AK Heavy Tower Grip",
+        "Muzzle": "Sandstorm Vertical Compensator",
+        "Stock": "PT1 Spec Ops Stock",
+        "Optic": "Cobra Accuracy Sight",
+        "Mag": "AKS 45-Round Extended Mag",
+        "Right Rail": "DBAL-X2 Purple Laser-Light Combo",
+        "Mag Mount": "Badger Small Mag Assist (Black)",
+        "Grip Mount": "Stable Grip Base",
+        "Handguard": "AKS-74 Lower Rail Handguard",
+        "Upper Handguard": "AKS-74 Upper Rail Handguard",
+        "Charging Handle": "ZenitCo Charging Handle Cap"
+      }
     },
     "6HLOBQC09MFFCME3G7LT2": {
       "code": "6HLOBQC09MFFCME3G7LT2",
@@ -273,7 +444,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 9
     },
     "6HLOBOS09MFFCME3G7LT2": {
       "code": "6HLOBOS09MFFCME3G7LT2",
@@ -287,7 +461,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 9
     },
     "6HLOB4K09MFFCME3G7LT2": {
       "code": "6HLOB4K09MFFCME3G7LT2",
@@ -301,7 +478,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOBSS09MFFCME3G7LT2": {
       "code": "6HLOBSS09MFFCME3G7LT2",
@@ -315,7 +495,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 8
     },
     "6HLOB6009MFFCME3G7LT2": {
       "code": "6HLOB6009MFFCME3G7LT2",
@@ -330,7 +513,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 9
     },
     "6HLOC2G09MFFCME3G7LT2": {
       "code": "6HLOC2G09MFFCME3G7LT2",
@@ -344,7 +530,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 10
     },
     "6HLOAJG09MFFCME3G7LT2": {
       "code": "6HLOAJG09MFFCME3G7LT2",
@@ -358,7 +547,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HLOBU009MFFCME3G7LT2": {
       "code": "6HLOBU009MFFCME3G7LT2",
@@ -372,7 +564,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 8
     },
     "6HLOCBS09MFFCME3G7LT2": {
       "code": "6HLOCBS09MFFCME3G7LT2",
@@ -386,7 +581,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 8
     },
     "6HLOCD009MFFCME3G7LT2": {
       "code": "6HLOCD009MFFCME3G7LT2",
@@ -400,7 +598,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 8
     },
     "6HLOC5C09MFFCME3G7LT2": {
       "code": "6HLOC5C09MFFCME3G7LT2",
@@ -414,7 +615,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOCFK09MFFCME3G7LT2": {
       "code": "6HLOCFK09MFFCME3G7LT2",
@@ -428,7 +632,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HLOC1409MFFCME3G7LT2": {
       "code": "6HLOC1409MFFCME3G7LT2",
@@ -442,7 +649,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 7
     },
     "6HLOCR009MFFCME3G7LT2": {
       "code": "6HLOCR009MFFCME3G7LT2",
@@ -456,7 +666,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HKHR6C09MFFCME3G7LT2": {
       "code": "6HKHR6C09MFFCME3G7LT2",
@@ -470,7 +683,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HLOBVK09MFFCME3G7LT2": {
       "code": "6HLOBVK09MFFCME3G7LT2",
@@ -484,7 +700,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 5
     },
     "6HLOCKC09MFFCME3G7LT2": {
       "code": "6HLOCKC09MFFCME3G7LT2",
@@ -499,7 +718,22 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcedb.com/build/sr-25-warfare-sr-25-marksman-rifle-warfare-6hlockc09mffcme3g7lt2",
+      "style": "Long Range",
+      "count": 11,
+      "att": {
+        "Rear Grip": "AR Heavy Tower Grip",
+        "Barrel": "SR-25 Zephyr Long Barrel",
+        "Stock": "Skeleton Sniper Stock",
+        "Optic": "Cobra Accuracy Sight",
+        "Mag": "SR-25 30-Round Extended Mag",
+        "Right Rail": "DBAL-X2 Purple Laser-Light Combo",
+        "Mag Mount": "Grizzly Full P. Mag Assist (Black)",
+        "Grip Mount": "Balanced Grip Base",
+        "Upper Patch": "Ranger Handguard Panel",
+        "Handguard": "SR-25 Elite Handguard"
+      }
     },
     "6HLOAVC09MFFCME3G7LT2": {
       "code": "6HLOAVC09MFFCME3G7LT2",
@@ -513,7 +747,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOD6009MFFCME3G7LT2": {
       "code": "6HLOD6009MFFCME3G7LT2",
@@ -527,7 +764,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Sniper",
+      "count": 8
     },
     "6HLOCAK09MFFCME3G7LT2": {
       "code": "6HLOCAK09MFFCME3G7LT2",
@@ -541,7 +781,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 9
     },
     "6HLOCPC09MFFCME3G7LT2": {
       "code": "6HLOCPC09MFFCME3G7LT2",
@@ -555,7 +798,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 8
     },
     "6HLOB0K09MFFCME3G7LT2": {
       "code": "6HLOB0K09MFFCME3G7LT2",
@@ -569,7 +815,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 9
     },
     "6HLOBIO09MFFCME3G7LT2": {
       "code": "6HLOBIO09MFFCME3G7LT2",
@@ -584,7 +833,22 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcedb.com/build/vityaz-warfare-vityaz-submachine-gun-warfare-6hlobio09mffcme3g7lt2",
+      "style": "Close Range",
+      "count": 11,
+      "att": {
+        "Rear Grip": "AK Skeleton Foregrip",
+        "Barrel": "Vityaz Beaver Barrel",
+        "Muzzle": "Sandstorm Vertical Compensator",
+        "Stock": "UR Spec Ops Tactical Stock",
+        "Optic": "OSIGHT Red Dot",
+        "Mag": "Vityaz 45-Round Extended Mag",
+        "Right Rail": "PERST-7 Blue Laser-Light Combo",
+        "Mag Mount": "Hornet SMG Mag Assist (Black)",
+        "Upper Patch": "DD Python Handguard",
+        "Charging Handle": "ZenitCo Charging Handle Cap"
+      }
     },
     "6HLOCN009MFFCME3G7LT2": {
       "code": "6HLOCN009MFFCME3G7LT2",
@@ -598,7 +862,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOCOC09MFFCME3G7LT2": {
       "code": "6HLOCOC09MFFCME3G7LT2",
@@ -612,7 +879,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HLOB9O09MFFCME3G7LT2": {
       "code": "6HLOB9O09MFFCME3G7LT2",
@@ -626,7 +896,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 8
     },
     "6HLOC3O09MFFCME3G7LT2": {
       "code": "6HLOC3O09MFFCME3G7LT2",
@@ -640,7 +913,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 8
     },
     "6HKHVKC09MFFCME3G7LT2": {
       "code": "6HKHVKC09MFFCME3G7LT2",
@@ -654,7 +930,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOCLG09MFFCME3G7LT2": {
       "code": "6HLOCLG09MFFCME3G7LT2",
@@ -669,7 +948,23 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcedb.com/build/sks-warfare-sks-marksman-rifle-warfare-6hloclg09mffcme3g7lt2",
+      "style": "Long Range",
+      "count": 12,
+      "att": {
+        "Rear Grip": "AK Heavy Tower Grip",
+        "Barrel": "SKS Instant Ultra-Long Barrel",
+        "Muzzle": "Sandstorm Vertical Compensator",
+        "Stock": "UR Spec Ops Tactical Stock",
+        "Optic": "Cobra Accuracy Sight",
+        "Mag": "AK762 30-Round Wooden Mag",
+        "Right Rail": "DBAL-X2 Purple Laser-Light Combo",
+        "Mag Mount": "Coyote Medium P. Mag Assist (Black)",
+        "Grip Mount": "Balanced Grip Base",
+        "Upper Patch": "DD Python Handguard",
+        "Handguard Kit": "SKS Advanced Handguard"
+      }
     },
     "6HLOB8G09MFFCME3G7LT2": {
       "code": "6HLOB8G09MFFCME3G7LT2",
@@ -683,7 +978,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HLOBHK09MFFCME3G7LT2": {
       "code": "6HLOBHK09MFFCME3G7LT2",
@@ -697,7 +995,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 10
     },
     "6HLOCH009MFFCME3G7LT2": {
       "code": "6HLOCH009MFFCME3G7LT2",
@@ -711,7 +1012,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 9
     },
     "6HLOB1O09MFFCME3G7LT2": {
       "code": "6HLOB1O09MFFCME3G7LT2",
@@ -725,7 +1029,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HLOAQC09MFFCME3G7LT2": {
       "code": "6HLOAQC09MFFCME3G7LT2",
@@ -739,7 +1046,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 9
     },
     "6HLOBNK09MFFCME3G7LT2": {
       "code": "6HLOBNK09MFFCME3G7LT2",
@@ -753,7 +1063,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Close Range",
+      "count": 9
     },
     "6HLODI809MFFCME3G7LT2": {
       "code": "6HLODI809MFFCME3G7LT2",
@@ -767,7 +1080,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Secondary",
+      "count": 8
     },
     "6HLOATS09MFFCME3G7LT2": {
       "code": "6HLOATS09MFFCME3G7LT2",
@@ -781,7 +1097,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 10
     },
     "6HLOB7C09MFFCME3G7LT2": {
       "code": "6HLOB7C09MFFCME3G7LT2",
@@ -795,7 +1114,10 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://codmunity.gg/delta-force",
+      "style": "Long Range",
+      "count": 11
     },
     "6HNEL2G0EIPHRNLI0J8JI": {
       "code": "6HNEL2G0EIPHRNLI0J8JI",
@@ -809,7 +1131,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6I04C2G0FSH6GRF76DG60": {
       "code": "6I04C2G0FSH6GRF76DG60",
@@ -823,7 +1146,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6HE0B9808M3TET99CEP38": {
       "code": "6HE0B9808M3TET99CEP38",
@@ -837,7 +1161,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6HS36340FSH6GRF76DG60": {
       "code": "6HS36340FSH6GRF76DG60",
@@ -851,7 +1176,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6HLPMQ80EIPHRNLI0J8JI": {
       "code": "6HLPMQ80EIPHRNLI0J8JI",
@@ -865,7 +1191,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6HSGLAG0FSH6GRF76DG60": {
       "code": "6HSGLAG0FSH6GRF76DG60",
@@ -879,7 +1206,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6EO15NC057RAU0E7AE9HI": {
       "code": "6EO15NC057RAU0E7AE9HI",
@@ -893,7 +1221,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6I6KK3S00RR8JACO27GDL": {
       "code": "6I6KK3S00RR8JACO27GDL",
@@ -907,7 +1236,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://deltaforcetools.gg/weapon-builds"
     },
     "6KJTP280554DKS2KS8AAN": {
       "code": "6KJTP280554DKS2KS8AAN",
@@ -921,7 +1251,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://skycoach.gg/blog/delta-force-hawk-ops/articles/df-best-loadouts"
     },
     "6K5T3F0073PJM0S450OEV": {
       "code": "6K5T3F0073PJM0S450OEV",
@@ -935,7 +1266,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6K5TDKO073PJM0S450OEV": {
       "code": "6K5TDKO073PJM0S450OEV",
@@ -949,7 +1281,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6K5VHK8073PJM0S450OEV": {
       "code": "6K5VHK8073PJM0S450OEV",
@@ -963,7 +1296,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6K5TIM0073PJM0S450OEV": {
       "code": "6K5TIM0073PJM0S450OEV",
@@ -977,7 +1311,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6K5TJV4073PJM0S450OEV": {
       "code": "6K5TJV4073PJM0S450OEV",
@@ -991,7 +1326,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6I01TBC0FSH6GRF76DG60": {
       "code": "6I01TBC0FSH6GRF76DG60",
@@ -1005,7 +1341,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6HSGI580FSH6GRF76DG60": {
       "code": "6HSGI580FSH6GRF76DG60",
@@ -1019,7 +1356,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6I0476C0FSH6GRF76DG60": {
       "code": "6I0476C0FSH6GRF76DG60",
@@ -1033,7 +1371,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6HSGGQG0FSH6GRF76DG60": {
       "code": "6HSGGQG0FSH6GRF76DG60",
@@ -1047,7 +1386,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6JGIO4C073PLKDGT2OU3K": {
       "code": "6JGIO4C073PLKDGT2OU3K",
@@ -1061,7 +1401,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6I5KMSC00RR8JACO27GDL": {
       "code": "6I5KMSC00RR8JACO27GDL",
@@ -1075,7 +1416,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.294Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     },
     "6K5TROO073PJM0S450OEV": {
       "code": "6K5TROO073PJM0S450OEV",
@@ -1089,7 +1431,8 @@
       ],
       "addedAt": "2026-10-09T17:53:44.295Z",
       "fav": false,
-      "hidden": false
+      "hidden": false,
+      "link": "https://buffbuff.com/blog/delta-force-gun-code"
     }
   }
 }
