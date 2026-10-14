@@ -175,7 +175,7 @@ const get = (url, headers) => new Promise(resolve => {
     await room.eval(`location.hash = 'maps'; 1`);
     await room.until(`!!document.querySelector('#map-note')`, 6000);
     await room.eval(`(() => { const ta = document.querySelector('#map-note'); ta.value = 'ออกทางเหนือ'; ta.dispatchEvent(new Event('input', { bubbles: true })); return 1; })()`);
-    await sleep(700);
+    await room.until(`(() => { try { const m = JSON.parse(localStorage.getItem('df-mine')); return m && m.notes && m.notes['zero-dam'] === 'ออกทางเหนือ'; } catch (e) { return false; } })()`, 6000);
     check('a note on a map is kept for that map; the door codes are a link, with its warning', await room.eval(`JSON.parse(localStorage.getItem('df-mine')).notes['zero-dam'] === 'ออกทางเหนือ' && !!document.querySelector('#map-body a[href*="door-codes"]') && /ยังไม่ได้ตรวจ/.test(document.querySelector('#map-body').textContent)`));
 
     // ── carrying it to another device ──

@@ -12,6 +12,8 @@ const LABEL = {
 const GROUPS = [
   ['all', 'ทั้งหมด', () => true],
   ['wait', 'รอแลก', e => ['new', 'early', 'retry'].includes(e.status)],
+  ['skins', 'สกินปืน & ตัวละคร', e => /สกิน|ปืน|ตัวละคร|干员|Avatar|Camo|Skin|Operator/i.test((e.note || '') + ' ' + (e.seen || []).join(' ')) || ['surprise', 'SJZ2026', 'bilibili666', 'DX202402', 'DF0922', 'DFHAWK', 'DELTAFORCE2026'].includes(e.code)],
+  ['cn', 'โค้ดจีน (CN)', e => /จีน|CN|口令|Bilibili|TapTap|好游/i.test((e.source || '') + ' ' + (e.seen || []).join(' ') + ' ' + (e.note || ''))],
   ['found', 'รออนุมัติ', e => e.status === 'found'],
   ['ok', 'สำเร็จ', e => e.status === 'ok'],
   ['done', 'จบแล้ว', e => ['used', 'gone', 'expired', 'invalid', 'failed', 'skip'].includes(e.status)]
@@ -433,6 +435,19 @@ function drawLan() {
   });
 }
 
+function formatNote(n) {
+  if (!n) return '';
+  return esc(n)
+    .replace(/\[สกินปืน\]/g, '<span class="tag m">สกินปืน</span> ')
+    .replace(/\[ตัวละคร\]/g, '<span class="tag" style="color:#6fd08c;border-color:#2f6a43">ตัวละคร</span> ')
+    .replace(/\[จีน CN\]/g, '<span class="tag" style="color:#e9b949;border-color:#8a6a23">จีน CN</span> ')
+    .replace(/\[Garena\]/g, '<span class="tag" style="color:#6fb8e0;border-color:#2d5a73">Garena</span> ')
+    .replace(/\[Global\]/g, '<span class="tag" style="color:#c594f7;border-color:#5c3580">Global</span> ')
+    .replace(/\[เสบียงแรร์\]/g, '<span class="tag" style="color:#ef6b5e;border-color:#7a3a33">เสบียงแรร์</span> ')
+    .replace(/\[เสบียง\]/g, '<span class="tag" style="color:#b9d3a4;border-color:#3c5030">เสบียง</span> ')
+    .replace(/\[อาวุธ\]/g, '<span class="tag" style="color:#f0a04b;border-color:#7a5424">อาวุธ</span> ');
+}
+
 // ── the list ──────────────────────────────────────────────
 function drawCodes() {
   const c = S.codes;
@@ -446,7 +461,7 @@ function drawCodes() {
         : ['new', 'early', 'retry'].includes(e.status) ? (S.mode === 'manual' ? `<button class="btn mini" data-pick="${esc(e.code)}">แลกตัวนี้</button> ` : '') + b('skip', 'ข้าม')
         : ['failed', 'skip'].includes(e.status) || (S.mode === 'manual' && ['ok', 'used', 'expired', 'invalid', 'gone'].includes(e.status)) ? b('again', 'เข้าคิวใหม่') : '';
       return `<tr><td class="code">${esc(e.code)}</td><td><span class="badge s-${e.status}">${LABEL[e.status] || e.status}</span></td>` +
-        `<td class="note">${esc(e.note || '')}</td><td class="when">${time(e.triedAt || e.addedAt)}</td><td class="src" title="${esc((e.seen || []).join('\n'))}">${esc(e.source === 'manual' ? 'เพิ่มเอง' : e.source)}${e.seen && e.seen.length > 1 ? ` <b class="more">+${e.seen.length - 1} แหล่ง</b>` : ''}</td><td class="act">${act}</td></tr>`;
+        `<td class="note">${formatNote(e.note)}</td><td class="when">${time(e.triedAt || e.addedAt)}</td><td class="src" title="${esc((e.seen || []).join('\n'))}">${esc(e.source === 'manual' ? 'เพิ่มเอง' : e.source)}${e.seen && e.seen.length > 1 ? ` <b class="more">+${e.seen.length - 1} แหล่ง</b>` : ''}</td><td class="act">${act}</td></tr>`;
     }).join('');
     $('#code-empty').hidden = rows.length > 0;
     $('#code-empty').textContent = c.length ? 'ไม่มีโค้ดในกลุ่มนี้' : 'ยังไม่มีโค้ดในรายการ — วางโค้ดในช่องด้านบน';
