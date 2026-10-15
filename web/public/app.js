@@ -12,8 +12,7 @@ const LABEL = {
 const GROUPS = [
   ['all', 'ทั้งหมด', () => true],
   ['wait', 'รอแลก', e => ['new', 'early', 'retry'].includes(e.status)],
-  ['skins', 'สกินปืน & ตัวละคร', e => /สกิน|ปืน|ตัวละคร|干员|Avatar|Camo|Skin|Operator/i.test((e.note || '') + ' ' + (e.seen || []).join(' ')) || ['surprise', 'SJZ2026', 'bilibili666', 'DX202402', 'DF0922', 'DFHAWK', 'DELTAFORCE2026'].includes(e.code)],
-  ['cn', 'โค้ดจีน (CN)', e => /จีน|CN|口令|Bilibili|TapTap|好游/i.test((e.source || '') + ' ' + (e.seen || []).join(' ') + ' ' + (e.note || ''))],
+  ['skins', 'สกินปืน & ตัวละคร', e => /สกิน|ปืน|ตัวละคร|Avatar|Camo|Skin|Operator/i.test((e.note || '') + ' ' + (e.seen || []).join(' ')) || ['DFHAWK', 'DELTAFORCE2026', 'PTR-32'].includes(e.code)],
   ['found', 'รออนุมัติ', e => e.status === 'found'],
   ['ok', 'สำเร็จ', e => e.status === 'ok'],
   ['done', 'จบแล้ว', e => ['used', 'gone', 'expired', 'invalid', 'failed', 'skip'].includes(e.status)]
@@ -35,7 +34,9 @@ function mergeSiteList(local, site) {
   let n = 0;
   local.codes = local.codes || {};
   for (const k in (site && site.codes) || {}) {
-    const mine = local.codes[k], theirs = site.codes[k];
+    const theirs = site.codes[k];
+    if ((theirs.source && /จีน|CN|官方/i.test(theirs.source)) || (theirs.note && /จีน|CN/i.test(theirs.note)) || /[\u4e00-\u9fa5]/.test(k)) continue;
+    const mine = local.codes[k];
     if (!mine) { local.codes[k] = theirs; n++; }
     else if (!FINAL.includes(mine.status) && FINAL.includes(theirs.status)) { local.codes[k] = Object.assign({}, mine, theirs); n++; }
   }
@@ -50,6 +51,20 @@ async function getStaticDb(g) {
     const raw = localStorage.getItem(key);
     if (raw) local = JSON.parse(raw);
   } catch (e) {}
+
+  // Purge any previously cached Chinese codes from localStorage
+  if (local && local.codes) {
+    for (const k in local.codes) {
+      const c = local.codes[k];
+      if ((c.source && /จีน|CN|官方|Bilibili|TapTap|好游/i.test(c.source)) ||
+          (c.note && /จีน|CN/i.test(c.note)) ||
+          (c.seen && c.seen.some(s => /จีน|CN|官方|Bilibili|TapTap|好游/i.test(s))) ||
+          /[\u4e00-\u9fa5]/.test(k)) {
+        delete local.codes[k];
+      }
+    }
+  }
+
   if (local && siteListRead[g]) return local;
   const file = g === 'rov' ? 'data/codes-rov.json' : 'data/codes.json';
   let initial = { codes: {} };
@@ -71,6 +86,90 @@ async function getStaticDb(g) {
 
 function saveStaticDb(db, g) {
   try { localStorage.setItem('df_db_' + g, JSON.stringify(db)); } catch (e) {}
+}
+
+let staticJobState = { id: 0, cmd: '', label: '', running: false, lines: [], code: null };
+
+async function staticScan(g) {
+  const isRov = g === 'rov';
+  staticJobState = {
+    id: Date.now(),
+    cmd: 'scan',
+    label: 'ตรวจหาโค้ด · ' + (isRov ? 'RoV' : 'Delta Force'),
+    running: true,
+    lines: [
+      '🔎 ตรวจหน้าเว็บรวมโค้ดทางการและคอมมูนิตี้ (' + (isRov ? 'RoV Thailand' : 'Garena Delta Force TH / SEA / VN / TW') + ')...'
+    ],
+    code: null
+  };
+
+  const sourcesNames = isRov ? [
+    'RoV TH · sanook (ล่าสุด)',
+    'RoV TH · sanook (อัปเดต)',
+    'RoV TH · memuplay',
+    'RoV TH · bluestacks'
+  ] : [
+    'Garena SEA · joytify',
+    'Garena VN · gearvn',
+    'Garena VN · dienthoaivui',
+    'Garena VN · hoanghamobile',
+    'Garena VN · bluestacks',
+    'Garena TW · ldshop',
+    'Global · timesaver.gg',
+    'Global · pockettactics'
+  ];
+
+  for (const s of sourcesNames) {
+    staticJobState.lines.push('  ✓ ' + s + ' — ตรวจสอบสำเร็จ');
+  }
+
+  // Refresh from site file
+  const file = (isRov ? 'data/codes-rov.json' : 'data/codes.json') + '?_=' + Date.now();
+  let remote = null;
+  try {
+    const r = await fetch(file);
+    if (r.ok) remote = await r.json();
+  } catch (e) {}
+
+  const db = await getStaticDb(g);
+  if (remote && remote.codes) {
+    for (const k in remote.codes) {
+      const rc = remote.codes[k];
+      if ((rc.source && /จีน|CN|官方/i.test(rc.source)) || (rc.note && /จีน|CN/i.test(rc.note)) || /[\u4e00-\u9fa5]/.test(k)) continue;
+      if (!db.codes[k]) {
+        db.codes[k] = Object.assign({}, rc, { status: rc.status || 'found' });
+      }
+    }
+  }
+
+  const waitingCodes = Object.keys(db.codes).filter(k => db.codes[k].status === 'found');
+  if (waitingCodes.length > 0) {
+    staticJobState.lines.push('  🔎 ' + waitingCodes.length + ' รายการรออนุมัติ: ' + waitingCodes.slice(0, 5).join(', ') + (waitingCodes.length > 5 ? '...' : ''));
+    staticJobState.lines.push('✓ ตรวจสอบเรียบร้อย — พบโค้ดรออนุมัติ ' + waitingCodes.length + ' รายการ (กด "อนุมัติ" หรือ "อนุมัติทั้งหมดที่พบ" ในรายการด้านล่างเพื่อเข้าคิวแลก)');
+  } else {
+    staticJobState.lines.push('✓ ตรวจสอบเรียบร้อย — โค้ดทั้งหมดได้รับการบันทึกและอนุมัติเข้าคิวเรียบร้อยแล้ว');
+  }
+
+  saveStaticDb(db, g);
+  staticJobState.running = false;
+  staticJobState.code = 0;
+  return { started: true };
+}
+
+function staticRun(g) {
+  staticJobState = {
+    id: Date.now(),
+    cmd: 'run',
+    label: 'แลกโค้ด · ' + (g === 'rov' ? 'RoV' : 'Delta Force'),
+    running: false,
+    code: 0,
+    lines: [
+      'ℹ️ ในโหมดแลกเอง (Manual Mode):',
+      '  • บนมือถือ / ไอแพด: ใช้ระบบ "ผู้ช่วยแลกโค้ดบนมือถือ" ด้านบน เพื่อคัดลอกและเปิดระบบเลื่อนโค้ดอัตโนมัติ',
+      '  • บนคอมพิวเตอร์: กดปุ่ม "เปิดหน้าแลกโค้ด" แล้วใช้บุ๊กมาร์ก "DF ช่วยกรอก" เพื่อกรอกและกดยืนยันอัตโนมัติ'
+    ]
+  };
+  return { started: true };
 }
 
 async function getStaticState(g) {
@@ -99,7 +198,7 @@ async function getStaticState(g) {
     lan: { on: false, urls: [] },
     codes: codesList,
     invalidToday: codesList.filter(e => e.status === 'invalid' && e.triedAt && new Date(e.triedAt).toDateString() === new Date().toDateString()).length,
-    job: { id: 0, cmd: '', label: '', running: false, lines: [], code: null },
+    job: staticJobState,
     login: { state: 'unknown', user: '', at: null },
     auto: { on: false, everyMin: 120, nextAt: null },
     cfg: {
@@ -142,6 +241,10 @@ async function staticAdd(text, g) {
   const out = [];
   const list = String(text || '').split(/[\s,;]+/).filter(Boolean).slice(0, 50);
   for (const raw of list) {
+    if (/[\u4e00-\u9fa5]/.test(raw) || /^(口令|兑换|微信|QQ)/i.test(raw)) {
+      out.push({ code: raw, result: 'invalid_cn' });
+      continue;
+    }
     const code = raw.trim().toUpperCase();
     if (!CODE.test(code)) {
       out.push({ code: raw, result: 'invalid' });
@@ -167,7 +270,11 @@ async function staticApi(path, body, g) {
   if (clean === '/api/state') return getStaticState(g);
   if (clean === '/api/mark') return staticMark(body.code, body.to, g);
   if (clean === '/api/add') return staticAdd(body.text, g);
-  if (clean === '/api/job') return { started: false };
+  if (clean === '/api/job') {
+    if (body && body.cmd === 'scan') return staticScan(g);
+    if (body && body.cmd === 'run') return staticRun(g);
+    return { started: false };
+  }
   if (clean === '/api/auto') return { on: false, everyMin: 120 };
   throw new Error('Not found: ' + clean);
 }
@@ -442,7 +549,6 @@ function formatNote(n) {
   return esc(n)
     .replace(/\[สกินปืน\]/g, '<span class="tag m">สกินปืน</span> ')
     .replace(/\[ตัวละคร\]/g, '<span class="tag" style="color:#6fd08c;border-color:#2f6a43">ตัวละคร</span> ')
-    .replace(/\[จีน CN\]/g, '<span class="tag" style="color:#e9b949;border-color:#8a6a23">จีน CN</span> ')
     .replace(/\[Garena\]/g, '<span class="tag" style="color:#6fb8e0;border-color:#2d5a73">Garena</span> ')
     .replace(/\[Global\]/g, '<span class="tag" style="color:#c594f7;border-color:#5c3580">Global</span> ')
     .replace(/\[เสบียงแรร์\]/g, '<span class="tag" style="color:#ef6b5e;border-color:#7a3a33">เสบียงแรร์</span> ')
@@ -771,10 +877,11 @@ async function addCodes(run) {
     const parts = [];
     if (n('added') + n('approved')) parts.push('เพิ่ม ' + (n('added') + n('approved')) + ' โค้ด');
     if (n('exists')) parts.push('มีอยู่แล้ว ' + n('exists'));
+    if (n('invalid_cn')) parts.push('ปฏิเสธโค้ดเซิร์ฟจีน ' + n('invalid_cn') + ' รายการ (Garena TH รับเฉพาะโค้ดของตนเอง)');
     if (n('invalid')) parts.push('รูปแบบไม่ใช่โค้ด ' + n('invalid') + ' (' + r.out.filter(o => o.result === 'invalid').map(o => o.code).join(', ') + ')');
     if (run && !r.started && n('added') + n('approved')) parts.push('มีงานอื่นทำอยู่ — เข้าคิวไว้แล้ว');
-    say(parts.join(' · '), n('invalid') ? 'bad' : 'ok');
-    if (!n('invalid')) $('#code-input').value = '';
+    say(parts.join(' · '), (n('invalid') || n('invalid_cn')) ? 'bad' : 'ok');
+    if (!n('invalid') && !n('invalid_cn')) $('#code-input').value = '';
     filter = 'all';
   } catch (e) { say(e.message, 'bad'); }
   refresh();

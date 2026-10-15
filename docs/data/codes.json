@@ -509,7 +509,7 @@
     },
     "PTR-32": {
       "code": "PTR-32",
-      "status": "new",
+      "status": "found",
       "source": "Global · timesaver.gg",
       "addedAt": "2026-10-14T18:19:15.149Z",
       "tries": 0,
@@ -518,11 +518,11 @@
         "Global · pockettactics"
       ],
       "triedAt": "2026-10-09T14:42:39.227Z",
-      "note": "[อาวุธ] [Global] เสบียงอุปกรณ์ปืน PTR-32 และยุทธวิธี"
+      "note": "[อาวุธ] [Garena] เสบียงอุปกรณ์ปืน PTR-32 และยุทธวิธี"
     },
     "DELTAFORCE2026": {
       "code": "DELTAFORCE2026",
-      "status": "new",
+      "status": "found",
       "source": "Global · timesaver.gg",
       "addedAt": "2026-10-14T18:19:15.149Z",
       "tries": 0,
@@ -531,11 +531,11 @@
         "Global · gamsgo"
       ],
       "triedAt": "2026-10-09T14:42:46.099Z",
-      "note": "[สกินปืน] [Global] บัตรทดลองสกินปืน M4A1 ลายพิเศษ + บัตรเกราะยุทธวิธี + EXP x2"
+      "note": "[สกินปืน] [Garena] บัตรทดลองสกินปืน M4A1 ลายพิเศษ + บัตรเกราะยุทธวิธี + EXP x2"
     },
     "DFHAWK": {
       "code": "DFHAWK",
-      "status": "new",
+      "status": "found",
       "source": "Global · timesaver.gg",
       "addedAt": "2026-10-14T18:19:15.149Z",
       "tries": 0,
@@ -544,7 +544,7 @@
         "Global · gamsgo"
       ],
       "triedAt": "2026-10-09T14:42:53.041Z",
-      "note": "[ตัวละคร] [Global] กรอบรูปตัวละคร Operator Hawk + กล่องแต่งปืนขั้นสูง"
+      "note": "[ตัวละคร] [Garena] กรอบรูปตัวละคร Operator Hawk + กล่องแต่งปืนขั้นสูง"
     },
     "GARENADFNY2501C158": {
       "code": "GARENADFNY2501C158",
@@ -623,20 +623,6 @@
       "triedAt": "2026-10-09T16:57:20.979Z",
       "note": "[เสบียง] [Garena] กล่องเสบียง Flash Pack"
     },
-    "DF0922": {
-      "code": "DF0922",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "TapTap",
-        "Global · pockettactics"
-      ],
-      "triedAt": "2026-10-09T14:43:29.554Z",
-      "note": "[ตัวละคร] [จีน CN] อวาตาร์พิเศษตัวละคร Vyron (威龙) สีม่วง + เสบียงเปิดเซิร์ฟ"
-    },
     "DELTAFORCEFOCUSBF": {
       "code": "DELTAFORCEFOCUSBF",
       "status": "invalid",
@@ -672,210 +658,6 @@
       ],
       "triedAt": "2026-10-09T16:57:59.864Z",
       "note": "บันทึกผลเอง"
-    },
-    "surprise": {
-      "code": "surprise",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Bilibili · 直播"
-      ],
-      "note": "[สกินปืน] [จีน CN] สกินปืน K437 ในตำนาน \"霸气外露\" (แลกในเกม: กิจกรรม -> อื่นๆ -> 口令兑换)"
-    },
-    "SJZ2026": {
-      "code": "SJZ2026",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "TapTap"
-      ],
-      "note": "[สกินปืน] [จีน CN] กล่องเลือกสกินปืนสีแดง (红色枪皮自选箱) + เสบียงรบ"
-    },
-    "bilibili666": {
-      "code": "bilibili666",
-      "status": "new",
-      "source": "จีน CN · Bilibili",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · Bilibili",
-        "官方活动"
-      ],
-      "note": "[สกินปืน] [จีน CN] สกินปืน Dark Night Warrior (暗夜武士) + ตั๋วกล่องสุ่ม"
-    },
-    "DX202402": {
-      "code": "DX202402",
-      "status": "new",
-      "source": "จีน CN · 官方兑换码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方兑换码",
-        "Baidu"
-      ],
-      "note": "[ตัวละคร] [จีน CN] บัตรทดลองตัวละคร Operator (干员体验卡) + วัตถุดิบอัปเกรด"
-    },
-    "DX202401": {
-      "code": "DX202401",
-      "status": "new",
-      "source": "จีน CN · 官方兑换码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方兑换码",
-        "Baidu"
-      ],
-      "note": "[จีน CN] 1,000 เหรียญทอง + ชุดเกราะเริ่มต้นครบเซ็ต"
-    },
-    "DFS10START": {
-      "code": "DFS10START",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "好游快爆"
-      ],
-      "note": "[เสบียง] [จีน CN] 50,000 Hafe Coins + ตั๋ว Delta (三角券) 50 ใบ"
-    },
-    "AIRDROP2026": {
-      "code": "AIRDROP2026",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "好游快爆"
-      ],
-      "note": "[เสบียง] [จีน CN] เหรียญ Hafe + สารปรับเสถียรภาพรังสี (Radiation Stabilizer)"
-    },
-    "SUMMERDELTA": {
-      "code": "SUMMERDELTA",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "好游快爆"
-      ],
-      "note": "[เสบียงแรร์] [จีน CN] ตั๋ว Delta + อิฐแมนเดล (Mandel Brick ถอดรหัสลุ้นสกินปืนทอง)"
-    },
-    "DELTA666": {
-      "code": "DELTA666",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] กล่องเสบียงอาวุธ + เหรียญ Hafe"
-    },
-    "DELTA888": {
-      "code": "DELTA888",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] กล่องเสบียงยุทธวิธี + เหรียญ Hafe"
-    },
-    "DELTA999": {
-      "code": "DELTA999",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] กล่องพยาบาลขั้นสูง + อุปกรณ์เสริมแต่งปืน"
-    },
-    "VIP777": {
-      "code": "VIP777",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] เสบียงรบ + บัตร EXP อาวุธ 2 เท่า"
-    },
-    "VIP888": {
-      "code": "VIP888",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] เสบียงรบ + ชุดเกราะยุทธวิธี"
-    },
-    "VIP999": {
-      "code": "VIP999",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] กล่องชิ้นส่วนดัดแปลงอาวุธขั้นสูง"
-    },
-    "DELTA2026": {
-      "code": "DELTA2026",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[สกินปืน] [จีน CN] เสบียงเริ่มต้น + ตั๋วสกินอาวุธ"
-    },
-    "WELCOME2026": {
-      "code": "WELCOME2026",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] เสบียงต้อนรับผู้เล่นใหม่"
-    },
-    "DF202607": {
-      "code": "DF202607",
-      "status": "new",
-      "source": "จีน CN · 官方口令码",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "จีน CN · 官方口令码",
-        "Baidu"
-      ],
-      "note": "[เสบียง] [จีน CN] เสบียงซีซั่น + เหรียญ Hafe"
     }
   }
 }
