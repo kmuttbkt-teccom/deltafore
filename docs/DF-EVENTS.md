@@ -221,6 +221,18 @@
 
 รอบของสัปดาห์นี้ให้ดูหน้ากิจกรรมในเกม — ประกาศที่อ่านได้ระบุรอบถึง 1 ต.ค. เท่านั้น
 
-## 5. แหล่งข้อมูล
+## 5. รหัสลับกิจกรรม & การถอดรหัส (Secret Event Ciphers & Decoding)
+
+* **แมนเดลบริก (MandelBrick) & เครื่องถอดรหัส (Analyzer):**
+  * เมื่อเก็บ MandelBrick ได้ในแมตช์ จะมีสัญญาณเตือนแจ้งพิกัดทั่วทั้งแมพ
+  * ต้องนำไปใส่เครื่องถอดรหัส (Decoder/Analyzer) ประจำแผนที่ และป้องกันพื้นที่จนกว่าแถบจะครบ 100%
+  * 💡 **ทริก:** เตรียมระเบิดควัน ป้อมปืน หรือโดรนตรวจจับไว้ล่วงหน้า เพราะจะมีผู้เล่นอื่นวิ่งมาดักชิงที่เครื่องถอดรหัสเสมอ
+* **รหัสคลื่นวิทยุภาคสนาม (Field Radio Ciphers):**
+  * ในแผนที่ Layali Grove และ Zero Dam จะมีเครื่องรับวิทยุกองทัพที่เปิดฟังได้
+  * เสียงสัญญาณจะอ่านตัวเลข 4 หลัก หรือสัญญาณมอร์ส นำตัวเลขไปกดตู้เซฟสัญญาณเพื่อรับอุปกรณ์เกรดทอง
+* **ปริศนาถอดรหัส Inside Haavk (Hackclaw):**
+  * โพสต์ในฟอรัม Haavk แต่ละตอนมีคำใบ้ซ่อนในข้อความ ให้สังเกต **ตัวอักษรพิมพ์ใหญ่แรกของบรรทัด** หรือ **รหัส IP/พิกัด** ที่อ้างถึงในบทสนทนา แล้วตามไปเก็บของตามพิกัดนั้นใน Operations
+
+## 6. แหล่งข้อมูล
 
 [Garena Delta Force TH — รวมพลฉลอง 2 ปี](https://deltaforce.garena.com/th/news/all/7AG4FG) · [timesaver.gg — anniversary events guide](https://timesaver.gg/blog/delta-force-anniversary-events-on-inside-haavk-guide) · [timesaver.gg — 3,900 Delta Tickets](https://timesaver.gg/blog/delta-force-2nd-anniversary-event-3900-delta-tickets) · [games.gg — fishing guide](https://games.gg/delta-force/guides/delta-force-fishing-guide/) · [timesaver.gg — fishing: how to unlock](https://timesaver.gg/blog/delta-force-fishing-guide-how-to-unlock) · [overgear — how to fish](https://overgear.com/guides/delta-force/how-to-fish/) · [gamesfuze — fishing guide](https://gamesfuze.com/guides/delta-force-ultimate-fishing-guide/) · [idcgames — Season Reorientation](https://idcgames.com/en/delta-force/news/delta-force%E2%80%99s-rover-introduces-season-reorientation-and-its-biggest-new-features-2026-09-08-06-52-13770)

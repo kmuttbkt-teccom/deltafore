@@ -297,6 +297,8 @@ table { width: 100%; border-collapse: collapse; }
 .bd .acts { display: flex; gap: 8px; align-items: center; margin-top: auto; }
 .bd .acts .btn { min-height: 42px; }                      /* a thumb must hit it */
 .bd .acts .btn.gold { flex: 1; text-align: center; }
+.bd .acts .btn.vid { background: linear-gradient(180deg, #381a1a, #241111); border-color: #7d3333; color: #ffbfbf; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.bd .acts .btn.vid:hover { filter: brightness(1.25); color: #fff; }
 .bd .star { position: absolute; top: 8px; right: 8px; z-index: 1; background: rgba(10, 13, 11, .7) !important; width: 32px; height: 32px; font-size: 18px; line-height: 1; cursor: pointer; background: transparent; border: 1px solid transparent; color: var(--mute); }
 .bd .star:hover { color: var(--gold2); border-color: var(--line2); }
 .bd.fav .star { color: var(--gold); }

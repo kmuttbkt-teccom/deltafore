@@ -100,7 +100,7 @@
       <div class="code">${esc(b.full)}</div>
       ${made(b)}
       <div class="from">${(b.seen || []).length ? 'จาก ' + esc(b.seen.join(' · ')) : 'เพิ่มเอง'}</div>
-      <div class="acts"><button class="btn gold mini" data-bcopy="${esc(b.code)}">คัดลอก</button><button class="btn ghost mini" data-bhide="${esc(b.code)}">${b.hidden ? 'เอากลับมา' : 'ซ่อน'}</button></div>
+      <div class="acts"><button class="btn gold mini" data-bcopy="${esc(b.code)}">คัดลอก</button><a class="btn mini vid" href="https://www.youtube.com/results?search_query=${encodeURIComponent('Delta Force ' + modelOf(b.name) + ' แต่งปืน รีวิว')}" target="_blank" rel="noopener" title="ดูคลิปรีวิวและทดสอบแรงดีดปืน ${esc(modelOf(b.name))} บน YouTube">🎬 คลิปรีวิว</a><button class="btn ghost mini" data-bhide="${esc(b.code)}">${b.hidden ? 'เอากลับมา' : 'ซ่อน'}</button></div>
       <div class="tried">ลองในเกมแล้ว:<button class="${w[b.code] === 'ok' ? 'on ok' : ''}" data-bwork="${esc(b.code)}" data-to="ok" aria-pressed="${w[b.code] === 'ok'}">✓ นำเข้าได้</button><button class="${w[b.code] === 'no' ? 'on no' : ''}" data-bwork="${esc(b.code)}" data-to="no" aria-pressed="${w[b.code] === 'no'}">✗ ไม่ได้</button></div>
     </div>`).join('');
     $('#bd-empty').hidden = rows.length > 0;
