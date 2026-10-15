@@ -509,47 +509,27 @@
     },
     "PTR-32": {
       "code": "PTR-32",
-      "status": "found",
-      "source": "Global · timesaver.gg",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "Global · timesaver.gg",
-        "Global · pockettactics",
-        "Global · lootbar"
-      ],
-      "triedAt": "2026-10-09T14:42:39.227Z",
-      "note": "[อาวุธ] [Garena] เสบียงอุปกรณ์ปืน PTR-32 และยุทธวิธี"
+      "status": "new",
+      "source": "Garena SEA · joytify",
+      "note": "[อาวุธ] [Garena] เสบียงอุปกรณ์ปืน PTR-32 และยุทธวิธี",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
     },
     "DELTAFORCE2026": {
       "code": "DELTAFORCE2026",
-      "status": "found",
-      "source": "Global · timesaver.gg",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "Global · timesaver.gg",
-        "Global · gamsgo",
-        "Global · pockettactics",
-        "Global · lootbar"
-      ],
-      "triedAt": "2026-10-09T14:42:46.099Z",
-      "note": "[สกินปืน] [Garena] บัตรทดลองสกินปืน M4A1 ลายพิเศษ + บัตรเกราะยุทธวิธี + EXP x2"
+      "status": "new",
+      "source": "Garena SEA · joytify",
+      "note": "[สกินปืน] [Garena] บัตรทดลองสกินปืน M4A1 ลายพิเศษ + บัตรเกราะยุทธวิธี + EXP x2",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
     },
     "DFHAWK": {
       "code": "DFHAWK",
-      "status": "found",
-      "source": "Global · timesaver.gg",
-      "addedAt": "2026-10-14T18:19:15.149Z",
-      "tries": 0,
-      "seen": [
-        "Global · timesaver.gg",
-        "Global · gamsgo",
-        "Global · pockettactics",
-        "Global · lootbar"
-      ],
-      "triedAt": "2026-10-09T14:42:53.041Z",
-      "note": "[ตัวละคร] [Garena] กรอบรูปตัวละคร Operator Hawk + กล่องแต่งปืนขั้นสูง"
+      "status": "new",
+      "source": "Garena SEA · joytify",
+      "note": "[ตัวละคร] [Garena] กรอบรูปตัวละคร Operator Hawk + กล่องแต่งปืนขั้นสูง",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
     },
     "GARENADFNY2501C158": {
       "code": "GARENADFNY2501C158",
@@ -663,6 +643,38 @@
       ],
       "triedAt": "2026-10-09T16:57:59.864Z",
       "note": "บันทึกผลเอง"
+    },
+    "GARENADF2610A": {
+      "code": "GARENADF2610A",
+      "status": "new",
+      "source": "Garena TH · official",
+      "note": "[สกินปืน] [Garena] สกินปืนพิเศษฉลองเปิดตัว Garena TH",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
+    },
+    "DFTH-8K2Q9": {
+      "code": "DFTH-8K2Q9",
+      "status": "new",
+      "source": "Garena TH · official",
+      "note": "[เสบียงแรร์] [Garena] กล่องเสบียงยุทธวิธีระดับสูง Garena TH",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
+    },
+    "HAWKOPS77": {
+      "code": "HAWKOPS77",
+      "status": "new",
+      "source": "Garena SEA · official",
+      "note": "[ตัวละคร] [Garena] แพ็กเกจ HawkOps ปฏิบัติการพิเศษ",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
+    },
+    "DELTA4EVER": {
+      "code": "DELTA4EVER",
+      "status": "new",
+      "source": "Garena SEA · official",
+      "note": "[สกินปืน] [Garena] สกินปืน Delta Forever ลิมิเต็ด",
+      "addedAt": "2026-10-15T03:25:53.850Z",
+      "tries": 0
     }
   }
 }

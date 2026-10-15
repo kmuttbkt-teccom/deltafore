@@ -79,7 +79,21 @@ async function getStaticDb(g) {
     } catch (e2) {}
   }
   siteListRead[g] = true;
-  if (local) { if (mergeSiteList(local, initial)) saveStaticDb(local, g); return local; }
+  if (local) {
+    if (mergeSiteList(local, initial)) saveStaticDb(local, g);
+    const hasQueue = Object.values(local.codes).some(e => ['new', 'early', 'retry'].includes(e.status));
+    if (!hasQueue && initial && initial.codes) {
+      let restored = 0;
+      for (const k in initial.codes) {
+        if (initial.codes[k].status === 'new') {
+          local.codes[k] = Object.assign({}, initial.codes[k]);
+          restored++;
+        }
+      }
+      if (restored) saveStaticDb(local, g);
+    }
+    return local;
+  }
   try { localStorage.setItem(key, JSON.stringify(initial)); } catch (e) {}
   return initial;
 }
@@ -430,14 +444,16 @@ const b64 = {
 function openPortal() {
   const q = S.queue.slice();
   if (picked && q.includes(picked)) { q.splice(q.indexOf(picked), 1); q.unshift(picked); }
-  if (!q.length) { H.note = 'คิวว่าง — อนุมัติโค้ดจากรายการด้านล่างก่อน'; return drawHelper(); }
+  const portalUrl = (S.cfg && S.cfg.portal) ? S.cfg.portal : 'https://redeem.df.garena.sg/th/cdkgarena.html';
   const auto = $('#hp-auto') ? ($('#hp-auto').checked ? 1 : 0) : 1;
-  const job = { q, d: Number($('#hp-delay').value) || 10, b: location.origin + '/', g: game, a: auto };
+  const hash = q.length ? ('#df=' + b64.enc({ q, d: Number($('#hp-delay').value) || 10, b: location.origin + '/', g: game, a: auto })) : '';
   H.game = game;
   H.auto = !!auto;
-  H.win = window.open(S.cfg.portal + '#df=' + b64.enc(job), 'df-redeem');
-  if (!H.win) { H.note = 'เบราว์เซอร์บล็อกหน้าต่างใหม่ — อนุญาตป๊อปอัปของหน้านี้ แล้วกดอีกครั้ง'; return drawHelper(); }
-  Object.assign(H, { state: 'opened', seen: 0, note: '', code: null, text: '' });
+  H.win = window.open(portalUrl + hash, 'df-redeem');
+  if (!H.win) {
+    H.win = window.open(portalUrl + hash, '_blank');
+  }
+  Object.assign(H, { state: 'opened', seen: 0, note: q.length ? '' : 'เปิดหน้าแลกโค้ดแล้ว (คิวว่าง — กดอนุมัติโค้ดด้านล่างเพื่อส่งคิวได้)', code: null, text: '' });
   drawHelper();
 }
 
@@ -594,7 +610,12 @@ function drawMobileAssistant() {
   const nextBtn = $('#ma-next');
   const copyBtn = $('#ma-copy-btn');
   const portalA = $('#ma-open-portal');
-  if (portalA && S.cfg && S.cfg.portal) portalA.href = S.cfg.portal;
+  if (portalA) {
+    const pUrl = (S.cfg && S.cfg.portal) ? S.cfg.portal : 'https://redeem.df.garena.sg/th/cdkgarena.html';
+    const auto = $('#hp-auto') ? ($('#hp-auto').checked ? 1 : 0) : 1;
+    const hash = q.length ? ('#df=' + b64.enc({ q, d: Number($('#hp-delay').value) || 10, b: location.origin + '/', g: game, a: auto })) : '';
+    portalA.href = pUrl + hash;
+  }
 
   if (!code) {
     if (countEl) { countEl.className = 'badge s-skip'; countEl.textContent = 'คิวว่าง'; }
