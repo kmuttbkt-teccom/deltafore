@@ -46,7 +46,44 @@
   <!-- 01 ─ codes -->
   <section class="page on" id="page-codes">
     <div class="panel manual" data-mode="manual">
-      <h2><b>แลกเอง — ทีละโค้ด</b><span id="mq-count"></span></h2>
+      <h2><b>แลกโค้ด — ศูนย์รวม</b><span id="mq-count"></span></h2>
+      <div class="rmode-switcher">
+        <button class="rmode-btn on" id="btn-mode-mobile" type="button">📱 โหมดมือถือ / iPad (ไม่ต้องติดตั้งบุ๊กมาร์ก)</button>
+        <button class="rmode-btn" id="btn-mode-desktop" type="button">💻 โหมดคอมพิวเตอร์ / บุ๊กมาร์กสคริปต์</button>
+      </div>
+
+      <div class="ma-card" id="mobile-assistant">
+        <div class="ma-top">
+          <b>🎯 ผู้ช่วยแลกโค้ดบนมือถือ / ไอแพด (1-Tap &amp; Auto-Runner)</b>
+          <span class="badge s-new" id="ma-count">คิวว่าง</span>
+        </div>
+        <p style="margin:0 0 8px;font-size:13.5px;color:var(--mute)">แตะปุ่มคัดลอก แล้วสลับไปวางในหน้าแลกโค้ด Garena หรือเปิดระบบนับถอยหลังอัตโนมัติ</p>
+        <div class="ma-code-box">
+          <div class="ma-code" id="ma-code">------</div>
+          <button class="btn gold" id="ma-copy-btn" type="button" style="min-height:38px;padding:6px 16px;font-size:15px">📋 คัดลอกโค้ดนี้</button>
+        </div>
+        <div class="ma-note" id="ma-note"></div>
+        <div class="ma-controls">
+          <button class="btn" id="ma-prev" type="button">◀ โค้ดย้อนหลัง</button>
+          <button class="btn gold" id="ma-next" type="button">โค้ดถัดไป ▶</button>
+          <a class="btn" id="ma-open-portal" href="https://redeem.df.garena.sg/th/cdkgarena.html" target="_blank" rel="noopener">เปิดหน้าแลกโค้ด Garena ↗</a>
+        </div>
+        <div class="ma-auto-box">
+          <div style="flex:1 1 200px">
+            <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-weight:700;color:var(--ink)">
+              <input type="checkbox" id="ma-auto-advance" style="accent-color:var(--gold);width:17px;height:17px">
+              ⏩ เปิดระบบเลื่อนโค้ดอัตโนมัติ (นับถอยหลัง <span id="ma-cd-sec">8</span> วิ)
+            </label>
+            <div class="ma-timer-bar" id="ma-timer-bar"></div>
+          </div>
+          <button class="btn mini" id="ma-copy-all" type="button">📋 คัดลอกทุกโค้ดรวดเดียว</button>
+        </div>
+        <div class="ma-links">
+          <span style="font-size:13px;color:var(--mute)">💡 ต้องการสคริปต์ช่วยกรอกอัตโนมัติในหน้า Garena?</span>
+          <button class="btn mini" id="ma-switch-to-desktop" type="button" style="background:transparent;border:1px solid var(--line2);color:var(--gold2)">สลับไปใช้ตัวช่วยบุ๊กมาร์ก (1 คลิกแลกหมด)</button>
+        </div>
+      </div>
+
       <div class="helper" id="helper" data-redeem="web">
         <div class="hp-head">
           <b>ตัวช่วยกรอกอัตโนมัติ</b><span class="badge s-skip" id="hp-state">ยังไม่เริ่ม</span>

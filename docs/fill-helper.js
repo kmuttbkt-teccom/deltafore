@@ -53,11 +53,12 @@ function (ORIGINS) {
   autoLabel.appendChild(autoCb); autoLabel.appendChild(D.createTextNode('กดแลกอัตโนมัติ'));
   var againB = el('button', BTN, 'ใส่โค้ดนี้อีกครั้ง');
   var skipB = el('button', BTN, 'ข้าม');
+  var loadB = el('button', BTN + ';background:#e9b949;color:#1a1405;font-weight:700', 'ดึงโค้ดอัตโนมัติ ⚡');
   var backA = el('a', BTN + ';text-decoration:none;display:inline-flex;align-items:center', 'กลับศูนย์โค้ด');
   var line = el('div', 'margin-top:6px;color:#d5dbc6');
-  [goB, pauseB, againB, skipB].forEach(function (b) { b.type = 'button'; });
-  goB.id = 'df-go'; pauseB.id = 'df-pause'; autoCb.id = 'df-auto-cb'; againB.id = 'df-again'; skipB.id = 'df-skip'; backA.id = 'df-back'; line.id = 'df-line'; bar.id = 'df-bar';
-  [title, count, codeEl, goB, pauseB, autoLabel, againB, skipB, backA].forEach(function (e) { row.appendChild(e); });
+  [goB, pauseB, againB, skipB, loadB].forEach(function (b) { b.type = 'button'; });
+  goB.id = 'df-go'; pauseB.id = 'df-pause'; autoCb.id = 'df-auto-cb'; againB.id = 'df-again'; skipB.id = 'df-skip'; loadB.id = 'df-load'; backA.id = 'df-back'; line.id = 'df-line'; bar.id = 'df-bar';
+  [title, count, codeEl, goB, pauseB, autoLabel, againB, skipB, loadB, backA].forEach(function (e) { row.appendChild(e); });
   bar.appendChild(row); bar.appendChild(line); D.body.appendChild(bar);
 
   var room = W.opener;
@@ -107,6 +108,7 @@ function (ORIGINS) {
     againB.style.display = state === 'ask' ? '' : 'none';
     skipB.style.display = state === 'filled' || state === 'ask' ? '' : 'none';
     backA.style.display = job && job.b ? 'inline-flex' : 'none';
+    loadB.style.display = state === 'none' ? '' : 'none';
     if (job && job.b) {
       backA.href = job.b + '#res=' + b64.enc({ g: job.g, r: Object.keys(job.r).map(function (c) { return [c, job.r[c].s]; }) });
       backA.textContent = filed ? 'กลับศูนย์โค้ด (ส่งผล ' + filed + ' รายการ)' : 'กลับศูนย์โค้ด';
@@ -114,7 +116,7 @@ function (ORIGINS) {
     var sec = Math.max(0, Math.ceil((until - Date.now()) / 1000));
     line.textContent =
       paused ? '⏸ พักชั่วคราว — กด «ทำต่อ ▶» เพื่อดำเนินการต่อ'
-      : state === 'none' ? 'ยังไม่มีคิว — เปิดหน้านี้จากปุ่ม «เปิดหน้าแลกโค้ด» ในศูนย์โค้ด แล้วกดบุ๊กมาร์กอีกครั้ง'
+      : state === 'none' ? 'ยังไม่มีคิว — กด «ดึงโค้ดอัตโนมัติ ⚡» หรือเปิดจากศูนย์โค้ด'
       : state === 'login' ? 'เข้าสู่ระบบ Garena ด้วยตัวคุณเองก่อน แล้วกดบุ๊กมาร์กนี้อีกครั้ง (คิวยังอยู่)'
       : state === 'filled' ? (isAuto ? 'ใส่โค้ด ' + code + ' ให้แล้ว — กำลังกดยืนยันอัตโนมัติ… (หรือกดปุ่ม «' + label() + '» ทันที)' : 'ใส่โค้ดให้แล้ว — กด «ยืนยัน · ไปแลก» หรือปุ่ม «' + label() + '» ของหน้าเว็บ')
       : state === 'wait' ? 'ส่งแล้ว รอคำตอบของหน้าเว็บ…'
@@ -122,6 +124,31 @@ function (ORIGINS) {
       : state === 'ask' ? 'หน้าเว็บตอบว่า «' + said + '» — ใส่โค้ดนี้อีกครั้ง หรือข้าม'
       : 'หมดคิวแล้ว — จดผล ' + filed + ' รายการ' + (job.b ? ' · กด «กลับศูนย์โค้ด»' : '');
     D.body.style.paddingTop = bar.offsetHeight + 'px';       // the bar must not sit on the page's own header
+  };
+  loadB.onclick = function () {
+    line.textContent = 'กำลังดึงรายการโค้ดล่าสุด…';
+    fetch('https://kmuttbkt-teccom.github.io/deltafore/data/codes.json?_=' + Date.now())
+      .then(function (r) { return r.json(); })
+      .then(function (db) {
+        var q = Object.values(db.codes || {})
+          .filter(function (e) { return ['new', 'early', 'retry'].includes(e.status); })
+          .map(function (e) { return e.code; });
+        if (!q.length) {
+          q = Object.values(db.codes || {})
+            .filter(function (e) { return !['invalid', 'expired', 'gone'].includes(e.status); })
+            .map(function (e) { return e.code; });
+        }
+        if (q.length) {
+          job = {
+            q: q, d: 8, b: 'https://kmuttbkt-teccom.github.io/deltafore/', g: 'deltaforce', a: 1, r: {}, skip: {}
+          };
+          save();
+          next();
+        } else {
+          line.textContent = 'ไม่พบโค้ดที่รอแลก';
+        }
+      })
+      .catch(function (e) { line.textContent = 'เชื่อมต่อศูนย์โค้ดไม่ได้ (' + e.message + ')'; });
   };
   var beat = function () { tell({ type: 'state', state: state, code: code, text: said, done: job ? job.q.length - left().length : 0, total: job ? job.q.length : 0, sec: Math.max(0, Math.ceil((until - Date.now()) / 1000)), auto: job ? !!job.a : false, paused: paused }); };
   var set = function (s) { state = s; show(); beat(); };

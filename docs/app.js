@@ -401,12 +401,14 @@ function drawHelper() {
 }
 
 // The bookmark: the helper's source (comment lines and indents taken out) with this page's addresses in it.
-let bookmark = '';
+let bookmark = '', tinyBookmark = '';
 fetch('fill-helper.js').then(r => r.text()).then(src => {
   const port = location.port ? ':' + location.port : '';
   const origins = [...new Set([location.origin, 'http://localhost' + port, 'http://127.0.0.1' + port])];
   const lean = src.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('//')).join('\n');
   bookmark = 'javascript:' + encodeURIComponent('(' + lean + ')(' + JSON.stringify(origins) + ');void 0');
+  const loaderBase = (location.origin + location.pathname).replace(/[^/]*$/, '');
+  tinyBookmark = "javascript:(function(){var s=document.createElement('script');s.src='" + loaderBase + "fill-helper-loader.js?_='+Date.now();document.head.appendChild(s);})();";
   $('#hp-bm').href = bookmark;
 }).catch(() => { $('#hp-bm').textContent = 'โหลดตัวช่วยกรอกไม่ได้'; });
 
@@ -446,6 +448,162 @@ function formatNote(n) {
     .replace(/\[เสบียงแรร์\]/g, '<span class="tag" style="color:#ef6b5e;border-color:#7a3a33">เสบียงแรร์</span> ')
     .replace(/\[เสบียง\]/g, '<span class="tag" style="color:#b9d3a4;border-color:#3c5030">เสบียง</span> ')
     .replace(/\[อาวุธ\]/g, '<span class="tag" style="color:#f0a04b;border-color:#7a5424">อาวุธ</span> ');
+}
+
+// ── mobile assistant & mode switcher ─────────────────────
+let rmode = 'desktop';
+try {
+  const saved = localStorage.getItem('df-rmode');
+  if (saved === 'desktop' || saved === 'mobile') rmode = saved;
+  else if (window.innerWidth <= 768 || ('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) rmode = 'mobile';
+} catch (e) { rmode = 'desktop'; }
+
+function applyRedeemMode(mode) {
+  rmode = mode;
+  try { localStorage.setItem('df-rmode', mode); } catch (e) {}
+  const isMobile = mode === 'mobile';
+  const mBtn = $('#btn-mode-mobile'), dBtn = $('#btn-mode-desktop');
+  if (mBtn) mBtn.classList.toggle('on', isMobile);
+  if (dBtn) dBtn.classList.toggle('on', !isMobile);
+  const ma = $('#mobile-assistant'), hp = $('#helper');
+  if (ma) ma.style.display = isMobile ? '' : 'none';
+  if (hp) hp.style.display = isMobile ? 'none' : '';
+  if (isMobile) drawMobileAssistant();
+}
+
+let maIndex = 0, maAutoTimer = null, maAutoSeconds = 8, maRemaining = 8;
+
+function drawMobileAssistant() {
+  if (!S || S.mode !== 'manual' || S.redeem !== 'web') return;
+  const q = S.queue || [];
+  if (maIndex >= q.length) maIndex = Math.max(0, q.length - 1);
+  const code = q[maIndex] || null;
+  const card = $('#mobile-assistant');
+  if (!card) return;
+
+  const countEl = $('#ma-count');
+  const codeEl = $('#ma-code');
+  const noteEl = $('#ma-note');
+  const prevBtn = $('#ma-prev');
+  const nextBtn = $('#ma-next');
+  const copyBtn = $('#ma-copy-btn');
+  const portalA = $('#ma-open-portal');
+  if (portalA && S.cfg && S.cfg.portal) portalA.href = S.cfg.portal;
+
+  if (!code) {
+    if (countEl) { countEl.className = 'badge s-skip'; countEl.textContent = 'คิวว่าง'; }
+    if (codeEl) codeEl.textContent = 'ไม่มีโค้ดในคิว';
+    if (noteEl) noteEl.innerHTML = '<span style="color:var(--mute)">กด "อนุมัติ" โค้ดในรายการด้านล่าง หรือพิมพ์โค้ดใหม่ลงในกล่องเพิ่มโค้ด</span>';
+    if (prevBtn) prevBtn.disabled = true;
+    if (nextBtn) nextBtn.disabled = true;
+    if (copyBtn) copyBtn.disabled = true;
+    stopMaAuto();
+    return;
+  }
+
+  if (countEl) {
+    countEl.className = 'badge s-new';
+    countEl.textContent = 'โค้ดที่ ' + (maIndex + 1) + ' / ' + q.length + ' (เหลือ ' + q.length + ' โค้ด)';
+  }
+  if (codeEl) codeEl.textContent = code;
+
+  const entry = S.codes.find(x => x.code === code) || {};
+  let noteHtml = '';
+  if (entry.note) noteHtml += formatNote(entry.note);
+  const seen = entry.seen && entry.seen.length ? entry.seen : [entry.source === 'manual' ? 'เพิ่มเอง' : entry.source];
+  if (seen && seen.length) {
+    noteHtml += (noteHtml ? ' · ' : '') + '<span style="color:var(--mute)">ที่มา: ' + esc(seen.join(' · ')) + '</span>';
+  }
+  if (noteEl) noteEl.innerHTML = noteHtml || '<span style="color:var(--mute)">โค้ดพร้อมแลกรับรางวัล</span>';
+
+  if (prevBtn) prevBtn.disabled = maIndex <= 0;
+  if (nextBtn) nextBtn.disabled = maIndex >= q.length - 1;
+  if (copyBtn) copyBtn.disabled = false;
+}
+
+function maNext() {
+  const q = S.queue || [];
+  if (maIndex < q.length - 1) {
+    maIndex++;
+    drawMobileAssistant();
+    return true;
+  }
+  return false;
+}
+
+function maPrev() {
+  if (maIndex > 0) {
+    maIndex--;
+    drawMobileAssistant();
+    return true;
+  }
+  return false;
+}
+
+async function copyCurrentMaCode() {
+  const q = S.queue || [];
+  const code = q[maIndex];
+  if (!code) return;
+  const ok = await copyText(code);
+  if (navigator.vibrate) try { navigator.vibrate([40]); } catch (e) {}
+  const btn = $('#ma-copy-btn');
+  if (btn) {
+    btn.textContent = ok ? 'คัดลอกแล้ว ✓ (' + code + ')' : 'คัดลอกไม่ได้';
+    setTimeout(() => { if (btn) btn.textContent = '📋 คัดลอกโค้ดนี้'; }, 1600);
+  }
+}
+
+async function copyAllCodes() {
+  const q = S.queue || [];
+  if (!q.length) { say('ไม่มีโค้ดในคิว', 'bad'); return; }
+  const text = q.join('\n');
+  const ok = await copyText(text);
+  const btn = $('#ma-copy-all');
+  if (btn) {
+    btn.textContent = ok ? 'คัดลอกครบ ' + q.length + ' โค้ดแล้ว ✓' : 'คัดลอกไม่ได้';
+    setTimeout(() => { if (btn) btn.textContent = '📋 คัดลอกทุกโค้ดรวดเดียว'; }, 2000);
+  }
+}
+
+function stopMaAuto() {
+  if (maAutoTimer) { clearInterval(maAutoTimer); maAutoTimer = null; }
+  const bar = $('#ma-timer-bar');
+  if (bar) bar.style.width = '0%';
+  const cb = $('#ma-auto-advance');
+  if (cb && (!S || !S.queue || !S.queue.length)) cb.checked = false;
+}
+
+function startMaAuto() {
+  stopMaAuto();
+  const q = S.queue || [];
+  if (!q.length) return;
+  maRemaining = maAutoSeconds;
+  updateMaBar();
+  copyCurrentMaCode();
+  maAutoTimer = setInterval(() => {
+    maRemaining--;
+    updateMaBar();
+    if (maRemaining <= 0) {
+      maRemaining = maAutoSeconds;
+      const moved = maNext();
+      if (!moved) {
+        maIndex = 0;
+        drawMobileAssistant();
+      }
+      copyCurrentMaCode();
+      if (navigator.vibrate) try { navigator.vibrate([60, 40, 60]); } catch (e) {}
+    }
+  }, 1000);
+}
+
+function updateMaBar() {
+  const bar = $('#ma-timer-bar');
+  const secEl = $('#ma-cd-sec');
+  if (secEl) secEl.textContent = maRemaining;
+  if (bar) {
+    const pct = Math.max(0, Math.min(100, Math.round(((maAutoSeconds - maRemaining) / maAutoSeconds) * 100)));
+    bar.style.width = pct + '%';
+  }
 }
 
 // ── the list ──────────────────────────────────────────────
@@ -594,7 +752,7 @@ async function refresh() {
     catch (e) { if (game === 'deltaforce') throw e; game = 'deltaforce'; S = await api('/api/state'); }   // a game that is no longer in config.json
     if (offline) { offline = false; drawn = {}; $('#job-title').textContent = 'ยังไม่ได้สั่งงาน'; }   // the server is back (it may be a new one)
     document.body.dataset.mode = S.mode;
-    drawChips(); drawManual(); drawHelper(); drawLan(); drawJob(); drawCodes(); drawEvents();
+    drawChips(); drawManual(); drawHelper(); drawMobileAssistant(); drawLan(); drawJob(); drawCodes(); drawEvents();
   } catch (e) {
     offline = true;
     $('#job-title').textContent = 'ต่อกับเซิร์ฟเวอร์ไม่ได้ — เปิดด้วย `npm run web` อยู่หรือเปล่า';
@@ -632,17 +790,24 @@ document.addEventListener('click', async ev => {
     return t.replaceWith(img);
   }
   if (t.dataset.f) { filter = t.dataset.f; drawCodes(); return; }
+  if (t.id === 'btn-mode-mobile') return applyRedeemMode('mobile');
+  if (t.id === 'btn-mode-desktop' || t.id === 'ma-switch-to-desktop') return applyRedeemMode('desktop');
+  if (t.id === 'ma-copy-btn') return copyCurrentMaCode();
+  if (t.id === 'ma-prev') return maPrev();
+  if (t.id === 'ma-next') return maNext();
+  if (t.id === 'ma-copy-all') return copyAllCodes();
   if (t.id === 'mq-copy') return copyCode();
   if (t.id === 'hp-open') return openPortal();
   if (t.id === 'hp-copybm') {
-    const ok = bookmark && await copyText(bookmark);
+    const bmToCopy = tinyBookmark || bookmark;
+    const ok = bmToCopy && await copyText(bmToCopy);
     t.textContent = ok ? 'คัดลอกแล้ว ✓' : 'คัดลอกเองจากช่องด้านล่าง ↓';
     setTimeout(() => { t.textContent = 'คัดลอกโค้ดบุ๊กมาร์ก'; }, 3500);
-    if (!ok && bookmark) {                         // the browser would not copy for us: the code itself, to copy by hand
+    if (!ok && bmToCopy) {                         // the browser would not copy for us: the code itself, to copy by hand
       const box = $('#hp-bmtext');
       $('.mobile-how').open = true;
-      box.hidden = false; box.value = bookmark;
-      box.focus(); box.select(); box.setSelectionRange(0, bookmark.length);
+      box.hidden = false; box.value = bmToCopy;
+      box.focus(); box.select(); box.setSelectionRange(0, bmToCopy.length);
       box.scrollIntoView({ block: 'center' });
     }
     return;
@@ -667,6 +832,13 @@ if ($('#hp-auto')) {
   try { if (localStorage.getItem('df-auto') === '0') $('#hp-auto').checked = false; } catch (e) {}
   $('#hp-auto').addEventListener('change', () => { try { localStorage.setItem('df-auto', $('#hp-auto').checked ? '1' : '0'); } catch (e) {} });
 }
+if ($('#ma-auto-advance')) {
+  $('#ma-auto-advance').addEventListener('change', ev => {
+    if (ev.target.checked) startMaAuto();
+    else stopMaAuto();
+  });
+}
+applyRedeemMode(rmode);
 $('#code-input').addEventListener('keydown', ev => { if (ev.key === 'Enter' && (ev.ctrlKey || ev.metaKey)) addCodes(true); });
 window.addEventListener('hashchange', async () => { if (await takeResults()) { await refresh(); return show('codes'); } show(location.hash.slice(1)); });
 $$('#toc').forEach(toc => toc.addEventListener('click', ev => {
